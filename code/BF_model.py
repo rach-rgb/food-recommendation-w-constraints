@@ -1,23 +1,28 @@
 import load_data as ld
 from foodRecBase import *
-from surprise.model_selection import train_test_split
 from surprise import SVD
 from collections import defaultdict
 
 
 class BFRec(FoodRecBase):
-    # recipe_data
-    # train_set, test_set
+    # attributes from FoodRecBase
     # algo
+    # train_set
+    # test_set
     # predictions
+
+    # additional attributes
+    # recipe_data
+    # candidate
+    # nutr_error
     # top_k
 
-    def __init__(self, candidate=30, nutr_error=5):
+    def __init__(self, candidate=30, nutr_error=5, algo=SVD()):
         # set constants
         self.candidate = candidate
         self.nutr_error = nutr_error
+        self.algo = algo
 
-    # load required data
     def get_data(self):
         # get recipe data
         self.recipe_data = ld.load_recipe_data()
@@ -26,14 +31,6 @@ class BFRec(FoodRecBase):
         data = ld.load_reduced_rating_data()
         self.train_set = data.build_full_trainset()
         self.test_set = self.train_set.build_anti_testset()
-        # self.train_set, self.test_set = train_test_split(data, test_size=.25)
-
-    def train(self):
-        self.algo = SVD()
-        self.algo.fit(self.train_set)
-
-    def test(self):
-        self.predictions = self.algo.test(self.test_set)
 
     # source form https://github.com/NicolasHug/Surprise/blob/master/examples/top_n_recommendations.py
     def get_candidate(self):
