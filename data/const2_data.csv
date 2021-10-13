@@ -1,2999 +1,2999 @@
-constraint
-"(0, None, 840, None)"
-"(0, None, 2499, None)"
-"(0, None, 5010, None)"
-"(1, None, 2499, None)"
-"(1, None, 5010, None)"
-"(1, None, 6906, None)"
-"(2, None, 6270, None)"
-"(2, None, 840, None)"
-"(2, None, 2499, None)"
-"(3, None, 7449, None)"
-"(3, None, 6654, None)"
-"(3, None, 1257, None)"
-"(4, None, 5010, None)"
-"(4, None, 6906, None)"
-"(4, None, 7655, None)"
-"(5, None, 6270, None)"
-"(5, None, 840, None)"
-"(5, None, 2499, None)"
-"(6, None, 840, None)"
-"(6, None, 2499, None)"
-"(6, None, 5010, None)"
-"(7, None, 6270, None)"
-"(7, None, 840, None)"
-"(7, None, 2499, None)"
-"(8, None, 840, None)"
-"(8, None, 2499, None)"
-"(8, None, 4717, None)"
-"(9, None, 840, None)"
-"(9, None, 2499, None)"
-"(9, None, 5010, None)"
-"(10, None, 5319, None)"
-"(10, None, 332, None)"
-"(10, None, 63, None)"
-"(11, None, 840, None)"
-"(11, None, 2499, None)"
-"(11, None, 6906, None)"
-"(12, None, 6270, None)"
-"(12, None, 840, None)"
-"(12, None, 2499, None)"
-"(13, None, 840, None)"
-"(13, None, 2499, None)"
-"(13, None, 5010, None)"
-"(14, None, 6270, None)"
-"(14, None, 840, None)"
-"(14, None, 2499, None)"
-"(15, None, 840, None)"
-"(15, None, 2499, None)"
-"(15, None, 5010, None)"
-"(16, None, 3203, None)"
-"(16, None, 7655, None)"
-"(16, None, 5319, None)"
-"(17, None, 1168, None)"
-"(17, None, 7213, None)"
-"(17, None, 3217, None)"
-"(18, None, 840, None)"
-"(18, None, 2499, None)"
-"(18, None, 5010, None)"
-"(19, None, 3203, None)"
-"(19, None, 4717, None)"
-"(19, None, 2683, None)"
-"(20, None, 6335, None)"
-"(20, None, 63, None)"
-"(20, None, 335, None)"
-"(21, None, 6270, None)"
-"(21, None, 840, None)"
-"(21, None, 2499, None)"
-"(22, None, 6270, None)"
-"(22, None, 840, None)"
-"(22, None, 2499, None)"
-"(23, None, 840, None)"
-"(23, None, 2499, None)"
-"(23, None, 6906, None)"
-"(24, None, 5006, None)"
-"(24, None, 3203, None)"
-"(24, None, 5319, None)"
-"(25, None, 332, None)"
-"(25, None, 63, None)"
-"(25, None, 7449, None)"
-"(26, None, 6270, None)"
-"(26, None, 2499, None)"
-"(26, None, 6906, None)"
-"(27, None, 840, None)"
-"(27, None, 5010, None)"
-"(27, None, 2683, None)"
-"(28, None, 840, None)"
-"(28, None, 2499, None)"
-"(28, None, 6906, None)"
-"(29, None, 6270, None)"
-"(29, None, 2499, None)"
-"(29, None, 6906, None)"
-"(30, None, 6270, None)"
-"(30, None, 2499, None)"
-"(30, None, 6906, None)"
-"(31, None, 6270, None)"
-"(31, None, 2499, None)"
-"(31, None, 6906, None)"
-"(32, None, 6906, None)"
-"(32, None, 3203, None)"
-"(32, None, 5319, None)"
-"(33, None, 6270, None)"
-"(33, None, 840, None)"
-"(33, None, 2499, None)"
-"(34, None, 6270, None)"
-"(34, None, 2499, None)"
-"(34, None, 6906, None)"
-"(35, None, 6270, None)"
-"(35, None, 840, None)"
-"(35, None, 2499, None)"
-"(36, None, 6270, None)"
-"(36, None, 2499, None)"
-"(36, None, 6906, None)"
-"(37, None, 332, None)"
-"(37, None, 1168, None)"
-"(37, None, 4253, None)"
-"(38, None, 6270, None)"
-"(38, None, 2499, None)"
-"(38, None, 6906, None)"
-"(39, None, 5006, None)"
-"(39, None, 800, None)"
-"(39, None, 3184, None)"
-"(40, None, 6270, None)"
-"(40, None, 840, None)"
-"(40, None, 5010, None)"
-"(41, None, 7655, None)"
-"(41, None, 3184, None)"
-"(41, None, 332, None)"
-"(42, None, 840, None)"
-"(42, None, 6906, None)"
-"(42, None, 5006, None)"
-"(43, None, 2683, None)"
-"(43, None, 800, None)"
-"(43, None, 63, None)"
-"(44, None, 840, None)"
-"(44, None, 2499, None)"
-"(44, None, 5319, None)"
-"(45, None, 6270, None)"
-"(45, None, 840, None)"
-"(45, None, 2499, None)"
-"(46, None, 7655, None)"
-"(46, None, 332, None)"
-"(46, None, 6335, None)"
-"(47, None, 5010, None)"
-"(47, None, 5006, None)"
-"(47, None, 3203, None)"
-"(48, None, 6270, None)"
-"(48, None, 840, None)"
-"(48, None, 2499, None)"
-"(49, None, 840, None)"
-"(49, None, 2499, None)"
-"(49, None, 4717, None)"
-"(50, None, 3203, None)"
-"(50, None, 7655, None)"
-"(50, None, 4717, None)"
-"(51, None, 7655, None)"
-"(51, None, 5319, None)"
-"(51, None, 3184, None)"
-"(52, None, 5006, None)"
-"(52, None, 3203, None)"
-"(52, None, 7655, None)"
-"(53, None, 7655, None)"
-"(53, None, 4717, None)"
-"(53, None, 5319, None)"
-"(54, None, 5010, None)"
-"(54, None, 5006, None)"
-"(54, None, 3203, None)"
-"(55, None, 6335, None)"
-"(55, None, 335, None)"
-"(55, None, 4253, None)"
-"(56, None, 335, None)"
-"(56, None, 7470, None)"
-"(56, None, 1833, None)"
-"(57, None, 840, None)"
-"(57, None, 5006, None)"
-"(57, None, 3203, None)"
-"(58, None, 840, None)"
-"(58, None, 2499, None)"
-"(58, None, 5006, None)"
-"(59, None, 6270, None)"
-"(59, None, 840, None)"
-"(59, None, 2499, None)"
-"(60, None, 6270, None)"
-"(60, None, 840, None)"
-"(60, None, 2499, None)"
-"(61, None, 5010, None)"
-"(61, None, 5006, None)"
-"(61, None, 3203, None)"
-"(62, None, 5010, None)"
-"(62, None, 5006, None)"
-"(62, None, 3203, None)"
-"(63, None, 5010, None)"
-"(63, None, 5006, None)"
-"(63, None, 3203, None)"
-"(64, None, 2499, None)"
-"(64, None, 5010, None)"
-"(64, None, 6906, None)"
-"(65, None, 7655, None)"
-"(65, None, 4717, None)"
-"(65, None, 2683, None)"
-"(66, None, 6270, None)"
-"(66, None, 840, None)"
-"(66, None, 2499, None)"
-"(67, None, 5319, None)"
-"(67, None, 63, None)"
-"(67, None, 1168, None)"
-"(68, None, 2499, None)"
-"(68, None, 5010, None)"
-"(68, None, 6906, None)"
-"(69, None, 800, None)"
-"(69, None, 3184, None)"
-"(69, None, 63, None)"
-"(70, None, 840, None)"
-"(70, None, 2499, None)"
-"(70, None, 5010, None)"
-"(71, None, 800, None)"
-"(71, None, 63, None)"
-"(71, None, 1168, None)"
-"(72, None, 5010, None)"
-"(72, None, 4717, None)"
-"(72, None, 332, None)"
-"(73, None, 5006, None)"
-"(73, None, 3203, None)"
-"(73, None, 4717, None)"
-"(74, None, 6270, None)"
-"(74, None, 2499, None)"
-"(74, None, 5010, None)"
-"(75, None, 6906, None)"
-"(75, None, 7655, None)"
-"(75, None, 2683, None)"
-"(76, None, 6270, None)"
-"(76, None, 840, None)"
-"(76, None, 2499, None)"
-"(77, None, 335, None)"
-"(77, None, 7449, None)"
-"(77, None, 1511, None)"
-"(78, None, 3203, None)"
-"(78, None, 5319, None)"
-"(78, None, 332, None)"
-"(79, None, 6270, None)"
-"(79, None, 840, None)"
-"(79, None, 2499, None)"
-"(80, None, 3203, None)"
-"(80, None, 5319, None)"
-"(80, None, 6335, None)"
-"(81, None, 840, None)"
-"(81, None, 5010, None)"
-"(81, None, 5006, None)"
-"(82, None, 4253, None)"
-"(82, None, 4623, None)"
-"(82, None, 1124, None)"
-"(83, None, 6270, None)"
-"(83, None, 840, None)"
-"(83, None, 2499, None)"
-"(84, None, 840, None)"
-"(84, None, 5010, None)"
-"(84, None, 5006, None)"
-"(85, None, 7655, None)"
-"(85, None, 2683, None)"
-"(85, None, 4253, None)"
-"(86, None, 840, None)"
-"(86, None, 2499, None)"
-"(86, None, 6906, None)"
-"(87, None, 6270, None)"
-"(87, None, 840, None)"
-"(87, None, 2499, None)"
-"(88, None, 6270, None)"
-"(88, None, 840, None)"
-"(88, None, 2499, None)"
-"(89, None, 5006, None)"
-"(89, None, 3203, None)"
-"(89, None, 5319, None)"
-"(90, None, 6270, None)"
-"(90, None, 840, None)"
-"(90, None, 2499, None)"
-"(91, None, 7655, None)"
-"(91, None, 4717, None)"
-"(91, None, 800, None)"
-"(92, None, 6270, None)"
-"(92, None, 840, None)"
-"(92, None, 5010, None)"
-"(93, None, 6270, None)"
-"(93, None, 840, None)"
-"(93, None, 2499, None)"
-"(94, None, '', None)"
-"(95, None, 2499, None)"
-"(95, None, 5010, None)"
-"(95, None, 6906, None)"
-"(96, None, 5010, None)"
-"(96, None, 5006, None)"
-"(96, None, 3203, None)"
-"(97, None, 6335, None)"
-"(97, None, 63, None)"
-"(97, None, 5180, None)"
-"(98, None, 7655, None)"
-"(98, None, 2683, None)"
-"(98, None, 5319, None)"
-"(99, None, 5010, None)"
-"(99, None, 6906, None)"
-"(99, None, 3203, None)"
-"(100, None, 332, None)"
-"(100, None, 7449, None)"
-"(100, None, 7557, None)"
-"(101, None, 2499, None)"
-"(101, None, 5010, None)"
-"(101, None, 6906, None)"
-"(102, None, 6270, None)"
-"(102, None, 2499, None)"
-"(102, None, 5010, None)"
-"(103, None, 1511, None)"
-"(103, None, 1252, None)"
-"(103, None, 7470, None)"
-"(104, None, 840, None)"
-"(104, None, 4717, None)"
-"(104, None, 5319, None)"
-"(105, None, 6906, None)"
-"(105, None, 4717, None)"
-"(105, None, 5319, None)"
-"(106, None, 6270, None)"
-"(106, None, 5010, None)"
-"(106, None, 6906, None)"
-"(107, None, 6906, None)"
-"(107, None, 332, None)"
-"(107, None, 63, None)"
-"(108, None, 3217, None)"
-"(108, None, 4623, None)"
-"(108, None, 7946, None)"
-"(109, None, 5006, None)"
-"(109, None, 6335, None)"
-"(109, None, 6276, None)"
-"(110, None, 335, None)"
-"(110, None, 7557, None)"
-"(110, None, 6654, None)"
-"(111, None, 2499, None)"
-"(111, None, 5010, None)"
-"(111, None, 6906, None)"
-"(112, None, 332, None)"
-"(112, None, 6276, None)"
-"(112, None, 1168, None)"
-"(113, None, 840, None)"
-"(113, None, 2499, None)"
-"(113, None, 5010, None)"
-"(114, None, 6270, None)"
-"(114, None, 2499, None)"
-"(114, None, 5010, None)"
-"(115, None, 5010, None)"
-"(115, None, 5006, None)"
-"(115, None, 3203, None)"
-"(116, None, 5010, None)"
-"(116, None, 6906, None)"
-"(116, None, 5006, None)"
-"(117, None, 5010, None)"
-"(117, None, 6906, None)"
-"(117, None, 5006, None)"
-"(118, None, 840, None)"
-"(118, None, 5006, None)"
-"(118, None, 3203, None)"
-"(119, None, 5010, None)"
-"(119, None, 5006, None)"
-"(119, None, 3203, None)"
-"(120, None, 6906, None)"
-"(120, None, 5006, None)"
-"(120, None, 3203, None)"
-"(121, None, 3203, None)"
-"(121, None, 6276, None)"
-"(121, None, 4253, None)"
-"(122, None, 5010, None)"
-"(122, None, 3203, None)"
-"(122, None, 2683, None)"
-"(123, None, 5010, None)"
-"(123, None, 5006, None)"
-"(123, None, 3203, None)"
-"(124, None, 3184, None)"
-"(124, None, 335, None)"
-"(124, None, 4253, None)"
-"(125, None, 6270, None)"
-"(125, None, 840, None)"
-"(125, None, 2499, None)"
-"(126, None, 6270, None)"
-"(126, None, 840, None)"
-"(126, None, 2499, None)"
-"(127, None, 840, None)"
-"(127, None, 2499, None)"
-"(127, None, 6906, None)"
-"(128, None, 4253, None)"
-"(128, None, 590, None)"
-"(128, None, 6696, None)"
-"(129, None, 840, None)"
-"(129, None, 6906, None)"
-"(129, None, 5006, None)"
-"(130, None, 1093, None)"
-"(130, None, 3484, None)"
-"(130, None, 4574, None)"
-"(131, None, 6270, None)"
-"(131, None, 2499, None)"
-"(131, None, 4717, None)"
-"(132, None, 7655, None)"
-"(132, None, 6335, None)"
-"(132, None, 4253, None)"
-"(133, None, 6270, None)"
-"(133, None, 840, None)"
-"(133, None, 2499, None)"
-"(134, None, 2499, None)"
-"(134, None, 6906, None)"
-"(134, None, 5006, None)"
-"(135, None, 5006, None)"
-"(135, None, 3203, None)"
-"(135, None, 332, None)"
-"(136, None, 840, None)"
-"(136, None, 2499, None)"
-"(136, None, 5010, None)"
-"(137, None, 3203, None)"
-"(137, None, 7449, None)"
-"(137, None, 7213, None)"
-"(138, None, 5006, None)"
-"(138, None, 3203, None)"
-"(138, None, 7655, None)"
-"(139, None, 6906, None)"
-"(139, None, 5006, None)"
-"(139, None, 2683, None)"
-"(140, None, 2499, None)"
-"(140, None, 3203, None)"
-"(140, None, 7655, None)"
-"(141, None, 4623, None)"
-"(141, None, 1252, None)"
-"(141, None, 5648, None)"
-"(142, None, 840, None)"
-"(142, None, 5006, None)"
-"(142, None, 3203, None)"
-"(143, None, 3217, None)"
-"(143, None, 1124, None)"
-"(143, None, 3723, None)"
-"(144, None, 6270, None)"
-"(144, None, 840, None)"
-"(144, None, 6906, None)"
-"(145, None, 6270, None)"
-"(145, None, 840, None)"
-"(145, None, 2499, None)"
-"(146, None, 4717, None)"
-"(146, None, 332, None)"
-"(146, None, 63, None)"
-"(147, None, 6270, None)"
-"(147, None, 840, None)"
-"(147, None, 2499, None)"
-"(148, None, 6270, None)"
-"(148, None, 840, None)"
-"(148, None, 2499, None)"
-"(149, None, 6270, None)"
-"(149, None, 840, None)"
-"(149, None, 2499, None)"
-"(150, None, 5010, None)"
-"(150, None, 5006, None)"
-"(150, None, 7655, None)"
-"(151, None, 4717, None)"
-"(151, None, 5319, None)"
-"(151, None, 3184, None)"
-"(152, None, 6906, None)"
-"(152, None, 7655, None)"
-"(152, None, 4717, None)"
-"(153, None, 6270, None)"
-"(153, None, 840, None)"
-"(153, None, 2499, None)"
-"(154, None, 5006, None)"
-"(154, None, 7655, None)"
-"(154, None, 332, None)"
-"(155, None, 6270, None)"
-"(155, None, 5010, None)"
-"(155, None, 5006, None)"
-"(156, None, 3203, None)"
-"(156, None, 800, None)"
-"(156, None, 3184, None)"
-"(157, None, 2499, None)"
-"(157, None, 6906, None)"
-"(157, None, 5006, None)"
-"(158, None, 6270, None)"
-"(158, None, 5010, None)"
-"(158, None, 6906, None)"
-"(159, None, 5180, None)"
-"(159, None, 335, None)"
-"(159, None, 7449, None)"
-"(160, None, 6270, None)"
-"(160, None, 840, None)"
-"(160, None, 2499, None)"
-"(161, None, 2499, None)"
-"(161, None, 5010, None)"
-"(161, None, 6906, None)"
-"(162, None, 840, None)"
-"(162, None, 5006, None)"
-"(162, None, 4717, None)"
-"(163, None, 6270, None)"
-"(163, None, 840, None)"
-"(163, None, 2499, None)"
-"(164, None, 1910, None)"
-"(164, None, 1252, None)"
-"(164, None, 1833, None)"
-"(165, None, 7655, None)"
-"(165, None, 5319, None)"
-"(165, None, 800, None)"
-"(166, None, 840, None)"
-"(166, None, 2499, None)"
-"(166, None, 6906, None)"
-"(167, None, 6270, None)"
-"(167, None, 840, None)"
-"(167, None, 2499, None)"
-"(168, None, 7655, None)"
-"(168, None, 2683, None)"
-"(168, None, 800, None)"
-"(169, None, 7655, None)"
-"(169, None, 5319, None)"
-"(169, None, 800, None)"
-"(170, None, 2683, None)"
-"(170, None, 800, None)"
-"(170, None, 332, None)"
-"(171, None, 5319, None)"
-"(171, None, 6335, None)"
-"(171, None, 63, None)"
-"(172, None, 63, None)"
-"(172, None, 335, None)"
-"(172, None, 7449, None)"
-"(173, None, 840, None)"
-"(173, None, 2499, None)"
-"(173, None, 5010, None)"
-"(174, None, 840, None)"
-"(174, None, 2499, None)"
-"(174, None, 5010, None)"
-"(175, None, 3184, None)"
-"(175, None, 4253, None)"
-"(175, None, 7449, None)"
-"(176, None, 4717, None)"
-"(176, None, 2683, None)"
-"(176, None, 4253, None)"
-"(177, None, 7655, None)"
-"(177, None, 4717, None)"
-"(177, None, 3184, None)"
-"(178, None, 840, None)"
-"(178, None, 2499, None)"
-"(178, None, 5010, None)"
-"(179, None, 3184, None)"
-"(179, None, 6335, None)"
-"(179, None, 1168, None)"
-"(180, None, 6270, None)"
-"(180, None, 840, None)"
-"(180, None, 2499, None)"
-"(181, None, 840, None)"
-"(181, None, 5010, None)"
-"(181, None, 4717, None)"
-"(182, None, 840, None)"
-"(182, None, 2499, None)"
-"(182, None, 3203, None)"
-"(183, None, 5010, None)"
-"(183, None, 5006, None)"
-"(183, None, 3203, None)"
-"(184, None, 335, None)"
-"(184, None, 4253, None)"
-"(184, None, 6696, None)"
-"(185, None, 840, None)"
-"(185, None, 5010, None)"
-"(185, None, 5006, None)"
-"(186, None, 6270, None)"
-"(186, None, 840, None)"
-"(186, None, 2499, None)"
-"(187, None, 2499, None)"
-"(187, None, 6906, None)"
-"(187, None, 3203, None)"
-"(188, None, 7655, None)"
-"(188, None, 5319, None)"
-"(188, None, 6276, None)"
-"(189, None, 5319, None)"
-"(189, None, 3184, None)"
-"(189, None, 6335, None)"
-"(190, None, 1168, None)"
-"(190, None, 6654, None)"
-"(190, None, 1511, None)"
-"(191, None, 5010, None)"
-"(191, None, 3203, None)"
-"(191, None, 5319, None)"
-"(192, None, 5010, None)"
-"(192, None, 6906, None)"
-"(192, None, 3203, None)"
-"(193, None, 2856, None)"
-"(193, None, 1329, None)"
-"(193, None, 3497, None)"
-"(194, None, 840, None)"
-"(194, None, 2499, None)"
-"(194, None, 5010, None)"
-"(195, None, 6270, None)"
-"(195, None, 840, None)"
-"(195, None, 2499, None)"
-"(196, None, 2499, None)"
-"(196, None, 5006, None)"
-"(196, None, 3203, None)"
-"(197, None, 840, None)"
-"(197, None, 2499, None)"
-"(197, None, 5010, None)"
-"(198, None, 6270, None)"
-"(198, None, 5010, None)"
-"(198, None, 6906, None)"
-"(199, None, 840, None)"
-"(199, None, 2499, None)"
-"(199, None, 6906, None)"
-"(200, None, 840, None)"
-"(200, None, 2499, None)"
-"(200, None, 2683, None)"
-"(201, None, 6270, None)"
-"(201, None, 840, None)"
-"(201, None, 2499, None)"
-"(202, None, 6270, None)"
-"(202, None, 840, None)"
-"(202, None, 2499, None)"
-"(203, None, 840, None)"
-"(203, None, 2683, None)"
-"(203, None, 5319, None)"
-"(204, None, 840, None)"
-"(204, None, 5010, None)"
-"(204, None, 4717, None)"
-"(205, None, 6270, None)"
-"(205, None, 840, None)"
-"(205, None, 2499, None)"
-"(206, None, 6270, None)"
-"(206, None, 840, None)"
-"(206, None, 2499, None)"
-"(207, None, 5010, None)"
-"(207, None, 5319, None)"
-"(207, None, 3184, None)"
-"(208, None, 6276, None)"
-"(208, None, 4623, None)"
-"(208, None, 1252, None)"
-"(209, None, 5010, None)"
-"(209, None, 5006, None)"
-"(209, None, 3203, None)"
-"(210, None, 5006, None)"
-"(210, None, 3203, None)"
-"(210, None, 7655, None)"
-"(211, None, 5006, None)"
-"(211, None, 6335, None)"
-"(211, None, 63, None)"
-"(212, None, 7655, None)"
-"(212, None, 4717, None)"
-"(212, None, 5319, None)"
-"(213, None, 840, None)"
-"(213, None, 2499, None)"
-"(213, None, 5010, None)"
-"(214, None, 6270, None)"
-"(214, None, 840, None)"
-"(214, None, 2499, None)"
-"(215, None, 5010, None)"
-"(215, None, 7655, None)"
-"(215, None, 4717, None)"
-"(216, None, 840, None)"
-"(216, None, 2499, None)"
-"(216, None, 6906, None)"
-"(217, None, 6270, None)"
-"(217, None, 840, None)"
-"(217, None, 2499, None)"
-"(218, None, 5010, None)"
-"(218, None, 3203, None)"
-"(218, None, 2683, None)"
-"(219, None, 5010, None)"
-"(219, None, 5006, None)"
-"(219, None, 3203, None)"
-"(220, None, 3203, None)"
-"(220, None, 5319, None)"
-"(220, None, 1168, None)"
-"(221, None, 2683, None)"
-"(221, None, 3184, None)"
-"(221, None, 6335, None)"
-"(222, None, 6270, None)"
-"(222, None, 840, None)"
-"(222, None, 2499, None)"
-"(223, None, 6270, None)"
-"(223, None, 840, None)"
-"(223, None, 2499, None)"
-"(224, None, 6270, None)"
-"(224, None, 840, None)"
-"(224, None, 2499, None)"
-"(225, None, 5010, None)"
-"(225, None, 6906, None)"
-"(225, None, 5006, None)"
-"(226, None, 2499, None)"
-"(226, None, 5006, None)"
-"(226, None, 3184, None)"
-"(227, None, 6270, None)"
-"(227, None, 840, None)"
-"(227, None, 2499, None)"
-"(228, None, 6270, None)"
-"(228, None, 2499, None)"
-"(228, None, 5010, None)"
-"(229, None, 6270, None)"
-"(229, None, 840, None)"
-"(229, None, 2499, None)"
-"(230, None, 6270, None)"
-"(230, None, 5006, None)"
-"(230, None, 3203, None)"
-"(231, None, 3203, None)"
-"(231, None, 4717, None)"
-"(231, None, 5319, None)"
-"(232, None, 5010, None)"
-"(232, None, 6906, None)"
-"(232, None, 5006, None)"
-"(233, None, 6270, None)"
-"(233, None, 840, None)"
-"(233, None, 2499, None)"
-"(234, None, 5006, None)"
-"(234, None, 2683, None)"
-"(234, None, 63, None)"
-"(235, None, 1168, None)"
-"(235, None, 1093, None)"
-"(235, None, 1257, None)"
-"(236, None, 6696, None)"
-"(236, None, 3723, None)"
-"(236, None, 5648, None)"
-"(237, None, 5006, None)"
-"(237, None, 3203, None)"
-"(237, None, 7655, None)"
-"(238, None, 5006, None)"
-"(238, None, 5319, None)"
-"(238, None, 3184, None)"
-"(239, None, 7655, None)"
-"(239, None, 3184, None)"
-"(239, None, 6335, None)"
-"(240, None, 5006, None)"
-"(240, None, 3203, None)"
-"(240, None, 4717, None)"
-"(241, None, 5168, None)"
-"(241, None, 2816, None)"
-"(241, None, 3502, None)"
-"(242, None, 63, None)"
-"(242, None, 335, None)"
-"(242, None, 4253, None)"
-"(243, None, 1168, None)"
-"(243, None, 335, None)"
-"(243, None, 7449, None)"
-"(244, None, 800, None)"
-"(244, None, 63, None)"
-"(244, None, 1168, None)"
-"(245, None, 6276, None)"
-"(245, None, 7449, None)"
-"(245, None, 1093, None)"
-"(246, None, 5006, None)"
-"(246, None, 4717, None)"
-"(246, None, 5319, None)"
-"(247, None, 2683, None)"
-"(247, None, 332, None)"
-"(247, None, 335, None)"
-"(248, None, 2683, None)"
-"(248, None, 5180, None)"
-"(248, None, 335, None)"
-"(249, None, 6906, None)"
-"(249, None, 2683, None)"
-"(249, None, 332, None)"
-"(250, None, 6270, None)"
-"(250, None, 840, None)"
-"(250, None, 2499, None)"
-"(251, None, 6270, None)"
-"(251, None, 840, None)"
-"(251, None, 2499, None)"
-"(252, None, 6270, None)"
-"(252, None, 840, None)"
-"(252, None, 2499, None)"
-"(253, None, 840, None)"
-"(253, None, 5010, None)"
-"(253, None, 6906, None)"
-"(254, None, 840, None)"
-"(254, None, 2499, None)"
-"(254, None, 5010, None)"
-"(255, None, 840, None)"
-"(255, None, 2499, None)"
-"(255, None, 5010, None)"
-"(256, None, 6270, None)"
-"(256, None, 840, None)"
-"(256, None, 2499, None)"
-"(257, None, 6270, None)"
-"(257, None, 840, None)"
-"(257, None, 2499, None)"
-"(258, None, 6270, None)"
-"(258, None, 840, None)"
-"(258, None, 2499, None)"
-"(259, None, 2499, None)"
-"(259, None, 2683, None)"
-"(259, None, 800, None)"
-"(260, None, 5006, None)"
-"(260, None, 332, None)"
-"(260, None, 6335, None)"
-"(261, None, 6270, None)"
-"(261, None, 840, None)"
-"(261, None, 2499, None)"
-"(262, None, 332, None)"
-"(262, None, 63, None)"
-"(262, None, 6276, None)"
-"(263, None, 7655, None)"
-"(263, None, 4717, None)"
-"(263, None, 63, None)"
-"(264, None, 6906, None)"
-"(264, None, 4717, None)"
-"(264, None, 3184, None)"
-"(265, None, 7655, None)"
-"(265, None, 5319, None)"
-"(265, None, 800, None)"
-"(266, None, 3184, None)"
-"(266, None, 63, None)"
-"(266, None, 6654, None)"
-"(267, None, 7449, None)"
-"(267, None, 6654, None)"
-"(267, None, 1511, None)"
-"(268, None, 5006, None)"
-"(268, None, 800, None)"
-"(268, None, 5180, None)"
-"(269, None, 6270, None)"
-"(269, None, 840, None)"
-"(269, None, 2499, None)"
-"(270, None, 840, None)"
-"(270, None, 2499, None)"
-"(270, None, 6906, None)"
-"(271, None, 4717, None)"
-"(271, None, 800, None)"
-"(271, None, 332, None)"
-"(272, None, 2499, None)"
-"(272, None, 5010, None)"
-"(272, None, 6906, None)"
-"(273, None, 6270, None)"
-"(273, None, 840, None)"
-"(273, None, 2499, None)"
-"(274, None, 5010, None)"
-"(274, None, 3203, None)"
-"(274, None, 2683, None)"
-"(275, None, 5695, None)"
-"(275, None, 2131, None)"
-"(275, None, 7233, None)"
-"(276, None, 2499, None)"
-"(276, None, 5006, None)"
-"(276, None, 3203, None)"
-"(277, None, 840, None)"
-"(277, None, 5010, None)"
-"(277, None, 6906, None)"
-"(278, None, 5006, None)"
-"(278, None, 3203, None)"
-"(278, None, 3184, None)"
-"(279, None, 6906, None)"
-"(279, None, 5006, None)"
-"(279, None, 800, None)"
-"(280, None, 6270, None)"
-"(280, None, 840, None)"
-"(280, None, 2499, None)"
-"(281, None, 5006, None)"
-"(281, None, 2683, None)"
-"(281, None, 800, None)"
-"(282, None, 5010, None)"
-"(282, None, 6906, None)"
-"(282, None, 4717, None)"
-"(283, None, 2499, None)"
-"(283, None, 5010, None)"
-"(283, None, 3203, None)"
-"(284, None, 6906, None)"
-"(284, None, 4717, None)"
-"(284, None, 5319, None)"
-"(285, None, 6270, None)"
-"(285, None, 2499, None)"
-"(285, None, 6906, None)"
-"(286, None, 6270, None)"
-"(286, None, 840, None)"
-"(286, None, 2499, None)"
-"(287, None, 6270, None)"
-"(287, None, 840, None)"
-"(287, None, 2499, None)"
-"(288, None, 5010, None)"
-"(288, None, 4717, None)"
-"(288, None, 2683, None)"
-"(289, None, 6270, None)"
-"(289, None, 840, None)"
-"(289, None, 2499, None)"
-"(290, None, 5010, None)"
-"(290, None, 5006, None)"
-"(290, None, 3203, None)"
-"(291, None, 4717, None)"
-"(291, None, 5319, None)"
-"(291, None, 6276, None)"
-"(292, None, 6270, None)"
-"(292, None, 840, None)"
-"(292, None, 2499, None)"
-"(293, None, 5010, None)"
-"(293, None, 800, None)"
-"(293, None, 63, None)"
-"(294, None, 6270, None)"
-"(294, None, 840, None)"
-"(294, None, 2499, None)"
-"(295, None, 6276, None)"
-"(295, None, 6654, None)"
-"(295, None, 590, None)"
-"(296, None, 3184, None)"
-"(296, None, 6276, None)"
-"(296, None, 1168, None)"
-"(297, None, 5010, None)"
-"(297, None, 5006, None)"
-"(297, None, 3203, None)"
-"(298, None, 6270, None)"
-"(298, None, 840, None)"
-"(298, None, 5010, None)"
-"(299, None, 6270, None)"
-"(299, None, 5006, None)"
-"(299, None, 7655, None)"
-"(300, None, 6270, None)"
-"(300, None, 840, None)"
-"(300, None, 5010, None)"
-"(301, None, 5006, None)"
-"(301, None, 3203, None)"
-"(301, None, 7655, None)"
-"(302, None, 6270, None)"
-"(302, None, 840, None)"
-"(302, None, 2499, None)"
-"(303, None, 5010, None)"
-"(303, None, 5006, None)"
-"(303, None, 3203, None)"
-"(304, None, 840, None)"
-"(304, None, 2499, None)"
-"(304, None, 5010, None)"
-"(305, None, 5319, None)"
-"(305, None, 3184, None)"
-"(305, None, 6335, None)"
-"(306, None, 2499, None)"
-"(306, None, 5010, None)"
-"(306, None, 5006, None)"
-"(307, None, 2499, None)"
-"(307, None, 6906, None)"
-"(307, None, 5006, None)"
-"(308, None, 840, None)"
-"(308, None, 2499, None)"
-"(308, None, 5010, None)"
-"(309, None, 6270, None)"
-"(309, None, 840, None)"
-"(309, None, 2499, None)"
-"(310, None, 5006, None)"
-"(310, None, 3184, None)"
-"(310, None, 63, None)"
-"(311, None, 6270, None)"
-"(311, None, 840, None)"
-"(311, None, 5010, None)"
-"(312, None, 840, None)"
-"(312, None, 5010, None)"
-"(312, None, 5006, None)"
-"(313, None, 840, None)"
-"(313, None, 5010, None)"
-"(313, None, 5006, None)"
-"(314, None, 6270, None)"
-"(314, None, 840, None)"
-"(314, None, 2499, None)"
-"(315, None, 5010, None)"
-"(315, None, 5006, None)"
-"(315, None, 4717, None)"
-"(316, None, 6270, None)"
-"(316, None, 840, None)"
-"(316, None, 2499, None)"
-"(317, None, 5010, None)"
-"(317, None, 6906, None)"
-"(317, None, 3203, None)"
-"(318, None, 6270, None)"
-"(318, None, 6906, None)"
-"(318, None, 5006, None)"
-"(319, None, 63, None)"
-"(319, None, 1168, None)"
-"(319, None, 6654, None)"
-"(320, None, 3203, None)"
-"(320, None, 2683, None)"
-"(320, None, 800, None)"
-"(321, None, 3184, None)"
-"(321, None, 6335, None)"
-"(321, None, 6276, None)"
-"(322, None, 2499, None)"
-"(322, None, 5006, None)"
-"(322, None, 3203, None)"
-"(323, None, 5010, None)"
-"(323, None, 5006, None)"
-"(323, None, 3203, None)"
-"(324, None, 2499, None)"
-"(324, None, 7655, None)"
-"(324, None, 4717, None)"
-"(325, None, 4717, None)"
-"(325, None, 5319, None)"
-"(325, None, 800, None)"
-"(326, None, 6906, None)"
-"(326, None, 800, None)"
-"(326, None, 3184, None)"
-"(327, None, 5010, None)"
-"(327, None, 5006, None)"
-"(327, None, 3203, None)"
-"(328, None, 6335, None)"
-"(328, None, 6276, None)"
-"(328, None, 5180, None)"
-"(329, None, 840, None)"
-"(329, None, 2499, None)"
-"(329, None, 5010, None)"
-"(330, None, 4717, None)"
-"(330, None, 63, None)"
-"(330, None, 1168, None)"
-"(331, None, 6270, None)"
-"(331, None, 840, None)"
-"(331, None, 2499, None)"
-"(332, None, 6270, None)"
-"(332, None, 840, None)"
-"(332, None, 2499, None)"
-"(333, None, 6270, None)"
-"(333, None, 840, None)"
-"(333, None, 2499, None)"
-"(334, None, 840, None)"
-"(334, None, 5010, None)"
-"(334, None, 6906, None)"
-"(335, None, 2499, None)"
-"(335, None, 6906, None)"
-"(335, None, 3203, None)"
-"(336, None, 840, None)"
-"(336, None, 5006, None)"
-"(336, None, 3203, None)"
-"(337, None, 6906, None)"
-"(337, None, 3203, None)"
-"(337, None, 2683, None)"
-"(338, None, 6906, None)"
-"(338, None, 7655, None)"
-"(338, None, 2683, None)"
-"(339, None, 6270, None)"
-"(339, None, 840, None)"
-"(339, None, 5010, None)"
-"(340, None, 6906, None)"
-"(340, None, 2683, None)"
-"(340, None, 800, None)"
-"(341, None, 840, None)"
-"(341, None, 2499, None)"
-"(341, None, 5010, None)"
-"(342, None, 1168, None)"
-"(342, None, 6654, None)"
-"(342, None, 590, None)"
-"(343, None, 2499, None)"
-"(343, None, 6906, None)"
-"(343, None, 3203, None)"
-"(344, None, 6270, None)"
-"(344, None, 840, None)"
-"(344, None, 2499, None)"
-"(345, None, 332, None)"
-"(345, None, 63, None)"
-"(345, None, 335, None)"
-"(346, None, 2499, None)"
-"(346, None, 6906, None)"
-"(346, None, 5006, None)"
-"(347, None, 2683, None)"
-"(347, None, 5319, None)"
-"(347, None, 3184, None)"
-"(348, None, 63, None)"
-"(348, None, 6276, None)"
-"(348, None, 335, None)"
-"(349, None, 4253, None)"
-"(349, None, 1257, None)"
-"(349, None, 4987, None)"
-"(350, None, 800, None)"
-"(350, None, 6335, None)"
-"(350, None, 7557, None)"
-"(351, None, 840, None)"
-"(351, None, 5010, None)"
-"(351, None, 3203, None)"
-"(352, None, 2499, None)"
-"(352, None, 6906, None)"
-"(352, None, 4717, None)"
-"(353, None, 5010, None)"
-"(353, None, 7655, None)"
-"(353, None, 800, None)"
-"(354, None, 6270, None)"
-"(354, None, 840, None)"
-"(354, None, 2499, None)"
-"(355, None, 5006, None)"
-"(355, None, 7655, None)"
-"(355, None, 332, None)"
-"(356, None, 7655, None)"
-"(356, None, 2683, None)"
-"(356, None, 800, None)"
-"(357, None, 335, None)"
-"(357, None, 6654, None)"
-"(357, None, 1511, None)"
-"(358, None, 5010, None)"
-"(358, None, 5006, None)"
-"(358, None, 3203, None)"
-"(359, None, 4717, None)"
-"(359, None, 3184, None)"
-"(359, None, 7449, None)"
-"(360, None, 840, None)"
-"(360, None, 5006, None)"
-"(360, None, 3203, None)"
-"(361, None, 840, None)"
-"(361, None, 7655, None)"
-"(361, None, 2683, None)"
-"(362, None, 840, None)"
-"(362, None, 5010, None)"
-"(362, None, 5006, None)"
-"(363, None, 5010, None)"
-"(363, None, 5006, None)"
-"(363, None, 7655, None)"
-"(364, None, 6270, None)"
-"(364, None, 840, None)"
-"(364, None, 2499, None)"
-"(365, None, 840, None)"
-"(365, None, 5010, None)"
-"(365, None, 5006, None)"
-"(366, None, 6270, None)"
-"(366, None, 840, None)"
-"(366, None, 2499, None)"
-"(367, None, 840, None)"
-"(367, None, 5010, None)"
-"(367, None, 5006, None)"
-"(368, None, 6270, None)"
-"(368, None, 840, None)"
-"(368, None, 2499, None)"
-"(369, None, 6276, None)"
-"(369, None, 7557, None)"
-"(369, None, 1093, None)"
-"(370, None, 6270, None)"
-"(370, None, 840, None)"
-"(370, None, 2499, None)"
-"(371, None, 6270, None)"
-"(371, None, 2499, None)"
-"(371, None, 6906, None)"
-"(372, None, 5010, None)"
-"(372, None, 5006, None)"
-"(372, None, 3203, None)"
-"(373, None, 2683, None)"
-"(373, None, 3184, None)"
-"(373, None, 335, None)"
-"(374, None, 840, None)"
-"(374, None, 3203, None)"
-"(374, None, 7655, None)"
-"(375, None, 5010, None)"
-"(375, None, 6906, None)"
-"(375, None, 5006, None)"
-"(376, None, 6906, None)"
-"(376, None, 3203, None)"
-"(376, None, 2683, None)"
-"(377, None, 1910, None)"
-"(377, None, 6696, None)"
-"(377, None, 1252, None)"
-"(378, None, 6270, None)"
-"(378, None, 840, None)"
-"(378, None, 2499, None)"
-"(379, None, 6270, None)"
-"(379, None, 2499, None)"
-"(379, None, 6906, None)"
-"(380, None, 800, None)"
-"(380, None, 332, None)"
-"(380, None, 63, None)"
-"(381, None, 2499, None)"
-"(381, None, 5006, None)"
-"(381, None, 7655, None)"
-"(382, None, 5006, None)"
-"(382, None, 7655, None)"
-"(382, None, 2683, None)"
-"(383, None, 6270, None)"
-"(383, None, 840, None)"
-"(383, None, 2499, None)"
-"(384, None, 335, None)"
-"(384, None, 1252, None)"
-"(384, None, 298, None)"
-"(385, None, 6270, None)"
-"(385, None, 2499, None)"
-"(385, None, 6906, None)"
-"(386, None, 2499, None)"
-"(386, None, 6906, None)"
-"(386, None, 7655, None)"
-"(387, None, 6270, None)"
-"(387, None, 2499, None)"
-"(387, None, 6906, None)"
-"(388, None, 840, None)"
-"(388, None, 2499, None)"
-"(388, None, 6906, None)"
-"(389, None, 2499, None)"
-"(389, None, 6906, None)"
-"(389, None, 5006, None)"
-"(390, None, 6270, None)"
-"(390, None, 840, None)"
-"(390, None, 2499, None)"
-"(391, None, 6270, None)"
-"(391, None, 2499, None)"
-"(391, None, 6906, None)"
-"(392, None, 6270, None)"
-"(392, None, 840, None)"
-"(392, None, 2499, None)"
-"(393, None, 6270, None)"
-"(393, None, 840, None)"
-"(393, None, 2499, None)"
-"(394, None, 6270, None)"
-"(394, None, 840, None)"
-"(394, None, 2499, None)"
-"(395, None, 7655, None)"
-"(395, None, 3184, None)"
-"(395, None, 6335, None)"
-"(396, None, 2499, None)"
-"(396, None, 6906, None)"
-"(396, None, 5319, None)"
-"(397, None, 6270, None)"
-"(397, None, 840, None)"
-"(397, None, 2499, None)"
-"(398, None, 6270, None)"
-"(398, None, 840, None)"
-"(398, None, 2499, None)"
-"(399, None, 2499, None)"
-"(399, None, 5010, None)"
-"(399, None, 6906, None)"
-"(400, None, 6270, None)"
-"(400, None, 840, None)"
-"(400, None, 2499, None)"
-"(401, None, 5319, None)"
-"(401, None, 800, None)"
-"(401, None, 3184, None)"
-"(402, None, 2499, None)"
-"(402, None, 6906, None)"
-"(402, None, 5006, None)"
-"(403, None, 6270, None)"
-"(403, None, 840, None)"
-"(403, None, 2499, None)"
-"(404, None, 5010, None)"
-"(404, None, 6906, None)"
-"(404, None, 7655, None)"
-"(405, None, 6270, None)"
-"(405, None, 840, None)"
-"(405, None, 2499, None)"
-"(406, None, 6270, None)"
-"(406, None, 840, None)"
-"(406, None, 2499, None)"
-"(407, None, 6270, None)"
-"(407, None, 840, None)"
-"(407, None, 2499, None)"
-"(408, None, 6270, None)"
-"(408, None, 840, None)"
-"(408, None, 2499, None)"
-"(409, None, 6270, None)"
-"(409, None, 840, None)"
-"(409, None, 2499, None)"
-"(410, None, 6270, None)"
-"(410, None, 840, None)"
-"(410, None, 2499, None)"
-"(411, None, 6270, None)"
-"(411, None, 840, None)"
-"(411, None, 2499, None)"
-"(412, None, 6270, None)"
-"(412, None, 2499, None)"
-"(412, None, 6906, None)"
-"(413, None, 2499, None)"
-"(413, None, 5010, None)"
-"(413, None, 6906, None)"
-"(414, None, 6270, None)"
-"(414, None, 840, None)"
-"(414, None, 2499, None)"
-"(415, None, 6270, None)"
-"(415, None, 840, None)"
-"(415, None, 2499, None)"
-"(416, None, 840, None)"
-"(416, None, 2499, None)"
-"(416, None, 6906, None)"
-"(417, None, 5006, None)"
-"(417, None, 3203, None)"
-"(417, None, 7655, None)"
-"(418, None, 6270, None)"
-"(418, None, 840, None)"
-"(418, None, 2499, None)"
-"(419, None, 6270, None)"
-"(419, None, 840, None)"
-"(419, None, 2499, None)"
-"(420, None, 4717, None)"
-"(420, None, 5319, None)"
-"(420, None, 800, None)"
-"(421, None, 6270, None)"
-"(421, None, 840, None)"
-"(421, None, 2499, None)"
-"(422, None, 6270, None)"
-"(422, None, 840, None)"
-"(422, None, 2499, None)"
-"(423, None, 3203, None)"
-"(423, None, 332, None)"
-"(423, None, 63, None)"
-"(424, None, 5319, None)"
-"(424, None, 3184, None)"
-"(424, None, 63, None)"
-"(425, None, 6270, None)"
-"(425, None, 840, None)"
-"(425, None, 2499, None)"
-"(426, None, 4717, None)"
-"(426, None, 6276, None)"
-"(426, None, 5180, None)"
-"(427, None, 6270, None)"
-"(427, None, 3203, None)"
-"(427, None, 4717, None)"
-"(428, None, 6270, None)"
-"(428, None, 840, None)"
-"(428, None, 2499, None)"
-"(429, None, 6270, None)"
-"(429, None, 840, None)"
-"(429, None, 2499, None)"
-"(430, None, 6270, None)"
-"(430, None, 840, None)"
-"(430, None, 2499, None)"
-"(431, None, 6270, None)"
-"(431, None, 840, None)"
-"(431, None, 2499, None)"
-"(432, None, 6270, None)"
-"(432, None, 2499, None)"
-"(432, None, 5010, None)"
-"(433, None, 6270, None)"
-"(433, None, 840, None)"
-"(433, None, 2499, None)"
-"(434, None, 840, None)"
-"(434, None, 5010, None)"
-"(434, None, 6906, None)"
-"(435, None, 6270, None)"
-"(435, None, 840, None)"
-"(435, None, 2499, None)"
-"(436, None, 6270, None)"
-"(436, None, 840, None)"
-"(436, None, 2499, None)"
-"(437, None, 6270, None)"
-"(437, None, 840, None)"
-"(437, None, 2499, None)"
-"(438, None, 6270, None)"
-"(438, None, 840, None)"
-"(438, None, 5010, None)"
-"(439, None, 840, None)"
-"(439, None, 2499, None)"
-"(439, None, 5010, None)"
-"(440, None, 6270, None)"
-"(440, None, 840, None)"
-"(440, None, 2499, None)"
-"(441, None, 840, None)"
-"(441, None, 2499, None)"
-"(441, None, 5010, None)"
-"(442, None, 6906, None)"
-"(442, None, 5006, None)"
-"(442, None, 5319, None)"
-"(443, None, 6270, None)"
-"(443, None, 840, None)"
-"(443, None, 2499, None)"
-"(444, None, 6270, None)"
-"(444, None, 840, None)"
-"(444, None, 2499, None)"
-"(445, None, 6270, None)"
-"(445, None, 840, None)"
-"(445, None, 2499, None)"
-"(446, None, 6270, None)"
-"(446, None, 840, None)"
-"(446, None, 2499, None)"
-"(447, None, 2499, None)"
-"(447, None, 5010, None)"
-"(447, None, 6906, None)"
-"(448, None, 6270, None)"
-"(448, None, 840, None)"
-"(448, None, 2499, None)"
-"(449, None, 6270, None)"
-"(449, None, 840, None)"
-"(449, None, 2499, None)"
-"(450, None, 6270, None)"
-"(450, None, 840, None)"
-"(450, None, 2499, None)"
-"(451, None, 6270, None)"
-"(451, None, 840, None)"
-"(451, None, 2499, None)"
-"(452, None, 7655, None)"
-"(452, None, 63, None)"
-"(452, None, 6276, None)"
-"(453, None, 4623, None)"
-"(453, None, 5185, None)"
-"(453, None, 5966, None)"
-"(454, None, 2499, None)"
-"(454, None, 6906, None)"
-"(454, None, 7655, None)"
-"(455, None, 800, None)"
-"(455, None, 7449, None)"
-"(455, None, 6696, None)"
-"(456, None, 800, None)"
-"(456, None, 63, None)"
-"(456, None, 6276, None)"
-"(457, None, 5010, None)"
-"(457, None, 7655, None)"
-"(457, None, 4717, None)"
-"(458, None, 7655, None)"
-"(458, None, 4717, None)"
-"(458, None, 5319, None)"
-"(459, None, 840, None)"
-"(459, None, 2499, None)"
-"(459, None, 6906, None)"
-"(460, None, 840, None)"
-"(460, None, 2499, None)"
-"(460, None, 6906, None)"
-"(461, None, 5319, None)"
-"(461, None, 7557, None)"
-"(461, None, 1093, None)"
-"(462, None, 3184, None)"
-"(462, None, 5180, None)"
-"(462, None, 1093, None)"
-"(463, None, 5319, None)"
-"(463, None, 800, None)"
-"(463, None, 6335, None)"
-"(464, None, 6270, None)"
-"(464, None, 840, None)"
-"(464, None, 2499, None)"
-"(465, None, 6270, None)"
-"(465, None, 840, None)"
-"(465, None, 2499, None)"
-"(466, None, 840, None)"
-"(466, None, 2499, None)"
-"(466, None, 5006, None)"
-"(467, None, 840, None)"
-"(467, None, 5010, None)"
-"(467, None, 5006, None)"
-"(468, None, 6270, None)"
-"(468, None, 840, None)"
-"(468, None, 2499, None)"
-"(469, None, 6270, None)"
-"(469, None, 840, None)"
-"(469, None, 2499, None)"
-"(470, None, 2683, None)"
-"(470, None, 6276, None)"
-"(470, None, 7557, None)"
-"(471, None, 6270, None)"
-"(471, None, 2499, None)"
-"(471, None, 6906, None)"
-"(472, None, 2499, None)"
-"(472, None, 7655, None)"
-"(472, None, 4717, None)"
-"(473, None, 4717, None)"
-"(473, None, 2683, None)"
-"(473, None, 332, None)"
-"(474, None, 6270, None)"
-"(474, None, 840, None)"
-"(474, None, 2499, None)"
-"(475, None, 6270, None)"
-"(475, None, 840, None)"
-"(475, None, 2499, None)"
-"(476, None, 840, None)"
-"(476, None, 4717, None)"
-"(476, None, 2683, None)"
-"(477, None, 840, None)"
-"(477, None, 2499, None)"
-"(477, None, 5010, None)"
-"(478, None, 6270, None)"
-"(478, None, 840, None)"
-"(478, None, 2499, None)"
-"(479, None, 3203, None)"
-"(479, None, 800, None)"
-"(479, None, 332, None)"
-"(480, None, 800, None)"
-"(480, None, 332, None)"
-"(480, None, 63, None)"
-"(481, None, 6335, None)"
-"(481, None, 6276, None)"
-"(481, None, 5180, None)"
-"(482, None, 6270, None)"
-"(482, None, 840, None)"
-"(482, None, 2499, None)"
-"(483, None, 4717, None)"
-"(483, None, 332, None)"
-"(483, None, 6276, None)"
-"(484, None, 5006, None)"
-"(484, None, 7655, None)"
-"(484, None, 3184, None)"
-"(485, None, 3203, None)"
-"(485, None, 800, None)"
-"(485, None, 3184, None)"
-"(486, None, 840, None)"
-"(486, None, 5006, None)"
-"(486, None, 3203, None)"
-"(487, None, 6906, None)"
-"(487, None, 7655, None)"
-"(487, None, 5319, None)"
-"(488, None, 840, None)"
-"(488, None, 5010, None)"
-"(488, None, 5006, None)"
-"(489, None, 6906, None)"
-"(489, None, 5006, None)"
-"(489, None, 7655, None)"
-"(490, None, 6270, None)"
-"(490, None, 840, None)"
-"(490, None, 2499, None)"
-"(491, None, 5010, None)"
-"(491, None, 6906, None)"
-"(491, None, 5006, None)"
-"(492, None, 5010, None)"
-"(492, None, 6906, None)"
-"(492, None, 5006, None)"
-"(493, None, 5010, None)"
-"(493, None, 6906, None)"
-"(493, None, 5006, None)"
-"(494, None, 5010, None)"
-"(494, None, 5006, None)"
-"(494, None, 3203, None)"
-"(495, None, 5010, None)"
-"(495, None, 6906, None)"
-"(495, None, 5006, None)"
-"(496, None, 590, None)"
-"(496, None, 1257, None)"
-"(496, None, 1252, None)"
-"(497, None, 6906, None)"
-"(497, None, 5006, None)"
-"(497, None, 3203, None)"
-"(498, None, 7655, None)"
-"(498, None, 800, None)"
-"(498, None, 332, None)"
-"(499, None, 3203, None)"
-"(499, None, 6276, None)"
-"(499, None, 335, None)"
-"(500, None, 5006, None)"
-"(500, None, 3203, None)"
-"(500, None, 7655, None)"
-"(501, None, 5010, None)"
-"(501, None, 5006, None)"
-"(501, None, 3203, None)"
-"(502, None, 5010, None)"
-"(502, None, 5006, None)"
-"(502, None, 3203, None)"
-"(503, None, 800, None)"
-"(503, None, 3184, None)"
-"(503, None, 5180, None)"
-"(504, None, 800, None)"
-"(504, None, 332, None)"
-"(504, None, 63, None)"
-"(505, None, 840, None)"
-"(505, None, 5010, None)"
-"(505, None, 5006, None)"
-"(506, None, 335, None)"
-"(506, None, 1252, None)"
-"(506, None, 7470, None)"
-"(507, None, 6270, None)"
-"(507, None, 840, None)"
-"(507, None, 2499, None)"
-"(508, None, 2499, None)"
-"(508, None, 4717, None)"
-"(508, None, 2683, None)"
-"(509, None, 840, None)"
-"(509, None, 2499, None)"
-"(509, None, 5010, None)"
-"(510, None, 840, None)"
-"(510, None, 2499, None)"
-"(510, None, 5010, None)"
-"(511, None, 3203, None)"
-"(511, None, 4717, None)"
-"(511, None, 800, None)"
-"(512, None, 3203, None)"
-"(512, None, 7655, None)"
-"(512, None, 4717, None)"
-"(513, None, 840, None)"
-"(513, None, 2499, None)"
-"(513, None, 5010, None)"
-"(514, None, 3203, None)"
-"(514, None, 4717, None)"
-"(514, None, 2683, None)"
-"(515, None, 800, None)"
-"(515, None, 3184, None)"
-"(515, None, 5180, None)"
-"(516, None, 2499, None)"
-"(516, None, 4717, None)"
-"(516, None, 2683, None)"
-"(517, None, 2499, None)"
-"(517, None, 3203, None)"
-"(517, None, 7655, None)"
-"(518, None, 840, None)"
-"(518, None, 2499, None)"
-"(518, None, 3203, None)"
-"(519, None, 4717, None)"
-"(519, None, 800, None)"
-"(519, None, 3184, None)"
-"(520, None, 7655, None)"
-"(520, None, 2683, None)"
-"(520, None, 5319, None)"
-"(521, None, 840, None)"
-"(521, None, 5010, None)"
-"(521, None, 3203, None)"
-"(522, None, 840, None)"
-"(522, None, 2499, None)"
-"(522, None, 5010, None)"
-"(523, None, 840, None)"
-"(523, None, 2499, None)"
-"(523, None, 5010, None)"
-"(524, None, 840, None)"
-"(524, None, 2499, None)"
-"(524, None, 5010, None)"
-"(525, None, 2499, None)"
-"(525, None, 5010, None)"
-"(525, None, 3203, None)"
-"(526, None, 2499, None)"
-"(526, None, 5010, None)"
-"(526, None, 3203, None)"
-"(527, None, 840, None)"
-"(527, None, 2499, None)"
-"(527, None, 5010, None)"
-"(528, None, 840, None)"
-"(528, None, 2499, None)"
-"(528, None, 7655, None)"
-"(529, None, 4717, None)"
-"(529, None, 5319, None)"
-"(529, None, 800, None)"
-"(530, None, 6270, None)"
-"(530, None, 840, None)"
-"(530, None, 2499, None)"
-"(531, None, 840, None)"
-"(531, None, 2499, None)"
-"(531, None, 5010, None)"
-"(532, None, 3203, None)"
-"(532, None, 7655, None)"
-"(532, None, 4717, None)"
-"(533, None, 800, None)"
-"(533, None, 1168, None)"
-"(533, None, 4253, None)"
-"(534, None, 6270, None)"
-"(534, None, 840, None)"
-"(534, None, 2499, None)"
-"(535, None, 2683, None)"
-"(535, None, 3184, None)"
-"(535, None, 6335, None)"
-"(536, None, 840, None)"
-"(536, None, 2499, None)"
-"(536, None, 5010, None)"
-"(537, None, 840, None)"
-"(537, None, 2499, None)"
-"(537, None, 5010, None)"
-"(538, None, 840, None)"
-"(538, None, 2499, None)"
-"(538, None, 5010, None)"
-"(539, None, 840, None)"
-"(539, None, 5010, None)"
-"(539, None, 3203, None)"
-"(540, None, 840, None)"
-"(540, None, 2499, None)"
-"(540, None, 5010, None)"
-"(541, None, 5010, None)"
-"(541, None, 5006, None)"
-"(541, None, 3203, None)"
-"(542, None, 5010, None)"
-"(542, None, 7655, None)"
-"(542, None, 2683, None)"
-"(543, None, 2499, None)"
-"(543, None, 4717, None)"
-"(543, None, 5319, None)"
-"(544, None, 840, None)"
-"(544, None, 2499, None)"
-"(544, None, 5010, None)"
-"(545, None, 840, None)"
-"(545, None, 2499, None)"
-"(545, None, 5010, None)"
-"(546, None, 1093, None)"
-"(546, None, 6654, None)"
-"(546, None, 7213, None)"
-"(547, None, 840, None)"
-"(547, None, 2499, None)"
-"(547, None, 5010, None)"
-"(548, None, 2499, None)"
-"(548, None, 5010, None)"
-"(548, None, 6906, None)"
-"(549, None, 840, None)"
-"(549, None, 2499, None)"
-"(549, None, 3203, None)"
-"(550, None, 840, None)"
-"(550, None, 2499, None)"
-"(550, None, 5010, None)"
-"(551, None, 63, None)"
-"(551, None, 335, None)"
-"(551, None, 7449, None)"
-"(552, None, 63, None)"
-"(552, None, 335, None)"
-"(552, None, 7449, None)"
-"(553, None, 6270, None)"
-"(553, None, 840, None)"
-"(553, None, 2499, None)"
-"(554, None, 6270, None)"
-"(554, None, 5010, None)"
-"(554, None, 6906, None)"
-"(555, None, 840, None)"
-"(555, None, 2499, None)"
-"(555, None, 7655, None)"
-"(556, None, 6270, None)"
-"(556, None, 5010, None)"
-"(556, None, 6906, None)"
-"(557, None, 840, None)"
-"(557, None, 2499, None)"
-"(557, None, 6906, None)"
-"(558, None, 6270, None)"
-"(558, None, 840, None)"
-"(558, None, 2499, None)"
-"(559, None, 6270, None)"
-"(559, None, 840, None)"
-"(559, None, 2499, None)"
-"(560, None, 5180, None)"
-"(560, None, 1093, None)"
-"(560, None, 4987, None)"
-"(561, None, 5006, None)"
-"(561, None, 800, None)"
-"(561, None, 6335, None)"
-"(562, None, 6270, None)"
-"(562, None, 840, None)"
-"(562, None, 2499, None)"
-"(563, None, 2499, None)"
-"(563, None, 5010, None)"
-"(563, None, 6906, None)"
-"(564, None, 332, None)"
-"(564, None, 7449, None)"
-"(564, None, 1511, None)"
-"(565, None, 6270, None)"
-"(565, None, 840, None)"
-"(565, None, 2499, None)"
-"(566, None, 840, None)"
-"(566, None, 5010, None)"
-"(566, None, 5006, None)"
-"(567, None, 840, None)"
-"(567, None, 6906, None)"
-"(567, None, 7655, None)"
-"(568, None, 6270, None)"
-"(568, None, 840, None)"
-"(568, None, 2499, None)"
-"(569, None, 6906, None)"
-"(569, None, 3203, None)"
-"(569, None, 7655, None)"
-"(570, None, 5006, None)"
-"(570, None, 7655, None)"
-"(570, None, 6276, None)"
-"(571, None, 6270, None)"
-"(571, None, 840, None)"
-"(571, None, 2499, None)"
-"(572, None, 2499, None)"
-"(572, None, 5006, None)"
-"(572, None, 3203, None)"
-"(573, None, 5006, None)"
-"(573, None, 3203, None)"
-"(573, None, 4717, None)"
-"(574, None, 5006, None)"
-"(574, None, 3203, None)"
-"(574, None, 2683, None)"
-"(575, None, 6270, None)"
-"(575, None, 840, None)"
-"(575, None, 2499, None)"
-"(576, None, 840, None)"
-"(576, None, 2499, None)"
-"(576, None, 5006, None)"
-"(577, None, 6270, None)"
-"(577, None, 840, None)"
-"(577, None, 2499, None)"
-"(578, None, 5006, None)"
-"(578, None, 3203, None)"
-"(578, None, 5319, None)"
-"(579, None, 6270, None)"
-"(579, None, 840, None)"
-"(579, None, 2499, None)"
-"(580, None, 6270, None)"
-"(580, None, 840, None)"
-"(580, None, 2499, None)"
-"(581, None, 840, None)"
-"(581, None, 5010, None)"
-"(581, None, 5006, None)"
-"(582, None, 6270, None)"
-"(582, None, 840, None)"
-"(582, None, 2499, None)"
-"(583, None, 6270, None)"
-"(583, None, 840, None)"
-"(583, None, 2499, None)"
-"(584, None, 4717, None)"
-"(584, None, 2683, None)"
-"(584, None, 3184, None)"
-"(585, None, 840, None)"
-"(585, None, 2499, None)"
-"(585, None, 5010, None)"
-"(586, None, 6270, None)"
-"(586, None, 840, None)"
-"(586, None, 2499, None)"
-"(587, None, 6906, None)"
-"(587, None, 5006, None)"
-"(587, None, 7655, None)"
-"(588, None, 6270, None)"
-"(588, None, 840, None)"
-"(588, None, 5010, None)"
-"(589, None, 5010, None)"
-"(589, None, 5006, None)"
-"(589, None, 3203, None)"
-"(590, None, 840, None)"
-"(590, None, 5010, None)"
-"(590, None, 5006, None)"
-"(591, None, 5010, None)"
-"(591, None, 5006, None)"
-"(591, None, 3203, None)"
-"(592, None, 6270, None)"
-"(592, None, 840, None)"
-"(592, None, 5010, None)"
-"(593, None, 5010, None)"
-"(593, None, 7655, None)"
-"(593, None, 3184, None)"
-"(594, None, 5010, None)"
-"(594, None, 5006, None)"
-"(594, None, 3203, None)"
-"(595, None, 6270, None)"
-"(595, None, 840, None)"
-"(595, None, 2499, None)"
-"(596, None, 5010, None)"
-"(596, None, 5006, None)"
-"(596, None, 3203, None)"
-"(597, None, 2499, None)"
-"(597, None, 5006, None)"
-"(597, None, 3203, None)"
-"(598, None, 6906, None)"
-"(598, None, 5006, None)"
-"(598, None, 3203, None)"
-"(599, None, 5010, None)"
-"(599, None, 5006, None)"
-"(599, None, 3203, None)"
-"(600, None, 840, None)"
-"(600, None, 5010, None)"
-"(600, None, 6906, None)"
-"(601, None, 6270, None)"
-"(601, None, 840, None)"
-"(601, None, 5010, None)"
-"(602, None, 6270, None)"
-"(602, None, 840, None)"
-"(602, None, 2499, None)"
-"(603, None, 6270, None)"
-"(603, None, 2499, None)"
-"(603, None, 5010, None)"
-"(604, None, 5319, None)"
-"(604, None, 6276, None)"
-"(604, None, 1168, None)"
-"(605, None, 6270, None)"
-"(605, None, 840, None)"
-"(605, None, 2499, None)"
-"(606, None, 2499, None)"
-"(606, None, 5010, None)"
-"(606, None, 6906, None)"
-"(607, None, 6270, None)"
-"(607, None, 840, None)"
-"(607, None, 2499, None)"
-"(608, None, 2499, None)"
-"(608, None, 6906, None)"
-"(608, None, 5006, None)"
-"(609, None, 840, None)"
-"(609, None, 5006, None)"
-"(609, None, 7655, None)"
-"(610, None, 5010, None)"
-"(610, None, 5006, None)"
-"(610, None, 3203, None)"
-"(611, None, 6270, None)"
-"(611, None, 840, None)"
-"(611, None, 2499, None)"
-"(612, None, 6270, None)"
-"(612, None, 840, None)"
-"(612, None, 2499, None)"
-"(613, None, 840, None)"
-"(613, None, 2499, None)"
-"(613, None, 6906, None)"
-"(614, None, 840, None)"
-"(614, None, 5010, None)"
-"(614, None, 6906, None)"
-"(615, None, 840, None)"
-"(615, None, 2499, None)"
-"(615, None, 5006, None)"
-"(616, None, 6270, None)"
-"(616, None, 840, None)"
-"(616, None, 2499, None)"
-"(617, None, 6270, None)"
-"(617, None, 840, None)"
-"(617, None, 5010, None)"
-"(618, None, 6270, None)"
-"(618, None, 840, None)"
-"(618, None, 2499, None)"
-"(619, None, 800, None)"
-"(619, None, 3184, None)"
-"(619, None, 6335, None)"
-"(620, None, 840, None)"
-"(620, None, 2499, None)"
-"(620, None, 5006, None)"
-"(621, None, 840, None)"
-"(621, None, 2499, None)"
-"(621, None, 2683, None)"
-"(622, None, 840, None)"
-"(622, None, 2499, None)"
-"(622, None, 5006, None)"
-"(623, None, 6906, None)"
-"(623, None, 5319, None)"
-"(623, None, 3184, None)"
-"(624, None, 5319, None)"
-"(624, None, 800, None)"
-"(624, None, 3184, None)"
-"(625, None, 840, None)"
-"(625, None, 2499, None)"
-"(625, None, 6906, None)"
-"(626, None, 840, None)"
-"(626, None, 2499, None)"
-"(626, None, 6906, None)"
-"(627, None, 800, None)"
-"(627, None, 332, None)"
-"(627, None, 6335, None)"
-"(628, None, 840, None)"
-"(628, None, 2499, None)"
-"(628, None, 6906, None)"
-"(629, None, 1168, None)"
-"(629, None, 5180, None)"
-"(629, None, 4253, None)"
-"(630, None, 3184, None)"
-"(630, None, 6335, None)"
-"(630, None, 63, None)"
-"(631, None, 6270, None)"
-"(631, None, 840, None)"
-"(631, None, 2499, None)"
-"(632, None, 7655, None)"
-"(632, None, 2683, None)"
-"(632, None, 5319, None)"
-"(633, None, 5006, None)"
-"(633, None, 800, None)"
-"(633, None, 6335, None)"
-"(634, None, 840, None)"
-"(634, None, 2499, None)"
-"(634, None, 6906, None)"
-"(635, None, 840, None)"
-"(635, None, 5010, None)"
-"(635, None, 6906, None)"
-"(636, None, 840, None)"
-"(636, None, 2499, None)"
-"(636, None, 5010, None)"
-"(637, None, 840, None)"
-"(637, None, 5010, None)"
-"(637, None, 6906, None)"
-"(638, None, 840, None)"
-"(638, None, 2499, None)"
-"(638, None, 5010, None)"
-"(639, None, 6270, None)"
-"(639, None, 840, None)"
-"(639, None, 2499, None)"
-"(640, None, 6906, None)"
-"(640, None, 4717, None)"
-"(640, None, 2683, None)"
-"(641, None, 2499, None)"
-"(641, None, 5006, None)"
-"(641, None, 3203, None)"
-"(642, None, 6270, None)"
-"(642, None, 840, None)"
-"(642, None, 2499, None)"
-"(643, None, 6270, None)"
-"(643, None, 2499, None)"
-"(643, None, 5010, None)"
-"(644, None, 2499, None)"
-"(644, None, 7655, None)"
-"(644, None, 4717, None)"
-"(645, None, 2499, None)"
-"(645, None, 6906, None)"
-"(645, None, 5006, None)"
-"(646, None, 5010, None)"
-"(646, None, 5006, None)"
-"(646, None, 3203, None)"
-"(647, None, 6270, None)"
-"(647, None, 2499, None)"
-"(647, None, 5010, None)"
-"(648, None, 840, None)"
-"(648, None, 2499, None)"
-"(648, None, 5010, None)"
-"(649, None, 6270, None)"
-"(649, None, 840, None)"
-"(649, None, 2499, None)"
-"(650, None, 6270, None)"
-"(650, None, 840, None)"
-"(650, None, 2499, None)"
-"(651, None, 3184, None)"
-"(651, None, 6276, None)"
-"(651, None, 1168, None)"
-"(652, None, 840, None)"
-"(652, None, 5010, None)"
-"(652, None, 6906, None)"
-"(653, None, 840, None)"
-"(653, None, 2499, None)"
-"(653, None, 5010, None)"
-"(654, None, 6270, None)"
-"(654, None, 5010, None)"
-"(654, None, 6906, None)"
-"(655, None, 5010, None)"
-"(655, None, 6906, None)"
-"(655, None, 5006, None)"
-"(656, None, 6270, None)"
-"(656, None, 840, None)"
-"(656, None, 2499, None)"
-"(657, None, 5010, None)"
-"(657, None, 5006, None)"
-"(657, None, 3203, None)"
-"(658, None, 5010, None)"
-"(658, None, 5006, None)"
-"(658, None, 3203, None)"
-"(659, None, 5010, None)"
-"(659, None, 5006, None)"
-"(659, None, 3203, None)"
-"(660, None, 6270, None)"
-"(660, None, 840, None)"
-"(660, None, 2499, None)"
-"(661, None, 6270, None)"
-"(661, None, 840, None)"
-"(661, None, 2499, None)"
-"(662, None, 5010, None)"
-"(662, None, 5006, None)"
-"(662, None, 3203, None)"
-"(663, None, 3203, None)"
-"(663, None, 7655, None)"
-"(663, None, 3184, None)"
-"(664, None, 6270, None)"
-"(664, None, 840, None)"
-"(664, None, 2499, None)"
-"(665, None, 6270, None)"
-"(665, None, 840, None)"
-"(665, None, 2499, None)"
-"(666, None, 6270, None)"
-"(666, None, 840, None)"
-"(666, None, 2499, None)"
-"(667, None, 2499, None)"
-"(667, None, 6906, None)"
-"(667, None, 5006, None)"
-"(668, None, 6270, None)"
-"(668, None, 840, None)"
-"(668, None, 2499, None)"
-"(669, None, 6270, None)"
-"(669, None, 840, None)"
-"(669, None, 2499, None)"
-"(670, None, 5010, None)"
-"(670, None, 5006, None)"
-"(670, None, 3203, None)"
-"(671, None, 5010, None)"
-"(671, None, 5006, None)"
-"(671, None, 3203, None)"
-"(672, None, 6270, None)"
-"(672, None, 840, None)"
-"(672, None, 2499, None)"
-"(673, None, 5319, None)"
-"(673, None, 3184, None)"
-"(673, None, 6335, None)"
-"(674, None, 6270, None)"
-"(674, None, 840, None)"
-"(674, None, 5010, None)"
-"(675, None, 840, None)"
-"(675, None, 6906, None)"
-"(675, None, 4717, None)"
-"(676, None, 6906, None)"
-"(676, None, 3203, None)"
-"(676, None, 4717, None)"
-"(677, None, 840, None)"
-"(677, None, 2499, None)"
-"(677, None, 5010, None)"
-"(678, None, 840, None)"
-"(678, None, 2499, None)"
-"(678, None, 5010, None)"
-"(679, None, 5010, None)"
-"(679, None, 6906, None)"
-"(679, None, 7655, None)"
-"(680, None, 6906, None)"
-"(680, None, 7655, None)"
-"(680, None, 4717, None)"
-"(681, None, 840, None)"
-"(681, None, 2499, None)"
-"(681, None, 6906, None)"
-"(682, None, 6270, None)"
-"(682, None, 840, None)"
-"(682, None, 2499, None)"
-"(683, None, 6270, None)"
-"(683, None, 840, None)"
-"(683, None, 2499, None)"
-"(684, None, 6270, None)"
-"(684, None, 840, None)"
-"(684, None, 2499, None)"
-"(685, None, 2683, None)"
-"(685, None, 800, None)"
-"(685, None, 332, None)"
-"(686, None, 6270, None)"
-"(686, None, 840, None)"
-"(686, None, 2499, None)"
-"(687, None, 6270, None)"
-"(687, None, 840, None)"
-"(687, None, 2499, None)"
-"(688, None, 6270, None)"
-"(688, None, 840, None)"
-"(688, None, 2499, None)"
-"(689, None, 2499, None)"
-"(689, None, 5010, None)"
-"(689, None, 4717, None)"
-"(690, None, 6270, None)"
-"(690, None, 840, None)"
-"(690, None, 5010, None)"
-"(691, None, 6270, None)"
-"(691, None, 840, None)"
-"(691, None, 2499, None)"
-"(692, None, 6270, None)"
-"(692, None, 840, None)"
-"(692, None, 2499, None)"
-"(693, None, 840, None)"
-"(693, None, 2499, None)"
-"(693, None, 6906, None)"
-"(694, None, 6270, None)"
-"(694, None, 840, None)"
-"(694, None, 2499, None)"
-"(695, None, 6270, None)"
-"(695, None, 840, None)"
-"(695, None, 2499, None)"
-"(696, None, 840, None)"
-"(696, None, 2499, None)"
-"(696, None, 6906, None)"
-"(697, None, 2499, None)"
-"(697, None, 4717, None)"
-"(697, None, 800, None)"
-"(698, None, 840, None)"
-"(698, None, 2499, None)"
-"(698, None, 6906, None)"
-"(699, None, 4717, None)"
-"(699, None, 2683, None)"
-"(699, None, 800, None)"
-"(700, None, 5010, None)"
-"(700, None, 6906, None)"
-"(700, None, 5006, None)"
-"(701, None, 5010, None)"
-"(701, None, 6906, None)"
-"(701, None, 5006, None)"
-"(702, None, 6270, None)"
-"(702, None, 840, None)"
-"(702, None, 2499, None)"
-"(703, None, 840, None)"
-"(703, None, 2499, None)"
-"(703, None, 5006, None)"
-"(704, None, 6906, None)"
-"(704, None, 5006, None)"
-"(704, None, 7655, None)"
-"(705, None, 2499, None)"
-"(705, None, 6906, None)"
-"(705, None, 5006, None)"
-"(706, None, 6270, None)"
-"(706, None, 840, None)"
-"(706, None, 6906, None)"
-"(707, None, 6270, None)"
-"(707, None, 840, None)"
-"(707, None, 2499, None)"
-"(708, None, 2499, None)"
-"(708, None, 6906, None)"
-"(708, None, 7655, None)"
-"(709, None, 2499, None)"
-"(709, None, 6906, None)"
-"(709, None, 5006, None)"
-"(710, None, 7655, None)"
-"(710, None, 4717, None)"
-"(710, None, 800, None)"
-"(711, None, 4717, None)"
-"(711, None, 6276, None)"
-"(711, None, 1168, None)"
-"(712, None, 840, None)"
-"(712, None, 2499, None)"
-"(712, None, 5006, None)"
-"(713, None, 7655, None)"
-"(713, None, 4717, None)"
-"(713, None, 5319, None)"
-"(714, None, 6270, None)"
-"(714, None, 840, None)"
-"(714, None, 2499, None)"
-"(715, None, 6270, None)"
-"(715, None, 840, None)"
-"(715, None, 2499, None)"
-"(716, None, 2499, None)"
-"(716, None, 5006, None)"
-"(716, None, 4717, None)"
-"(717, None, 5006, None)"
-"(717, None, 7655, None)"
-"(717, None, 5319, None)"
-"(718, None, 840, None)"
-"(718, None, 2499, None)"
-"(718, None, 6906, None)"
-"(719, None, 5006, None)"
-"(719, None, 4717, None)"
-"(719, None, 3184, None)"
-"(720, None, 840, None)"
-"(720, None, 6906, None)"
-"(720, None, 3203, None)"
-"(721, None, 840, None)"
-"(721, None, 3203, None)"
-"(721, None, 7655, None)"
-"(722, None, 6270, None)"
-"(722, None, 840, None)"
-"(722, None, 6906, None)"
-"(723, None, 5006, None)"
-"(723, None, 7655, None)"
-"(723, None, 4717, None)"
-"(724, None, 3203, None)"
-"(724, None, 5319, None)"
-"(724, None, 800, None)"
-"(725, None, 5010, None)"
-"(725, None, 6906, None)"
-"(725, None, 5006, None)"
-"(726, None, 5010, None)"
-"(726, None, 6906, None)"
-"(726, None, 5006, None)"
-"(727, None, 3184, None)"
-"(727, None, 63, None)"
-"(727, None, 5180, None)"
-"(728, None, 4253, None)"
-"(728, None, 7449, None)"
-"(728, None, 6654, None)"
-"(729, None, 6270, None)"
-"(729, None, 840, None)"
-"(729, None, 2499, None)"
-"(730, None, 6270, None)"
-"(730, None, 840, None)"
-"(730, None, 2499, None)"
-"(731, None, 6270, None)"
-"(731, None, 840, None)"
-"(731, None, 2499, None)"
-"(732, None, 6270, None)"
-"(732, None, 840, None)"
-"(732, None, 5010, None)"
-"(733, None, 6270, None)"
-"(733, None, 5010, None)"
-"(733, None, 5006, None)"
-"(734, None, 800, None)"
-"(734, None, 6335, None)"
-"(734, None, 63, None)"
-"(735, None, 3203, None)"
-"(735, None, 7655, None)"
-"(735, None, 800, None)"
-"(736, None, 6276, None)"
-"(736, None, 1093, None)"
-"(736, None, 6654, None)"
-"(737, None, 840, None)"
-"(737, None, 2499, None)"
-"(737, None, 6906, None)"
-"(738, None, 5010, None)"
-"(738, None, 6906, None)"
-"(738, None, 5006, None)"
-"(739, None, 6270, None)"
-"(739, None, 840, None)"
-"(739, None, 2499, None)"
-"(740, None, 6270, None)"
-"(740, None, 840, None)"
-"(740, None, 2499, None)"
-"(741, None, 840, None)"
-"(741, None, 2499, None)"
-"(741, None, 3203, None)"
-"(742, None, 2499, None)"
-"(742, None, 4717, None)"
-"(742, None, 2683, None)"
-"(743, None, 63, None)"
-"(743, None, 335, None)"
-"(743, None, 4253, None)"
-"(744, None, 5006, None)"
-"(744, None, 7655, None)"
-"(744, None, 4717, None)"
-"(745, None, 5006, None)"
-"(745, None, 3203, None)"
-"(745, None, 6276, None)"
-"(746, None, 840, None)"
-"(746, None, 2499, None)"
-"(746, None, 7655, None)"
-"(747, None, 840, None)"
-"(747, None, 800, None)"
-"(747, None, 3184, None)"
-"(748, None, 6270, None)"
-"(748, None, 2499, None)"
-"(748, None, 5010, None)"
-"(749, None, 840, None)"
-"(749, None, 2683, None)"
-"(749, None, 3184, None)"
-"(750, None, 6906, None)"
-"(750, None, 5006, None)"
-"(750, None, 3203, None)"
-"(751, None, 5006, None)"
-"(751, None, 3203, None)"
-"(751, None, 4717, None)"
-"(752, None, 2499, None)"
-"(752, None, 5006, None)"
-"(752, None, 7655, None)"
-"(753, None, 840, None)"
-"(753, None, 2499, None)"
-"(753, None, 6906, None)"
-"(754, None, 5006, None)"
-"(754, None, 6276, None)"
-"(754, None, 1511, None)"
-"(755, None, 5010, None)"
-"(755, None, 6906, None)"
-"(755, None, 3203, None)"
-"(756, None, 6270, None)"
-"(756, None, 840, None)"
-"(756, None, 2499, None)"
-"(757, None, 840, None)"
-"(757, None, 2499, None)"
-"(757, None, 5010, None)"
-"(758, None, 840, None)"
-"(758, None, 5010, None)"
-"(758, None, 5006, None)"
-"(759, None, 6270, None)"
-"(759, None, 840, None)"
-"(759, None, 2499, None)"
-"(760, None, 2499, None)"
-"(760, None, 5010, None)"
-"(760, None, 3203, None)"
-"(761, None, 840, None)"
-"(761, None, 2499, None)"
-"(761, None, 5010, None)"
-"(762, None, 2499, None)"
-"(762, None, 6906, None)"
-"(762, None, 3203, None)"
-"(763, None, 6270, None)"
-"(763, None, 840, None)"
-"(763, None, 2499, None)"
-"(764, None, 840, None)"
-"(764, None, 7655, None)"
-"(764, None, 2683, None)"
-"(765, None, 6270, None)"
-"(765, None, 840, None)"
-"(765, None, 2499, None)"
-"(766, None, 5010, None)"
-"(766, None, 5006, None)"
-"(766, None, 3203, None)"
-"(767, None, 840, None)"
-"(767, None, 5010, None)"
-"(767, None, 5006, None)"
-"(768, None, 840, None)"
-"(768, None, 2499, None)"
-"(768, None, 6906, None)"
-"(769, None, 6270, None)"
-"(769, None, 840, None)"
-"(769, None, 2499, None)"
-"(770, None, 5010, None)"
-"(770, None, 5006, None)"
-"(770, None, 3203, None)"
-"(771, None, 840, None)"
-"(771, None, 2499, None)"
-"(771, None, 6906, None)"
-"(772, None, 6270, None)"
-"(772, None, 6906, None)"
-"(772, None, 5006, None)"
-"(773, None, 2499, None)"
-"(773, None, 5006, None)"
-"(773, None, 7655, None)"
-"(774, None, 6270, None)"
-"(774, None, 5010, None)"
-"(774, None, 6906, None)"
-"(775, None, 800, None)"
-"(775, None, 6335, None)"
-"(775, None, 4253, None)"
-"(776, None, 840, None)"
-"(776, None, 2499, None)"
-"(776, None, 6906, None)"
-"(777, None, 5006, None)"
-"(777, None, 7655, None)"
-"(777, None, 800, None)"
-"(778, None, 7655, None)"
-"(778, None, 4717, None)"
-"(778, None, 2683, None)"
-"(779, None, 6270, None)"
-"(779, None, 6906, None)"
-"(779, None, 3203, None)"
-"(780, None, 7655, None)"
-"(780, None, 6335, None)"
-"(780, None, 1168, None)"
-"(781, None, 6270, None)"
-"(781, None, 840, None)"
-"(781, None, 2499, None)"
-"(782, None, 840, None)"
-"(782, None, 2499, None)"
-"(782, None, 6906, None)"
-"(783, None, 6270, None)"
-"(783, None, 840, None)"
-"(783, None, 2499, None)"
-"(784, None, 6270, None)"
-"(784, None, 840, None)"
-"(784, None, 2499, None)"
-"(785, None, 6270, None)"
-"(785, None, 840, None)"
-"(785, None, 2499, None)"
-"(786, None, 840, None)"
-"(786, None, 5010, None)"
-"(786, None, 6906, None)"
-"(787, None, 6270, None)"
-"(787, None, 840, None)"
-"(787, None, 5010, None)"
-"(788, None, 2499, None)"
-"(788, None, 5010, None)"
-"(788, None, 6906, None)"
-"(789, None, 6270, None)"
-"(789, None, 840, None)"
-"(789, None, 2499, None)"
-"(790, None, 5010, None)"
-"(790, None, 6906, None)"
-"(790, None, 800, None)"
-"(791, None, 6270, None)"
-"(791, None, 840, None)"
-"(791, None, 2499, None)"
-"(792, None, 6906, None)"
-"(792, None, 3203, None)"
-"(792, None, 2683, None)"
-"(793, None, 6270, None)"
-"(793, None, 840, None)"
-"(793, None, 2499, None)"
-"(794, None, 2499, None)"
-"(794, None, 5010, None)"
-"(794, None, 4717, None)"
-"(795, None, 840, None)"
-"(795, None, 2499, None)"
-"(795, None, 4717, None)"
-"(796, None, 6906, None)"
-"(796, None, 7655, None)"
-"(796, None, 2683, None)"
-"(797, None, 6270, None)"
-"(797, None, 840, None)"
-"(797, None, 2499, None)"
-"(798, None, 6270, None)"
-"(798, None, 840, None)"
-"(798, None, 2499, None)"
-"(799, None, 6270, None)"
-"(799, None, 840, None)"
-"(799, None, 2499, None)"
-"(800, None, 840, None)"
-"(800, None, 2499, None)"
-"(800, None, 6906, None)"
-"(801, None, 6270, None)"
-"(801, None, 840, None)"
-"(801, None, 5010, None)"
-"(802, None, 6270, None)"
-"(802, None, 840, None)"
-"(802, None, 2499, None)"
-"(803, None, 2499, None)"
-"(803, None, 6906, None)"
-"(803, None, 5006, None)"
-"(804, None, 6270, None)"
-"(804, None, 840, None)"
-"(804, None, 2499, None)"
-"(805, None, 6270, None)"
-"(805, None, 840, None)"
-"(805, None, 2499, None)"
-"(806, None, 6270, None)"
-"(806, None, 840, None)"
-"(806, None, 2499, None)"
-"(807, None, 5010, None)"
-"(807, None, 6906, None)"
-"(807, None, 3203, None)"
-"(808, None, 6270, None)"
-"(808, None, 840, None)"
-"(808, None, 2499, None)"
-"(809, None, 6270, None)"
-"(809, None, 840, None)"
-"(809, None, 2499, None)"
-"(810, None, 6270, None)"
-"(810, None, 840, None)"
-"(810, None, 2499, None)"
-"(811, None, 6270, None)"
-"(811, None, 840, None)"
-"(811, None, 2499, None)"
-"(812, None, 5010, None)"
-"(812, None, 5006, None)"
-"(812, None, 3203, None)"
-"(813, None, 6270, None)"
-"(813, None, 840, None)"
-"(813, None, 2499, None)"
-"(814, None, 840, None)"
-"(814, None, 2499, None)"
-"(814, None, 5006, None)"
-"(815, None, 840, None)"
-"(815, None, 5010, None)"
-"(815, None, 5006, None)"
-"(816, None, 2499, None)"
-"(816, None, 2683, None)"
-"(816, None, 3184, None)"
-"(817, None, 6270, None)"
-"(817, None, 840, None)"
-"(817, None, 2499, None)"
-"(818, None, 840, None)"
-"(818, None, 2499, None)"
-"(818, None, 3203, None)"
-"(819, None, 6906, None)"
-"(819, None, 332, None)"
-"(819, None, 1168, None)"
-"(820, None, 840, None)"
-"(820, None, 2499, None)"
-"(820, None, 5010, None)"
-"(821, None, 6270, None)"
-"(821, None, 840, None)"
-"(821, None, 2499, None)"
-"(822, None, 6270, None)"
-"(822, None, 2499, None)"
-"(822, None, 6906, None)"
-"(823, None, 5010, None)"
-"(823, None, 6906, None)"
-"(823, None, 5006, None)"
-"(824, None, 332, None)"
-"(824, None, 63, None)"
-"(824, None, 335, None)"
-"(825, None, 840, None)"
-"(825, None, 2499, None)"
-"(825, None, 332, None)"
-"(826, None, 840, None)"
-"(826, None, 2499, None)"
-"(826, None, 4717, None)"
-"(827, None, 2499, None)"
-"(827, None, 5010, None)"
-"(827, None, 6906, None)"
-"(828, None, 6335, None)"
-"(828, None, 5180, None)"
-"(828, None, 4253, None)"
-"(829, None, 6276, None)"
-"(829, None, 1168, None)"
-"(829, None, 335, None)"
-"(830, None, 5010, None)"
-"(830, None, 5006, None)"
-"(830, None, 3203, None)"
-"(831, None, 800, None)"
-"(831, None, 7449, None)"
-"(831, None, 1093, None)"
-"(832, None, 2683, None)"
-"(832, None, 3184, None)"
-"(832, None, 6335, None)"
-"(833, None, 4717, None)"
-"(833, None, 2683, None)"
-"(833, None, 5319, None)"
-"(834, None, 840, None)"
-"(834, None, 5010, None)"
-"(834, None, 6906, None)"
-"(835, None, 6270, None)"
-"(835, None, 840, None)"
-"(835, None, 2499, None)"
-"(836, None, 2499, None)"
-"(836, None, 3203, None)"
-"(836, None, 7655, None)"
-"(837, None, 6270, None)"
-"(837, None, 840, None)"
-"(837, None, 2499, None)"
-"(838, None, 6270, None)"
-"(838, None, 2499, None)"
-"(838, None, 6906, None)"
-"(839, None, 6270, None)"
-"(839, None, 2499, None)"
-"(839, None, 6906, None)"
-"(840, None, 6270, None)"
-"(840, None, 840, None)"
-"(840, None, 5010, None)"
-"(841, None, 2499, None)"
-"(841, None, 5006, None)"
-"(841, None, 7655, None)"
-"(842, None, 5006, None)"
-"(842, None, 800, None)"
-"(842, None, 6335, None)"
-"(843, None, 6270, None)"
-"(843, None, 2499, None)"
-"(843, None, 6906, None)"
-"(844, None, 6270, None)"
-"(844, None, 2499, None)"
-"(844, None, 6906, None)"
-"(845, None, 2499, None)"
-"(845, None, 6906, None)"
-"(845, None, 3203, None)"
-"(846, None, 6335, None)"
-"(846, None, 4253, None)"
-"(846, None, 590, None)"
-"(847, None, 6270, None)"
-"(847, None, 840, None)"
-"(847, None, 2499, None)"
-"(848, None, 5006, None)"
-"(848, None, 7655, None)"
-"(848, None, 2683, None)"
-"(849, None, 6270, None)"
-"(849, None, 2499, None)"
-"(849, None, 6906, None)"
-"(850, None, 6270, None)"
-"(850, None, 2499, None)"
-"(850, None, 6906, None)"
-"(851, None, 5006, None)"
-"(851, None, 3203, None)"
-"(851, None, 800, None)"
-"(852, None, 5006, None)"
-"(852, None, 3203, None)"
-"(852, None, 2683, None)"
-"(853, None, 5006, None)"
-"(853, None, 3203, None)"
-"(853, None, 7655, None)"
-"(854, None, 2499, None)"
-"(854, None, 2683, None)"
-"(854, None, 332, None)"
-"(855, None, 6270, None)"
-"(855, None, 2499, None)"
-"(855, None, 6906, None)"
-"(856, None, 3203, None)"
-"(856, None, 332, None)"
-"(856, None, 4253, None)"
-"(857, None, 5006, None)"
-"(857, None, 6335, None)"
-"(857, None, 63, None)"
-"(858, None, 5006, None)"
-"(858, None, 7655, None)"
-"(858, None, 3184, None)"
-"(859, None, 6270, None)"
-"(859, None, 2499, None)"
-"(859, None, 6906, None)"
-"(860, None, 3203, None)"
-"(860, None, 7655, None)"
-"(860, None, 2683, None)"
-"(861, None, 5006, None)"
-"(861, None, 3203, None)"
-"(861, None, 2683, None)"
-"(862, None, 6270, None)"
-"(862, None, 2499, None)"
-"(862, None, 6906, None)"
-"(863, None, 5010, None)"
-"(863, None, 5006, None)"
-"(863, None, 3203, None)"
-"(864, None, 6270, None)"
-"(864, None, 840, None)"
-"(864, None, 2499, None)"
-"(865, None, 6906, None)"
-"(865, None, 7655, None)"
-"(865, None, 2683, None)"
-"(866, None, 6270, None)"
-"(866, None, 2499, None)"
-"(866, None, 6906, None)"
-"(867, None, 6270, None)"
-"(867, None, 6906, None)"
-"(867, None, 5006, None)"
-"(868, None, 6270, None)"
-"(868, None, 840, None)"
-"(868, None, 2499, None)"
-"(869, None, 6270, None)"
-"(869, None, 2499, None)"
-"(869, None, 6906, None)"
-"(870, None, 2499, None)"
-"(870, None, 5010, None)"
-"(870, None, 6906, None)"
-"(871, None, 6270, None)"
-"(871, None, 6906, None)"
-"(871, None, 5006, None)"
-"(872, None, 6270, None)"
-"(872, None, 2499, None)"
-"(872, None, 6906, None)"
-"(873, None, 6270, None)"
-"(873, None, 2499, None)"
-"(873, None, 5010, None)"
-"(874, None, 5006, None)"
-"(874, None, 3203, None)"
-"(874, None, 7655, None)"
-"(875, None, 2499, None)"
-"(875, None, 5010, None)"
-"(875, None, 6906, None)"
-"(876, None, 6270, None)"
-"(876, None, 840, None)"
-"(876, None, 2499, None)"
-"(877, None, 2499, None)"
-"(877, None, 3203, None)"
-"(877, None, 7655, None)"
-"(878, None, 6270, None)"
-"(878, None, 2499, None)"
-"(878, None, 6906, None)"
-"(879, None, 6270, None)"
-"(879, None, 2499, None)"
-"(879, None, 6906, None)"
-"(880, None, 5006, None)"
-"(880, None, 3203, None)"
-"(880, None, 2683, None)"
-"(881, None, 2499, None)"
-"(881, None, 6906, None)"
-"(881, None, 5006, None)"
-"(882, None, 6270, None)"
-"(882, None, 2499, None)"
-"(882, None, 6906, None)"
-"(883, None, 6270, None)"
-"(883, None, 2499, None)"
-"(883, None, 6906, None)"
-"(884, None, 840, None)"
-"(884, None, 2499, None)"
-"(884, None, 5010, None)"
-"(885, None, 5010, None)"
-"(885, None, 6906, None)"
-"(885, None, 5006, None)"
-"(886, None, 6270, None)"
-"(886, None, 840, None)"
-"(886, None, 5010, None)"
-"(887, None, 6906, None)"
-"(887, None, 5006, None)"
-"(887, None, 3203, None)"
-"(888, None, 3203, None)"
-"(888, None, 800, None)"
-"(888, None, 332, None)"
-"(889, None, 6270, None)"
-"(889, None, 840, None)"
-"(889, None, 2499, None)"
-"(890, None, 6270, None)"
-"(890, None, 2499, None)"
-"(890, None, 6906, None)"
-"(891, None, 6270, None)"
-"(891, None, 840, None)"
-"(891, None, 2499, None)"
-"(892, None, 2499, None)"
-"(892, None, 5010, None)"
-"(892, None, 6906, None)"
-"(893, None, 840, None)"
-"(893, None, 2499, None)"
-"(893, None, 6906, None)"
-"(894, None, 6906, None)"
-"(894, None, 332, None)"
-"(894, None, 6335, None)"
-"(895, None, 6270, None)"
-"(895, None, 840, None)"
-"(895, None, 2499, None)"
-"(896, None, 6270, None)"
-"(896, None, 840, None)"
-"(896, None, 2499, None)"
-"(897, None, 6270, None)"
-"(897, None, 840, None)"
-"(897, None, 2499, None)"
-"(898, None, 6270, None)"
-"(898, None, 840, None)"
-"(898, None, 2499, None)"
-"(899, None, 5006, None)"
-"(899, None, 3203, None)"
-"(899, None, 7655, None)"
-"(900, None, 3184, None)"
-"(900, None, 6276, None)"
-"(900, None, 7449, None)"
-"(901, None, 800, None)"
-"(901, None, 7557, None)"
-"(901, None, 1093, None)"
-"(902, None, 800, None)"
-"(902, None, 6335, None)"
-"(902, None, 1168, None)"
-"(903, None, 3184, None)"
-"(903, None, 332, None)"
-"(903, None, 63, None)"
-"(904, None, 6906, None)"
-"(904, None, 5006, None)"
-"(904, None, 3203, None)"
-"(905, None, 3203, None)"
-"(905, None, 7655, None)"
-"(905, None, 4717, None)"
-"(906, None, 5006, None)"
-"(906, None, 3203, None)"
-"(906, None, 7655, None)"
-"(907, None, 800, None)"
-"(907, None, 332, None)"
-"(907, None, 335, None)"
-"(908, None, 4717, None)"
-"(908, None, 3184, None)"
-"(908, None, 332, None)"
-"(909, None, 2683, None)"
-"(909, None, 800, None)"
-"(909, None, 6335, None)"
-"(910, None, 6270, None)"
-"(910, None, 2499, None)"
-"(910, None, 6906, None)"
-"(911, None, 6270, None)"
-"(911, None, 2499, None)"
-"(911, None, 5010, None)"
-"(912, None, 6270, None)"
-"(912, None, 840, None)"
-"(912, None, 2499, None)"
-"(913, None, 6270, None)"
-"(913, None, 840, None)"
-"(913, None, 2499, None)"
-"(914, None, 5010, None)"
-"(914, None, 6906, None)"
-"(914, None, 5006, None)"
-"(915, None, 6270, None)"
-"(915, None, 5010, None)"
-"(915, None, 6906, None)"
-"(916, None, 6270, None)"
-"(916, None, 840, None)"
-"(916, None, 5010, None)"
-"(917, None, 6270, None)"
-"(917, None, 840, None)"
-"(917, None, 2499, None)"
-"(918, None, 840, None)"
-"(918, None, 2499, None)"
-"(918, None, 5010, None)"
-"(919, None, 6906, None)"
-"(919, None, 7655, None)"
-"(919, None, 5319, None)"
-"(920, None, 6270, None)"
-"(920, None, 2499, None)"
-"(920, None, 5010, None)"
-"(921, None, 6270, None)"
-"(921, None, 2499, None)"
-"(921, None, 6906, None)"
-"(922, None, 2683, None)"
-"(922, None, 800, None)"
-"(922, None, 3184, None)"
-"(923, None, 6270, None)"
-"(923, None, 840, None)"
-"(923, None, 2499, None)"
-"(924, None, 6270, None)"
-"(924, None, 2499, None)"
-"(924, None, 6906, None)"
-"(925, None, 6270, None)"
-"(925, None, 840, None)"
-"(925, None, 2499, None)"
-"(926, None, 800, None)"
-"(926, None, 6335, None)"
-"(926, None, 7449, None)"
-"(927, None, 6270, None)"
-"(927, None, 840, None)"
-"(927, None, 2499, None)"
-"(928, None, 6270, None)"
-"(928, None, 840, None)"
-"(928, None, 2499, None)"
-"(929, None, 1093, None)"
-"(929, None, 1910, None)"
-"(929, None, 6696, None)"
-"(930, None, 6906, None)"
-"(930, None, 3203, None)"
-"(930, None, 7655, None)"
-"(931, None, 800, None)"
-"(931, None, 332, None)"
-"(931, None, 63, None)"
-"(932, None, 2499, None)"
-"(932, None, 5010, None)"
-"(932, None, 6906, None)"
-"(933, None, 6906, None)"
-"(933, None, 3203, None)"
-"(933, None, 7655, None)"
-"(934, None, 6906, None)"
-"(934, None, 3203, None)"
-"(934, None, 7655, None)"
-"(935, None, 6270, None)"
-"(935, None, 6906, None)"
-"(935, None, 5006, None)"
-"(936, None, 840, None)"
-"(936, None, 7655, None)"
-"(936, None, 800, None)"
-"(937, None, 7655, None)"
-"(937, None, 2683, None)"
-"(937, None, 4253, None)"
-"(938, None, 2499, None)"
-"(938, None, 5006, None)"
-"(938, None, 2683, None)"
-"(939, None, 6270, None)"
-"(939, None, 840, None)"
-"(939, None, 2499, None)"
-"(940, None, 2683, None)"
-"(940, None, 800, None)"
-"(940, None, 6276, None)"
-"(941, None, 2499, None)"
-"(941, None, 5010, None)"
-"(941, None, 6906, None)"
-"(942, None, 7655, None)"
-"(942, None, 4717, None)"
-"(942, None, 2683, None)"
-"(943, None, 6270, None)"
-"(943, None, 840, None)"
-"(943, None, 2499, None)"
-"(944, None, 6270, None)"
-"(944, None, 840, None)"
-"(944, None, 2499, None)"
-"(945, None, 6270, None)"
-"(945, None, 840, None)"
-"(945, None, 2499, None)"
-"(946, None, 5010, None)"
-"(946, None, 5006, None)"
-"(946, None, 3184, None)"
-"(947, None, 6270, None)"
-"(947, None, 840, None)"
-"(947, None, 2499, None)"
-"(948, None, 5006, None)"
-"(948, None, 5319, None)"
-"(948, None, 3184, None)"
-"(949, None, 840, None)"
-"(949, None, 2499, None)"
-"(949, None, 5010, None)"
-"(950, None, 2499, None)"
-"(950, None, 5010, None)"
-"(950, None, 5006, None)"
-"(951, None, 840, None)"
-"(951, None, 2499, None)"
-"(951, None, 5010, None)"
-"(952, None, 840, None)"
-"(952, None, 2499, None)"
-"(952, None, 5010, None)"
-"(953, None, 6270, None)"
-"(953, None, 840, None)"
-"(953, None, 2499, None)"
-"(954, None, 6270, None)"
-"(954, None, 840, None)"
-"(954, None, 2499, None)"
-"(955, None, 6270, None)"
-"(955, None, 5010, None)"
-"(955, None, 4717, None)"
-"(956, None, 6270, None)"
-"(956, None, 840, None)"
-"(956, None, 2499, None)"
-"(957, None, 6270, None)"
-"(957, None, 840, None)"
-"(957, None, 2499, None)"
-"(958, None, 6270, None)"
-"(958, None, 2499, None)"
-"(958, None, 6906, None)"
-"(959, None, 6270, None)"
-"(959, None, 840, None)"
-"(959, None, 2499, None)"
-"(960, None, 5010, None)"
-"(960, None, 5006, None)"
-"(960, None, 3203, None)"
-"(961, None, 6270, None)"
-"(961, None, 840, None)"
-"(961, None, 2499, None)"
-"(962, None, 6270, None)"
-"(962, None, 840, None)"
-"(962, None, 2499, None)"
-"(963, None, 5006, None)"
-"(963, None, 3203, None)"
-"(963, None, 7655, None)"
-"(964, None, 840, None)"
-"(964, None, 2499, None)"
-"(964, None, 6906, None)"
-"(965, None, 6270, None)"
-"(965, None, 840, None)"
-"(965, None, 2499, None)"
-"(966, None, 6270, None)"
-"(966, None, 840, None)"
-"(966, None, 2499, None)"
-"(967, None, 6906, None)"
-"(967, None, 800, None)"
-"(967, None, 332, None)"
-"(968, None, 6270, None)"
-"(968, None, 2499, None)"
-"(968, None, 6906, None)"
-"(969, None, 6270, None)"
-"(969, None, 2499, None)"
-"(969, None, 5010, None)"
-"(970, None, 840, None)"
-"(970, None, 2499, None)"
-"(970, None, 6906, None)"
-"(971, None, 840, None)"
-"(971, None, 2499, None)"
-"(971, None, 6906, None)"
-"(972, None, 2499, None)"
-"(972, None, 5010, None)"
-"(972, None, 6906, None)"
-"(973, None, 840, None)"
-"(973, None, 5010, None)"
-"(973, None, 5006, None)"
-"(974, None, 2499, None)"
-"(974, None, 5010, None)"
-"(974, None, 6906, None)"
-"(975, None, 5006, None)"
-"(975, None, 3203, None)"
-"(975, None, 7655, None)"
-"(976, None, 6270, None)"
-"(976, None, 840, None)"
-"(976, None, 2499, None)"
-"(977, None, 5010, None)"
-"(977, None, 5006, None)"
-"(977, None, 3203, None)"
-"(978, None, 5006, None)"
-"(978, None, 800, None)"
-"(978, None, 3184, None)"
-"(979, None, 5010, None)"
-"(979, None, 7655, None)"
-"(979, None, 4717, None)"
-"(980, None, 7655, None)"
-"(980, None, 1168, None)"
-"(980, None, 7449, None)"
-"(981, None, 5010, None)"
-"(981, None, 5006, None)"
-"(981, None, 3203, None)"
-"(982, None, 6906, None)"
-"(982, None, 5006, None)"
-"(982, None, 800, None)"
-"(983, None, 840, None)"
-"(983, None, 5010, None)"
-"(983, None, 6906, None)"
-"(984, None, 840, None)"
-"(984, None, 5010, None)"
-"(984, None, 6906, None)"
-"(985, None, 6270, None)"
-"(985, None, 840, None)"
-"(985, None, 2499, None)"
-"(986, None, 840, None)"
-"(986, None, 2499, None)"
-"(986, None, 4717, None)"
-"(987, None, 6270, None)"
-"(987, None, 840, None)"
-"(987, None, 2499, None)"
-"(988, None, 840, None)"
-"(988, None, 2499, None)"
-"(988, None, 6906, None)"
-"(989, None, 840, None)"
-"(989, None, 2499, None)"
-"(989, None, 6906, None)"
-"(990, None, 6270, None)"
-"(990, None, 840, None)"
-"(990, None, 2499, None)"
-"(991, None, 2499, None)"
-"(991, None, 6906, None)"
-"(991, None, 3203, None)"
-"(992, None, 5010, None)"
-"(992, None, 6906, None)"
-"(992, None, 3203, None)"
-"(993, None, 6270, None)"
-"(993, None, 2499, None)"
-"(993, None, 5006, None)"
-"(994, None, 6270, None)"
-"(994, None, 840, None)"
-"(994, None, 2499, None)"
-"(995, None, 840, None)"
-"(995, None, 2499, None)"
-"(995, None, 6906, None)"
-"(996, None, 840, None)"
-"(996, None, 2499, None)"
-"(996, None, 5006, None)"
-"(997, None, 840, None)"
-"(997, None, 2499, None)"
-"(997, None, 6906, None)"
-"(998, None, 840, None)"
-"(998, None, 2499, None)"
-"(998, None, 6906, None)"
-"(999, None, 2499, None)"
-"(999, None, 800, None)"
-"(999, None, 3184, None)"
+u,i1,i2,hl,nl
+0,,840,,
+0,,2499,,
+0,,5010,,
+1,,2499,,
+1,,5010,,
+1,,6906,,
+2,,6270,,
+2,,840,,
+2,,2499,,
+3,,7449,,
+3,,6654,,
+3,,1257,,
+4,,5010,,
+4,,6906,,
+4,,7655,,
+5,,6270,,
+5,,840,,
+5,,2499,,
+6,,840,,
+6,,2499,,
+6,,5010,,
+7,,6270,,
+7,,840,,
+7,,2499,,
+8,,840,,
+8,,2499,,
+8,,4717,,
+9,,840,,
+9,,2499,,
+9,,5010,,
+10,,5319,,
+10,,332,,
+10,,63,,
+11,,840,,
+11,,2499,,
+11,,6906,,
+12,,6270,,
+12,,840,,
+12,,2499,,
+13,,840,,
+13,,2499,,
+13,,5010,,
+14,,6270,,
+14,,840,,
+14,,2499,,
+15,,840,,
+15,,2499,,
+15,,5010,,
+16,,3203,,
+16,,7655,,
+16,,5319,,
+17,,1168,,
+17,,7213,,
+17,,3217,,
+18,,840,,
+18,,2499,,
+18,,5010,,
+19,,3203,,
+19,,4717,,
+19,,2683,,
+20,,6335,,
+20,,63,,
+20,,335,,
+21,,6270,,
+21,,840,,
+21,,2499,,
+22,,6270,,
+22,,840,,
+22,,2499,,
+23,,840,,
+23,,2499,,
+23,,6906,,
+24,,5006,,
+24,,3203,,
+24,,5319,,
+25,,332,,
+25,,63,,
+25,,7449,,
+26,,6270,,
+26,,2499,,
+26,,6906,,
+27,,840,,
+27,,5010,,
+27,,2683,,
+28,,840,,
+28,,2499,,
+28,,6906,,
+29,,6270,,
+29,,2499,,
+29,,6906,,
+30,,6270,,
+30,,2499,,
+30,,6906,,
+31,,6270,,
+31,,2499,,
+31,,6906,,
+32,,6906,,
+32,,3203,,
+32,,5319,,
+33,,6270,,
+33,,840,,
+33,,2499,,
+34,,6270,,
+34,,2499,,
+34,,6906,,
+35,,6270,,
+35,,840,,
+35,,2499,,
+36,,6270,,
+36,,2499,,
+36,,6906,,
+37,,332,,
+37,,1168,,
+37,,4253,,
+38,,6270,,
+38,,2499,,
+38,,6906,,
+39,,5006,,
+39,,800,,
+39,,3184,,
+40,,6270,,
+40,,840,,
+40,,5010,,
+41,,7655,,
+41,,3184,,
+41,,332,,
+42,,840,,
+42,,6906,,
+42,,5006,,
+43,,2683,,
+43,,800,,
+43,,63,,
+44,,840,,
+44,,2499,,
+44,,5319,,
+45,,6270,,
+45,,840,,
+45,,2499,,
+46,,7655,,
+46,,332,,
+46,,6335,,
+47,,5010,,
+47,,5006,,
+47,,3203,,
+48,,6270,,
+48,,840,,
+48,,2499,,
+49,,840,,
+49,,2499,,
+49,,4717,,
+50,,3203,,
+50,,7655,,
+50,,4717,,
+51,,7655,,
+51,,5319,,
+51,,3184,,
+52,,5006,,
+52,,3203,,
+52,,7655,,
+53,,7655,,
+53,,4717,,
+53,,5319,,
+54,,5010,,
+54,,5006,,
+54,,3203,,
+55,,6335,,
+55,,335,,
+55,,4253,,
+56,,335,,
+56,,7470,,
+56,,1833,,
+57,,840,,
+57,,5006,,
+57,,3203,,
+58,,840,,
+58,,2499,,
+58,,5006,,
+59,,6270,,
+59,,840,,
+59,,2499,,
+60,,6270,,
+60,,840,,
+60,,2499,,
+61,,5010,,
+61,,5006,,
+61,,3203,,
+62,,5010,,
+62,,5006,,
+62,,3203,,
+63,,5010,,
+63,,5006,,
+63,,3203,,
+64,,2499,,
+64,,5010,,
+64,,6906,,
+65,,7655,,
+65,,4717,,
+65,,2683,,
+66,,6270,,
+66,,840,,
+66,,2499,,
+67,,5319,,
+67,,63,,
+67,,1168,,
+68,,2499,,
+68,,5010,,
+68,,6906,,
+69,,800,,
+69,,3184,,
+69,,63,,
+70,,840,,
+70,,2499,,
+70,,5010,,
+71,,800,,
+71,,63,,
+71,,1168,,
+72,,5010,,
+72,,4717,,
+72,,332,,
+73,,5006,,
+73,,3203,,
+73,,4717,,
+74,,6270,,
+74,,2499,,
+74,,5010,,
+75,,6906,,
+75,,7655,,
+75,,2683,,
+76,,6270,,
+76,,840,,
+76,,2499,,
+77,,335,,
+77,,7449,,
+77,,1511,,
+78,,3203,,
+78,,5319,,
+78,,332,,
+79,,6270,,
+79,,840,,
+79,,2499,,
+80,,3203,,
+80,,5319,,
+80,,6335,,
+81,,840,,
+81,,5010,,
+81,,5006,,
+82,,4253,,
+82,,4623,,
+82,,1124,,
+83,,6270,,
+83,,840,,
+83,,2499,,
+84,,840,,
+84,,5010,,
+84,,5006,,
+85,,7655,,
+85,,2683,,
+85,,4253,,
+86,,840,,
+86,,2499,,
+86,,6906,,
+87,,6270,,
+87,,840,,
+87,,2499,,
+88,,6270,,
+88,,840,,
+88,,2499,,
+89,,5006,,
+89,,3203,,
+89,,5319,,
+90,,6270,,
+90,,840,,
+90,,2499,,
+91,,7655,,
+91,,4717,,
+91,,800,,
+92,,6270,,
+92,,840,,
+92,,5010,,
+93,,6270,,
+93,,840,,
+93,,2499,,
+94,,,,
+95,,2499,,
+95,,5010,,
+95,,6906,,
+96,,5010,,
+96,,5006,,
+96,,3203,,
+97,,6335,,
+97,,63,,
+97,,5180,,
+98,,7655,,
+98,,2683,,
+98,,5319,,
+99,,5010,,
+99,,6906,,
+99,,3203,,
+100,,332,,
+100,,7449,,
+100,,7557,,
+101,,2499,,
+101,,5010,,
+101,,6906,,
+102,,6270,,
+102,,2499,,
+102,,5010,,
+103,,1511,,
+103,,1252,,
+103,,7470,,
+104,,840,,
+104,,4717,,
+104,,5319,,
+105,,6906,,
+105,,4717,,
+105,,5319,,
+106,,6270,,
+106,,5010,,
+106,,6906,,
+107,,6906,,
+107,,332,,
+107,,63,,
+108,,3217,,
+108,,4623,,
+108,,7946,,
+109,,5006,,
+109,,6335,,
+109,,6276,,
+110,,335,,
+110,,7557,,
+110,,6654,,
+111,,2499,,
+111,,5010,,
+111,,6906,,
+112,,332,,
+112,,6276,,
+112,,1168,,
+113,,840,,
+113,,2499,,
+113,,5010,,
+114,,6270,,
+114,,2499,,
+114,,5010,,
+115,,5010,,
+115,,5006,,
+115,,3203,,
+116,,5010,,
+116,,6906,,
+116,,5006,,
+117,,5010,,
+117,,6906,,
+117,,5006,,
+118,,840,,
+118,,5006,,
+118,,3203,,
+119,,5010,,
+119,,5006,,
+119,,3203,,
+120,,6906,,
+120,,5006,,
+120,,3203,,
+121,,3203,,
+121,,6276,,
+121,,4253,,
+122,,5010,,
+122,,3203,,
+122,,2683,,
+123,,5010,,
+123,,5006,,
+123,,3203,,
+124,,3184,,
+124,,335,,
+124,,4253,,
+125,,6270,,
+125,,840,,
+125,,2499,,
+126,,6270,,
+126,,840,,
+126,,2499,,
+127,,840,,
+127,,2499,,
+127,,6906,,
+128,,4253,,
+128,,590,,
+128,,6696,,
+129,,840,,
+129,,6906,,
+129,,5006,,
+130,,1093,,
+130,,3484,,
+130,,4574,,
+131,,6270,,
+131,,2499,,
+131,,4717,,
+132,,7655,,
+132,,6335,,
+132,,4253,,
+133,,6270,,
+133,,840,,
+133,,2499,,
+134,,2499,,
+134,,6906,,
+134,,5006,,
+135,,5006,,
+135,,3203,,
+135,,332,,
+136,,840,,
+136,,2499,,
+136,,5010,,
+137,,3203,,
+137,,7449,,
+137,,7213,,
+138,,5006,,
+138,,3203,,
+138,,7655,,
+139,,6906,,
+139,,5006,,
+139,,2683,,
+140,,2499,,
+140,,3203,,
+140,,7655,,
+141,,4623,,
+141,,1252,,
+141,,5648,,
+142,,840,,
+142,,5006,,
+142,,3203,,
+143,,3217,,
+143,,1124,,
+143,,3723,,
+144,,6270,,
+144,,840,,
+144,,6906,,
+145,,6270,,
+145,,840,,
+145,,2499,,
+146,,4717,,
+146,,332,,
+146,,63,,
+147,,6270,,
+147,,840,,
+147,,2499,,
+148,,6270,,
+148,,840,,
+148,,2499,,
+149,,6270,,
+149,,840,,
+149,,2499,,
+150,,5010,,
+150,,5006,,
+150,,7655,,
+151,,4717,,
+151,,5319,,
+151,,3184,,
+152,,6906,,
+152,,7655,,
+152,,4717,,
+153,,6270,,
+153,,840,,
+153,,2499,,
+154,,5006,,
+154,,7655,,
+154,,332,,
+155,,6270,,
+155,,5010,,
+155,,5006,,
+156,,3203,,
+156,,800,,
+156,,3184,,
+157,,2499,,
+157,,6906,,
+157,,5006,,
+158,,6270,,
+158,,5010,,
+158,,6906,,
+159,,5180,,
+159,,335,,
+159,,7449,,
+160,,6270,,
+160,,840,,
+160,,2499,,
+161,,2499,,
+161,,5010,,
+161,,6906,,
+162,,840,,
+162,,5006,,
+162,,4717,,
+163,,6270,,
+163,,840,,
+163,,2499,,
+164,,1910,,
+164,,1252,,
+164,,1833,,
+165,,7655,,
+165,,5319,,
+165,,800,,
+166,,840,,
+166,,2499,,
+166,,6906,,
+167,,6270,,
+167,,840,,
+167,,2499,,
+168,,7655,,
+168,,2683,,
+168,,800,,
+169,,7655,,
+169,,5319,,
+169,,800,,
+170,,2683,,
+170,,800,,
+170,,332,,
+171,,5319,,
+171,,6335,,
+171,,63,,
+172,,63,,
+172,,335,,
+172,,7449,,
+173,,840,,
+173,,2499,,
+173,,5010,,
+174,,840,,
+174,,2499,,
+174,,5010,,
+175,,3184,,
+175,,4253,,
+175,,7449,,
+176,,4717,,
+176,,2683,,
+176,,4253,,
+177,,7655,,
+177,,4717,,
+177,,3184,,
+178,,840,,
+178,,2499,,
+178,,5010,,
+179,,3184,,
+179,,6335,,
+179,,1168,,
+180,,6270,,
+180,,840,,
+180,,2499,,
+181,,840,,
+181,,5010,,
+181,,4717,,
+182,,840,,
+182,,2499,,
+182,,3203,,
+183,,5010,,
+183,,5006,,
+183,,3203,,
+184,,335,,
+184,,4253,,
+184,,6696,,
+185,,840,,
+185,,5010,,
+185,,5006,,
+186,,6270,,
+186,,840,,
+186,,2499,,
+187,,2499,,
+187,,6906,,
+187,,3203,,
+188,,7655,,
+188,,5319,,
+188,,6276,,
+189,,5319,,
+189,,3184,,
+189,,6335,,
+190,,1168,,
+190,,6654,,
+190,,1511,,
+191,,5010,,
+191,,3203,,
+191,,5319,,
+192,,5010,,
+192,,6906,,
+192,,3203,,
+193,,2856,,
+193,,1329,,
+193,,3497,,
+194,,840,,
+194,,2499,,
+194,,5010,,
+195,,6270,,
+195,,840,,
+195,,2499,,
+196,,2499,,
+196,,5006,,
+196,,3203,,
+197,,840,,
+197,,2499,,
+197,,5010,,
+198,,6270,,
+198,,5010,,
+198,,6906,,
+199,,840,,
+199,,2499,,
+199,,6906,,
+200,,840,,
+200,,2499,,
+200,,2683,,
+201,,6270,,
+201,,840,,
+201,,2499,,
+202,,6270,,
+202,,840,,
+202,,2499,,
+203,,840,,
+203,,2683,,
+203,,5319,,
+204,,840,,
+204,,5010,,
+204,,4717,,
+205,,6270,,
+205,,840,,
+205,,2499,,
+206,,6270,,
+206,,840,,
+206,,2499,,
+207,,5010,,
+207,,5319,,
+207,,3184,,
+208,,6276,,
+208,,4623,,
+208,,1252,,
+209,,5010,,
+209,,5006,,
+209,,3203,,
+210,,5006,,
+210,,3203,,
+210,,7655,,
+211,,5006,,
+211,,6335,,
+211,,63,,
+212,,7655,,
+212,,4717,,
+212,,5319,,
+213,,840,,
+213,,2499,,
+213,,5010,,
+214,,6270,,
+214,,840,,
+214,,2499,,
+215,,5010,,
+215,,7655,,
+215,,4717,,
+216,,840,,
+216,,2499,,
+216,,6906,,
+217,,6270,,
+217,,840,,
+217,,2499,,
+218,,5010,,
+218,,3203,,
+218,,2683,,
+219,,5010,,
+219,,5006,,
+219,,3203,,
+220,,3203,,
+220,,5319,,
+220,,1168,,
+221,,2683,,
+221,,3184,,
+221,,6335,,
+222,,6270,,
+222,,840,,
+222,,2499,,
+223,,6270,,
+223,,840,,
+223,,2499,,
+224,,6270,,
+224,,840,,
+224,,2499,,
+225,,5010,,
+225,,6906,,
+225,,5006,,
+226,,2499,,
+226,,5006,,
+226,,3184,,
+227,,6270,,
+227,,840,,
+227,,2499,,
+228,,6270,,
+228,,2499,,
+228,,5010,,
+229,,6270,,
+229,,840,,
+229,,2499,,
+230,,6270,,
+230,,5006,,
+230,,3203,,
+231,,3203,,
+231,,4717,,
+231,,5319,,
+232,,5010,,
+232,,6906,,
+232,,5006,,
+233,,6270,,
+233,,840,,
+233,,2499,,
+234,,5006,,
+234,,2683,,
+234,,63,,
+235,,1168,,
+235,,1093,,
+235,,1257,,
+236,,6696,,
+236,,3723,,
+236,,5648,,
+237,,5006,,
+237,,3203,,
+237,,7655,,
+238,,5006,,
+238,,5319,,
+238,,3184,,
+239,,7655,,
+239,,3184,,
+239,,6335,,
+240,,5006,,
+240,,3203,,
+240,,4717,,
+241,,5168,,
+241,,2816,,
+241,,3502,,
+242,,63,,
+242,,335,,
+242,,4253,,
+243,,1168,,
+243,,335,,
+243,,7449,,
+244,,800,,
+244,,63,,
+244,,1168,,
+245,,6276,,
+245,,7449,,
+245,,1093,,
+246,,5006,,
+246,,4717,,
+246,,5319,,
+247,,2683,,
+247,,332,,
+247,,335,,
+248,,2683,,
+248,,5180,,
+248,,335,,
+249,,6906,,
+249,,2683,,
+249,,332,,
+250,,6270,,
+250,,840,,
+250,,2499,,
+251,,6270,,
+251,,840,,
+251,,2499,,
+252,,6270,,
+252,,840,,
+252,,2499,,
+253,,840,,
+253,,5010,,
+253,,6906,,
+254,,840,,
+254,,2499,,
+254,,5010,,
+255,,840,,
+255,,2499,,
+255,,5010,,
+256,,6270,,
+256,,840,,
+256,,2499,,
+257,,6270,,
+257,,840,,
+257,,2499,,
+258,,6270,,
+258,,840,,
+258,,2499,,
+259,,2499,,
+259,,2683,,
+259,,800,,
+260,,5006,,
+260,,332,,
+260,,6335,,
+261,,6270,,
+261,,840,,
+261,,2499,,
+262,,332,,
+262,,63,,
+262,,6276,,
+263,,7655,,
+263,,4717,,
+263,,63,,
+264,,6906,,
+264,,4717,,
+264,,3184,,
+265,,7655,,
+265,,5319,,
+265,,800,,
+266,,3184,,
+266,,63,,
+266,,6654,,
+267,,7449,,
+267,,6654,,
+267,,1511,,
+268,,5006,,
+268,,800,,
+268,,5180,,
+269,,6270,,
+269,,840,,
+269,,2499,,
+270,,840,,
+270,,2499,,
+270,,6906,,
+271,,4717,,
+271,,800,,
+271,,332,,
+272,,2499,,
+272,,5010,,
+272,,6906,,
+273,,6270,,
+273,,840,,
+273,,2499,,
+274,,5010,,
+274,,3203,,
+274,,2683,,
+275,,5695,,
+275,,2131,,
+275,,7233,,
+276,,2499,,
+276,,5006,,
+276,,3203,,
+277,,840,,
+277,,5010,,
+277,,6906,,
+278,,5006,,
+278,,3203,,
+278,,3184,,
+279,,6906,,
+279,,5006,,
+279,,800,,
+280,,6270,,
+280,,840,,
+280,,2499,,
+281,,5006,,
+281,,2683,,
+281,,800,,
+282,,5010,,
+282,,6906,,
+282,,4717,,
+283,,2499,,
+283,,5010,,
+283,,3203,,
+284,,6906,,
+284,,4717,,
+284,,5319,,
+285,,6270,,
+285,,2499,,
+285,,6906,,
+286,,6270,,
+286,,840,,
+286,,2499,,
+287,,6270,,
+287,,840,,
+287,,2499,,
+288,,5010,,
+288,,4717,,
+288,,2683,,
+289,,6270,,
+289,,840,,
+289,,2499,,
+290,,5010,,
+290,,5006,,
+290,,3203,,
+291,,4717,,
+291,,5319,,
+291,,6276,,
+292,,6270,,
+292,,840,,
+292,,2499,,
+293,,5010,,
+293,,800,,
+293,,63,,
+294,,6270,,
+294,,840,,
+294,,2499,,
+295,,6276,,
+295,,6654,,
+295,,590,,
+296,,3184,,
+296,,6276,,
+296,,1168,,
+297,,5010,,
+297,,5006,,
+297,,3203,,
+298,,6270,,
+298,,840,,
+298,,5010,,
+299,,6270,,
+299,,5006,,
+299,,7655,,
+300,,6270,,
+300,,840,,
+300,,5010,,
+301,,5006,,
+301,,3203,,
+301,,7655,,
+302,,6270,,
+302,,840,,
+302,,2499,,
+303,,5010,,
+303,,5006,,
+303,,3203,,
+304,,840,,
+304,,2499,,
+304,,5010,,
+305,,5319,,
+305,,3184,,
+305,,6335,,
+306,,2499,,
+306,,5010,,
+306,,5006,,
+307,,2499,,
+307,,6906,,
+307,,5006,,
+308,,840,,
+308,,2499,,
+308,,5010,,
+309,,6270,,
+309,,840,,
+309,,2499,,
+310,,5006,,
+310,,3184,,
+310,,63,,
+311,,6270,,
+311,,840,,
+311,,5010,,
+312,,840,,
+312,,5010,,
+312,,5006,,
+313,,840,,
+313,,5010,,
+313,,5006,,
+314,,6270,,
+314,,840,,
+314,,2499,,
+315,,5010,,
+315,,5006,,
+315,,4717,,
+316,,6270,,
+316,,840,,
+316,,2499,,
+317,,5010,,
+317,,6906,,
+317,,3203,,
+318,,6270,,
+318,,6906,,
+318,,5006,,
+319,,63,,
+319,,1168,,
+319,,6654,,
+320,,3203,,
+320,,2683,,
+320,,800,,
+321,,3184,,
+321,,6335,,
+321,,6276,,
+322,,2499,,
+322,,5006,,
+322,,3203,,
+323,,5010,,
+323,,5006,,
+323,,3203,,
+324,,2499,,
+324,,7655,,
+324,,4717,,
+325,,4717,,
+325,,5319,,
+325,,800,,
+326,,6906,,
+326,,800,,
+326,,3184,,
+327,,5010,,
+327,,5006,,
+327,,3203,,
+328,,6335,,
+328,,6276,,
+328,,5180,,
+329,,840,,
+329,,2499,,
+329,,5010,,
+330,,4717,,
+330,,63,,
+330,,1168,,
+331,,6270,,
+331,,840,,
+331,,2499,,
+332,,6270,,
+332,,840,,
+332,,2499,,
+333,,6270,,
+333,,840,,
+333,,2499,,
+334,,840,,
+334,,5010,,
+334,,6906,,
+335,,2499,,
+335,,6906,,
+335,,3203,,
+336,,840,,
+336,,5006,,
+336,,3203,,
+337,,6906,,
+337,,3203,,
+337,,2683,,
+338,,6906,,
+338,,7655,,
+338,,2683,,
+339,,6270,,
+339,,840,,
+339,,5010,,
+340,,6906,,
+340,,2683,,
+340,,800,,
+341,,840,,
+341,,2499,,
+341,,5010,,
+342,,1168,,
+342,,6654,,
+342,,590,,
+343,,2499,,
+343,,6906,,
+343,,3203,,
+344,,6270,,
+344,,840,,
+344,,2499,,
+345,,332,,
+345,,63,,
+345,,335,,
+346,,2499,,
+346,,6906,,
+346,,5006,,
+347,,2683,,
+347,,5319,,
+347,,3184,,
+348,,63,,
+348,,6276,,
+348,,335,,
+349,,4253,,
+349,,1257,,
+349,,4987,,
+350,,800,,
+350,,6335,,
+350,,7557,,
+351,,840,,
+351,,5010,,
+351,,3203,,
+352,,2499,,
+352,,6906,,
+352,,4717,,
+353,,5010,,
+353,,7655,,
+353,,800,,
+354,,6270,,
+354,,840,,
+354,,2499,,
+355,,5006,,
+355,,7655,,
+355,,332,,
+356,,7655,,
+356,,2683,,
+356,,800,,
+357,,335,,
+357,,6654,,
+357,,1511,,
+358,,5010,,
+358,,5006,,
+358,,3203,,
+359,,4717,,
+359,,3184,,
+359,,7449,,
+360,,840,,
+360,,5006,,
+360,,3203,,
+361,,840,,
+361,,7655,,
+361,,2683,,
+362,,840,,
+362,,5010,,
+362,,5006,,
+363,,5010,,
+363,,5006,,
+363,,7655,,
+364,,6270,,
+364,,840,,
+364,,2499,,
+365,,840,,
+365,,5010,,
+365,,5006,,
+366,,6270,,
+366,,840,,
+366,,2499,,
+367,,840,,
+367,,5010,,
+367,,5006,,
+368,,6270,,
+368,,840,,
+368,,2499,,
+369,,6276,,
+369,,7557,,
+369,,1093,,
+370,,6270,,
+370,,840,,
+370,,2499,,
+371,,6270,,
+371,,2499,,
+371,,6906,,
+372,,5010,,
+372,,5006,,
+372,,3203,,
+373,,2683,,
+373,,3184,,
+373,,335,,
+374,,840,,
+374,,3203,,
+374,,7655,,
+375,,5010,,
+375,,6906,,
+375,,5006,,
+376,,6906,,
+376,,3203,,
+376,,2683,,
+377,,1910,,
+377,,6696,,
+377,,1252,,
+378,,6270,,
+378,,840,,
+378,,2499,,
+379,,6270,,
+379,,2499,,
+379,,6906,,
+380,,800,,
+380,,332,,
+380,,63,,
+381,,2499,,
+381,,5006,,
+381,,7655,,
+382,,5006,,
+382,,7655,,
+382,,2683,,
+383,,6270,,
+383,,840,,
+383,,2499,,
+384,,335,,
+384,,1252,,
+384,,298,,
+385,,6270,,
+385,,2499,,
+385,,6906,,
+386,,2499,,
+386,,6906,,
+386,,7655,,
+387,,6270,,
+387,,2499,,
+387,,6906,,
+388,,840,,
+388,,2499,,
+388,,6906,,
+389,,2499,,
+389,,6906,,
+389,,5006,,
+390,,6270,,
+390,,840,,
+390,,2499,,
+391,,6270,,
+391,,2499,,
+391,,6906,,
+392,,6270,,
+392,,840,,
+392,,2499,,
+393,,6270,,
+393,,840,,
+393,,2499,,
+394,,6270,,
+394,,840,,
+394,,2499,,
+395,,7655,,
+395,,3184,,
+395,,6335,,
+396,,2499,,
+396,,6906,,
+396,,5319,,
+397,,6270,,
+397,,840,,
+397,,2499,,
+398,,6270,,
+398,,840,,
+398,,2499,,
+399,,2499,,
+399,,5010,,
+399,,6906,,
+400,,6270,,
+400,,840,,
+400,,2499,,
+401,,5319,,
+401,,800,,
+401,,3184,,
+402,,2499,,
+402,,6906,,
+402,,5006,,
+403,,6270,,
+403,,840,,
+403,,2499,,
+404,,5010,,
+404,,6906,,
+404,,7655,,
+405,,6270,,
+405,,840,,
+405,,2499,,
+406,,6270,,
+406,,840,,
+406,,2499,,
+407,,6270,,
+407,,840,,
+407,,2499,,
+408,,6270,,
+408,,840,,
+408,,2499,,
+409,,6270,,
+409,,840,,
+409,,2499,,
+410,,6270,,
+410,,840,,
+410,,2499,,
+411,,6270,,
+411,,840,,
+411,,2499,,
+412,,6270,,
+412,,2499,,
+412,,6906,,
+413,,2499,,
+413,,5010,,
+413,,6906,,
+414,,6270,,
+414,,840,,
+414,,2499,,
+415,,6270,,
+415,,840,,
+415,,2499,,
+416,,840,,
+416,,2499,,
+416,,6906,,
+417,,5006,,
+417,,3203,,
+417,,7655,,
+418,,6270,,
+418,,840,,
+418,,2499,,
+419,,6270,,
+419,,840,,
+419,,2499,,
+420,,4717,,
+420,,5319,,
+420,,800,,
+421,,6270,,
+421,,840,,
+421,,2499,,
+422,,6270,,
+422,,840,,
+422,,2499,,
+423,,3203,,
+423,,332,,
+423,,63,,
+424,,5319,,
+424,,3184,,
+424,,63,,
+425,,6270,,
+425,,840,,
+425,,2499,,
+426,,4717,,
+426,,6276,,
+426,,5180,,
+427,,6270,,
+427,,3203,,
+427,,4717,,
+428,,6270,,
+428,,840,,
+428,,2499,,
+429,,6270,,
+429,,840,,
+429,,2499,,
+430,,6270,,
+430,,840,,
+430,,2499,,
+431,,6270,,
+431,,840,,
+431,,2499,,
+432,,6270,,
+432,,2499,,
+432,,5010,,
+433,,6270,,
+433,,840,,
+433,,2499,,
+434,,840,,
+434,,5010,,
+434,,6906,,
+435,,6270,,
+435,,840,,
+435,,2499,,
+436,,6270,,
+436,,840,,
+436,,2499,,
+437,,6270,,
+437,,840,,
+437,,2499,,
+438,,6270,,
+438,,840,,
+438,,5010,,
+439,,840,,
+439,,2499,,
+439,,5010,,
+440,,6270,,
+440,,840,,
+440,,2499,,
+441,,840,,
+441,,2499,,
+441,,5010,,
+442,,6906,,
+442,,5006,,
+442,,5319,,
+443,,6270,,
+443,,840,,
+443,,2499,,
+444,,6270,,
+444,,840,,
+444,,2499,,
+445,,6270,,
+445,,840,,
+445,,2499,,
+446,,6270,,
+446,,840,,
+446,,2499,,
+447,,2499,,
+447,,5010,,
+447,,6906,,
+448,,6270,,
+448,,840,,
+448,,2499,,
+449,,6270,,
+449,,840,,
+449,,2499,,
+450,,6270,,
+450,,840,,
+450,,2499,,
+451,,6270,,
+451,,840,,
+451,,2499,,
+452,,7655,,
+452,,63,,
+452,,6276,,
+453,,4623,,
+453,,5185,,
+453,,5966,,
+454,,2499,,
+454,,6906,,
+454,,7655,,
+455,,800,,
+455,,7449,,
+455,,6696,,
+456,,800,,
+456,,63,,
+456,,6276,,
+457,,5010,,
+457,,7655,,
+457,,4717,,
+458,,7655,,
+458,,4717,,
+458,,5319,,
+459,,840,,
+459,,2499,,
+459,,6906,,
+460,,840,,
+460,,2499,,
+460,,6906,,
+461,,5319,,
+461,,7557,,
+461,,1093,,
+462,,3184,,
+462,,5180,,
+462,,1093,,
+463,,5319,,
+463,,800,,
+463,,6335,,
+464,,6270,,
+464,,840,,
+464,,2499,,
+465,,6270,,
+465,,840,,
+465,,2499,,
+466,,840,,
+466,,2499,,
+466,,5006,,
+467,,840,,
+467,,5010,,
+467,,5006,,
+468,,6270,,
+468,,840,,
+468,,2499,,
+469,,6270,,
+469,,840,,
+469,,2499,,
+470,,2683,,
+470,,6276,,
+470,,7557,,
+471,,6270,,
+471,,2499,,
+471,,6906,,
+472,,2499,,
+472,,7655,,
+472,,4717,,
+473,,4717,,
+473,,2683,,
+473,,332,,
+474,,6270,,
+474,,840,,
+474,,2499,,
+475,,6270,,
+475,,840,,
+475,,2499,,
+476,,840,,
+476,,4717,,
+476,,2683,,
+477,,840,,
+477,,2499,,
+477,,5010,,
+478,,6270,,
+478,,840,,
+478,,2499,,
+479,,3203,,
+479,,800,,
+479,,332,,
+480,,800,,
+480,,332,,
+480,,63,,
+481,,6335,,
+481,,6276,,
+481,,5180,,
+482,,6270,,
+482,,840,,
+482,,2499,,
+483,,4717,,
+483,,332,,
+483,,6276,,
+484,,5006,,
+484,,7655,,
+484,,3184,,
+485,,3203,,
+485,,800,,
+485,,3184,,
+486,,840,,
+486,,5006,,
+486,,3203,,
+487,,6906,,
+487,,7655,,
+487,,5319,,
+488,,840,,
+488,,5010,,
+488,,5006,,
+489,,6906,,
+489,,5006,,
+489,,7655,,
+490,,6270,,
+490,,840,,
+490,,2499,,
+491,,5010,,
+491,,6906,,
+491,,5006,,
+492,,5010,,
+492,,6906,,
+492,,5006,,
+493,,5010,,
+493,,6906,,
+493,,5006,,
+494,,5010,,
+494,,5006,,
+494,,3203,,
+495,,5010,,
+495,,6906,,
+495,,5006,,
+496,,590,,
+496,,1257,,
+496,,1252,,
+497,,6906,,
+497,,5006,,
+497,,3203,,
+498,,7655,,
+498,,800,,
+498,,332,,
+499,,3203,,
+499,,6276,,
+499,,335,,
+500,,5006,,
+500,,3203,,
+500,,7655,,
+501,,5010,,
+501,,5006,,
+501,,3203,,
+502,,5010,,
+502,,5006,,
+502,,3203,,
+503,,800,,
+503,,3184,,
+503,,5180,,
+504,,800,,
+504,,332,,
+504,,63,,
+505,,840,,
+505,,5010,,
+505,,5006,,
+506,,335,,
+506,,1252,,
+506,,7470,,
+507,,6270,,
+507,,840,,
+507,,2499,,
+508,,2499,,
+508,,4717,,
+508,,2683,,
+509,,840,,
+509,,2499,,
+509,,5010,,
+510,,840,,
+510,,2499,,
+510,,5010,,
+511,,3203,,
+511,,4717,,
+511,,800,,
+512,,3203,,
+512,,7655,,
+512,,4717,,
+513,,840,,
+513,,2499,,
+513,,5010,,
+514,,3203,,
+514,,4717,,
+514,,2683,,
+515,,800,,
+515,,3184,,
+515,,5180,,
+516,,2499,,
+516,,4717,,
+516,,2683,,
+517,,2499,,
+517,,3203,,
+517,,7655,,
+518,,840,,
+518,,2499,,
+518,,3203,,
+519,,4717,,
+519,,800,,
+519,,3184,,
+520,,7655,,
+520,,2683,,
+520,,5319,,
+521,,840,,
+521,,5010,,
+521,,3203,,
+522,,840,,
+522,,2499,,
+522,,5010,,
+523,,840,,
+523,,2499,,
+523,,5010,,
+524,,840,,
+524,,2499,,
+524,,5010,,
+525,,2499,,
+525,,5010,,
+525,,3203,,
+526,,2499,,
+526,,5010,,
+526,,3203,,
+527,,840,,
+527,,2499,,
+527,,5010,,
+528,,840,,
+528,,2499,,
+528,,7655,,
+529,,4717,,
+529,,5319,,
+529,,800,,
+530,,6270,,
+530,,840,,
+530,,2499,,
+531,,840,,
+531,,2499,,
+531,,5010,,
+532,,3203,,
+532,,7655,,
+532,,4717,,
+533,,800,,
+533,,1168,,
+533,,4253,,
+534,,6270,,
+534,,840,,
+534,,2499,,
+535,,2683,,
+535,,3184,,
+535,,6335,,
+536,,840,,
+536,,2499,,
+536,,5010,,
+537,,840,,
+537,,2499,,
+537,,5010,,
+538,,840,,
+538,,2499,,
+538,,5010,,
+539,,840,,
+539,,5010,,
+539,,3203,,
+540,,840,,
+540,,2499,,
+540,,5010,,
+541,,5010,,
+541,,5006,,
+541,,3203,,
+542,,5010,,
+542,,7655,,
+542,,2683,,
+543,,2499,,
+543,,4717,,
+543,,5319,,
+544,,840,,
+544,,2499,,
+544,,5010,,
+545,,840,,
+545,,2499,,
+545,,5010,,
+546,,1093,,
+546,,6654,,
+546,,7213,,
+547,,840,,
+547,,2499,,
+547,,5010,,
+548,,2499,,
+548,,5010,,
+548,,6906,,
+549,,840,,
+549,,2499,,
+549,,3203,,
+550,,840,,
+550,,2499,,
+550,,5010,,
+551,,63,,
+551,,335,,
+551,,7449,,
+552,,63,,
+552,,335,,
+552,,7449,,
+553,,6270,,
+553,,840,,
+553,,2499,,
+554,,6270,,
+554,,5010,,
+554,,6906,,
+555,,840,,
+555,,2499,,
+555,,7655,,
+556,,6270,,
+556,,5010,,
+556,,6906,,
+557,,840,,
+557,,2499,,
+557,,6906,,
+558,,6270,,
+558,,840,,
+558,,2499,,
+559,,6270,,
+559,,840,,
+559,,2499,,
+560,,5180,,
+560,,1093,,
+560,,4987,,
+561,,5006,,
+561,,800,,
+561,,6335,,
+562,,6270,,
+562,,840,,
+562,,2499,,
+563,,2499,,
+563,,5010,,
+563,,6906,,
+564,,332,,
+564,,7449,,
+564,,1511,,
+565,,6270,,
+565,,840,,
+565,,2499,,
+566,,840,,
+566,,5010,,
+566,,5006,,
+567,,840,,
+567,,6906,,
+567,,7655,,
+568,,6270,,
+568,,840,,
+568,,2499,,
+569,,6906,,
+569,,3203,,
+569,,7655,,
+570,,5006,,
+570,,7655,,
+570,,6276,,
+571,,6270,,
+571,,840,,
+571,,2499,,
+572,,2499,,
+572,,5006,,
+572,,3203,,
+573,,5006,,
+573,,3203,,
+573,,4717,,
+574,,5006,,
+574,,3203,,
+574,,2683,,
+575,,6270,,
+575,,840,,
+575,,2499,,
+576,,840,,
+576,,2499,,
+576,,5006,,
+577,,6270,,
+577,,840,,
+577,,2499,,
+578,,5006,,
+578,,3203,,
+578,,5319,,
+579,,6270,,
+579,,840,,
+579,,2499,,
+580,,6270,,
+580,,840,,
+580,,2499,,
+581,,840,,
+581,,5010,,
+581,,5006,,
+582,,6270,,
+582,,840,,
+582,,2499,,
+583,,6270,,
+583,,840,,
+583,,2499,,
+584,,4717,,
+584,,2683,,
+584,,3184,,
+585,,840,,
+585,,2499,,
+585,,5010,,
+586,,6270,,
+586,,840,,
+586,,2499,,
+587,,6906,,
+587,,5006,,
+587,,7655,,
+588,,6270,,
+588,,840,,
+588,,5010,,
+589,,5010,,
+589,,5006,,
+589,,3203,,
+590,,840,,
+590,,5010,,
+590,,5006,,
+591,,5010,,
+591,,5006,,
+591,,3203,,
+592,,6270,,
+592,,840,,
+592,,5010,,
+593,,5010,,
+593,,7655,,
+593,,3184,,
+594,,5010,,
+594,,5006,,
+594,,3203,,
+595,,6270,,
+595,,840,,
+595,,2499,,
+596,,5010,,
+596,,5006,,
+596,,3203,,
+597,,2499,,
+597,,5006,,
+597,,3203,,
+598,,6906,,
+598,,5006,,
+598,,3203,,
+599,,5010,,
+599,,5006,,
+599,,3203,,
+600,,840,,
+600,,5010,,
+600,,6906,,
+601,,6270,,
+601,,840,,
+601,,5010,,
+602,,6270,,
+602,,840,,
+602,,2499,,
+603,,6270,,
+603,,2499,,
+603,,5010,,
+604,,5319,,
+604,,6276,,
+604,,1168,,
+605,,6270,,
+605,,840,,
+605,,2499,,
+606,,2499,,
+606,,5010,,
+606,,6906,,
+607,,6270,,
+607,,840,,
+607,,2499,,
+608,,2499,,
+608,,6906,,
+608,,5006,,
+609,,840,,
+609,,5006,,
+609,,7655,,
+610,,5010,,
+610,,5006,,
+610,,3203,,
+611,,6270,,
+611,,840,,
+611,,2499,,
+612,,6270,,
+612,,840,,
+612,,2499,,
+613,,840,,
+613,,2499,,
+613,,6906,,
+614,,840,,
+614,,5010,,
+614,,6906,,
+615,,840,,
+615,,2499,,
+615,,5006,,
+616,,6270,,
+616,,840,,
+616,,2499,,
+617,,6270,,
+617,,840,,
+617,,5010,,
+618,,6270,,
+618,,840,,
+618,,2499,,
+619,,800,,
+619,,3184,,
+619,,6335,,
+620,,840,,
+620,,2499,,
+620,,5006,,
+621,,840,,
+621,,2499,,
+621,,2683,,
+622,,840,,
+622,,2499,,
+622,,5006,,
+623,,6906,,
+623,,5319,,
+623,,3184,,
+624,,5319,,
+624,,800,,
+624,,3184,,
+625,,840,,
+625,,2499,,
+625,,6906,,
+626,,840,,
+626,,2499,,
+626,,6906,,
+627,,800,,
+627,,332,,
+627,,6335,,
+628,,840,,
+628,,2499,,
+628,,6906,,
+629,,1168,,
+629,,5180,,
+629,,4253,,
+630,,3184,,
+630,,6335,,
+630,,63,,
+631,,6270,,
+631,,840,,
+631,,2499,,
+632,,7655,,
+632,,2683,,
+632,,5319,,
+633,,5006,,
+633,,800,,
+633,,6335,,
+634,,840,,
+634,,2499,,
+634,,6906,,
+635,,840,,
+635,,5010,,
+635,,6906,,
+636,,840,,
+636,,2499,,
+636,,5010,,
+637,,840,,
+637,,5010,,
+637,,6906,,
+638,,840,,
+638,,2499,,
+638,,5010,,
+639,,6270,,
+639,,840,,
+639,,2499,,
+640,,6906,,
+640,,4717,,
+640,,2683,,
+641,,2499,,
+641,,5006,,
+641,,3203,,
+642,,6270,,
+642,,840,,
+642,,2499,,
+643,,6270,,
+643,,2499,,
+643,,5010,,
+644,,2499,,
+644,,7655,,
+644,,4717,,
+645,,2499,,
+645,,6906,,
+645,,5006,,
+646,,5010,,
+646,,5006,,
+646,,3203,,
+647,,6270,,
+647,,2499,,
+647,,5010,,
+648,,840,,
+648,,2499,,
+648,,5010,,
+649,,6270,,
+649,,840,,
+649,,2499,,
+650,,6270,,
+650,,840,,
+650,,2499,,
+651,,3184,,
+651,,6276,,
+651,,1168,,
+652,,840,,
+652,,5010,,
+652,,6906,,
+653,,840,,
+653,,2499,,
+653,,5010,,
+654,,6270,,
+654,,5010,,
+654,,6906,,
+655,,5010,,
+655,,6906,,
+655,,5006,,
+656,,6270,,
+656,,840,,
+656,,2499,,
+657,,5010,,
+657,,5006,,
+657,,3203,,
+658,,5010,,
+658,,5006,,
+658,,3203,,
+659,,5010,,
+659,,5006,,
+659,,3203,,
+660,,6270,,
+660,,840,,
+660,,2499,,
+661,,6270,,
+661,,840,,
+661,,2499,,
+662,,5010,,
+662,,5006,,
+662,,3203,,
+663,,3203,,
+663,,7655,,
+663,,3184,,
+664,,6270,,
+664,,840,,
+664,,2499,,
+665,,6270,,
+665,,840,,
+665,,2499,,
+666,,6270,,
+666,,840,,
+666,,2499,,
+667,,2499,,
+667,,6906,,
+667,,5006,,
+668,,6270,,
+668,,840,,
+668,,2499,,
+669,,6270,,
+669,,840,,
+669,,2499,,
+670,,5010,,
+670,,5006,,
+670,,3203,,
+671,,5010,,
+671,,5006,,
+671,,3203,,
+672,,6270,,
+672,,840,,
+672,,2499,,
+673,,5319,,
+673,,3184,,
+673,,6335,,
+674,,6270,,
+674,,840,,
+674,,5010,,
+675,,840,,
+675,,6906,,
+675,,4717,,
+676,,6906,,
+676,,3203,,
+676,,4717,,
+677,,840,,
+677,,2499,,
+677,,5010,,
+678,,840,,
+678,,2499,,
+678,,5010,,
+679,,5010,,
+679,,6906,,
+679,,7655,,
+680,,6906,,
+680,,7655,,
+680,,4717,,
+681,,840,,
+681,,2499,,
+681,,6906,,
+682,,6270,,
+682,,840,,
+682,,2499,,
+683,,6270,,
+683,,840,,
+683,,2499,,
+684,,6270,,
+684,,840,,
+684,,2499,,
+685,,2683,,
+685,,800,,
+685,,332,,
+686,,6270,,
+686,,840,,
+686,,2499,,
+687,,6270,,
+687,,840,,
+687,,2499,,
+688,,6270,,
+688,,840,,
+688,,2499,,
+689,,2499,,
+689,,5010,,
+689,,4717,,
+690,,6270,,
+690,,840,,
+690,,5010,,
+691,,6270,,
+691,,840,,
+691,,2499,,
+692,,6270,,
+692,,840,,
+692,,2499,,
+693,,840,,
+693,,2499,,
+693,,6906,,
+694,,6270,,
+694,,840,,
+694,,2499,,
+695,,6270,,
+695,,840,,
+695,,2499,,
+696,,840,,
+696,,2499,,
+696,,6906,,
+697,,2499,,
+697,,4717,,
+697,,800,,
+698,,840,,
+698,,2499,,
+698,,6906,,
+699,,4717,,
+699,,2683,,
+699,,800,,
+700,,5010,,
+700,,6906,,
+700,,5006,,
+701,,5010,,
+701,,6906,,
+701,,5006,,
+702,,6270,,
+702,,840,,
+702,,2499,,
+703,,840,,
+703,,2499,,
+703,,5006,,
+704,,6906,,
+704,,5006,,
+704,,7655,,
+705,,2499,,
+705,,6906,,
+705,,5006,,
+706,,6270,,
+706,,840,,
+706,,6906,,
+707,,6270,,
+707,,840,,
+707,,2499,,
+708,,2499,,
+708,,6906,,
+708,,7655,,
+709,,2499,,
+709,,6906,,
+709,,5006,,
+710,,7655,,
+710,,4717,,
+710,,800,,
+711,,4717,,
+711,,6276,,
+711,,1168,,
+712,,840,,
+712,,2499,,
+712,,5006,,
+713,,7655,,
+713,,4717,,
+713,,5319,,
+714,,6270,,
+714,,840,,
+714,,2499,,
+715,,6270,,
+715,,840,,
+715,,2499,,
+716,,2499,,
+716,,5006,,
+716,,4717,,
+717,,5006,,
+717,,7655,,
+717,,5319,,
+718,,840,,
+718,,2499,,
+718,,6906,,
+719,,5006,,
+719,,4717,,
+719,,3184,,
+720,,840,,
+720,,6906,,
+720,,3203,,
+721,,840,,
+721,,3203,,
+721,,7655,,
+722,,6270,,
+722,,840,,
+722,,6906,,
+723,,5006,,
+723,,7655,,
+723,,4717,,
+724,,3203,,
+724,,5319,,
+724,,800,,
+725,,5010,,
+725,,6906,,
+725,,5006,,
+726,,5010,,
+726,,6906,,
+726,,5006,,
+727,,3184,,
+727,,63,,
+727,,5180,,
+728,,4253,,
+728,,7449,,
+728,,6654,,
+729,,6270,,
+729,,840,,
+729,,2499,,
+730,,6270,,
+730,,840,,
+730,,2499,,
+731,,6270,,
+731,,840,,
+731,,2499,,
+732,,6270,,
+732,,840,,
+732,,5010,,
+733,,6270,,
+733,,5010,,
+733,,5006,,
+734,,800,,
+734,,6335,,
+734,,63,,
+735,,3203,,
+735,,7655,,
+735,,800,,
+736,,6276,,
+736,,1093,,
+736,,6654,,
+737,,840,,
+737,,2499,,
+737,,6906,,
+738,,5010,,
+738,,6906,,
+738,,5006,,
+739,,6270,,
+739,,840,,
+739,,2499,,
+740,,6270,,
+740,,840,,
+740,,2499,,
+741,,840,,
+741,,2499,,
+741,,3203,,
+742,,2499,,
+742,,4717,,
+742,,2683,,
+743,,63,,
+743,,335,,
+743,,4253,,
+744,,5006,,
+744,,7655,,
+744,,4717,,
+745,,5006,,
+745,,3203,,
+745,,6276,,
+746,,840,,
+746,,2499,,
+746,,7655,,
+747,,840,,
+747,,800,,
+747,,3184,,
+748,,6270,,
+748,,2499,,
+748,,5010,,
+749,,840,,
+749,,2683,,
+749,,3184,,
+750,,6906,,
+750,,5006,,
+750,,3203,,
+751,,5006,,
+751,,3203,,
+751,,4717,,
+752,,2499,,
+752,,5006,,
+752,,7655,,
+753,,840,,
+753,,2499,,
+753,,6906,,
+754,,5006,,
+754,,6276,,
+754,,1511,,
+755,,5010,,
+755,,6906,,
+755,,3203,,
+756,,6270,,
+756,,840,,
+756,,2499,,
+757,,840,,
+757,,2499,,
+757,,5010,,
+758,,840,,
+758,,5010,,
+758,,5006,,
+759,,6270,,
+759,,840,,
+759,,2499,,
+760,,2499,,
+760,,5010,,
+760,,3203,,
+761,,840,,
+761,,2499,,
+761,,5010,,
+762,,2499,,
+762,,6906,,
+762,,3203,,
+763,,6270,,
+763,,840,,
+763,,2499,,
+764,,840,,
+764,,7655,,
+764,,2683,,
+765,,6270,,
+765,,840,,
+765,,2499,,
+766,,5010,,
+766,,5006,,
+766,,3203,,
+767,,840,,
+767,,5010,,
+767,,5006,,
+768,,840,,
+768,,2499,,
+768,,6906,,
+769,,6270,,
+769,,840,,
+769,,2499,,
+770,,5010,,
+770,,5006,,
+770,,3203,,
+771,,840,,
+771,,2499,,
+771,,6906,,
+772,,6270,,
+772,,6906,,
+772,,5006,,
+773,,2499,,
+773,,5006,,
+773,,7655,,
+774,,6270,,
+774,,5010,,
+774,,6906,,
+775,,800,,
+775,,6335,,
+775,,4253,,
+776,,840,,
+776,,2499,,
+776,,6906,,
+777,,5006,,
+777,,7655,,
+777,,800,,
+778,,7655,,
+778,,4717,,
+778,,2683,,
+779,,6270,,
+779,,6906,,
+779,,3203,,
+780,,7655,,
+780,,6335,,
+780,,1168,,
+781,,6270,,
+781,,840,,
+781,,2499,,
+782,,840,,
+782,,2499,,
+782,,6906,,
+783,,6270,,
+783,,840,,
+783,,2499,,
+784,,6270,,
+784,,840,,
+784,,2499,,
+785,,6270,,
+785,,840,,
+785,,2499,,
+786,,840,,
+786,,5010,,
+786,,6906,,
+787,,6270,,
+787,,840,,
+787,,5010,,
+788,,2499,,
+788,,5010,,
+788,,6906,,
+789,,6270,,
+789,,840,,
+789,,2499,,
+790,,5010,,
+790,,6906,,
+790,,800,,
+791,,6270,,
+791,,840,,
+791,,2499,,
+792,,6906,,
+792,,3203,,
+792,,2683,,
+793,,6270,,
+793,,840,,
+793,,2499,,
+794,,2499,,
+794,,5010,,
+794,,4717,,
+795,,840,,
+795,,2499,,
+795,,4717,,
+796,,6906,,
+796,,7655,,
+796,,2683,,
+797,,6270,,
+797,,840,,
+797,,2499,,
+798,,6270,,
+798,,840,,
+798,,2499,,
+799,,6270,,
+799,,840,,
+799,,2499,,
+800,,840,,
+800,,2499,,
+800,,6906,,
+801,,6270,,
+801,,840,,
+801,,5010,,
+802,,6270,,
+802,,840,,
+802,,2499,,
+803,,2499,,
+803,,6906,,
+803,,5006,,
+804,,6270,,
+804,,840,,
+804,,2499,,
+805,,6270,,
+805,,840,,
+805,,2499,,
+806,,6270,,
+806,,840,,
+806,,2499,,
+807,,5010,,
+807,,6906,,
+807,,3203,,
+808,,6270,,
+808,,840,,
+808,,2499,,
+809,,6270,,
+809,,840,,
+809,,2499,,
+810,,6270,,
+810,,840,,
+810,,2499,,
+811,,6270,,
+811,,840,,
+811,,2499,,
+812,,5010,,
+812,,5006,,
+812,,3203,,
+813,,6270,,
+813,,840,,
+813,,2499,,
+814,,840,,
+814,,2499,,
+814,,5006,,
+815,,840,,
+815,,5010,,
+815,,5006,,
+816,,2499,,
+816,,2683,,
+816,,3184,,
+817,,6270,,
+817,,840,,
+817,,2499,,
+818,,840,,
+818,,2499,,
+818,,3203,,
+819,,6906,,
+819,,332,,
+819,,1168,,
+820,,840,,
+820,,2499,,
+820,,5010,,
+821,,6270,,
+821,,840,,
+821,,2499,,
+822,,6270,,
+822,,2499,,
+822,,6906,,
+823,,5010,,
+823,,6906,,
+823,,5006,,
+824,,332,,
+824,,63,,
+824,,335,,
+825,,840,,
+825,,2499,,
+825,,332,,
+826,,840,,
+826,,2499,,
+826,,4717,,
+827,,2499,,
+827,,5010,,
+827,,6906,,
+828,,6335,,
+828,,5180,,
+828,,4253,,
+829,,6276,,
+829,,1168,,
+829,,335,,
+830,,5010,,
+830,,5006,,
+830,,3203,,
+831,,800,,
+831,,7449,,
+831,,1093,,
+832,,2683,,
+832,,3184,,
+832,,6335,,
+833,,4717,,
+833,,2683,,
+833,,5319,,
+834,,840,,
+834,,5010,,
+834,,6906,,
+835,,6270,,
+835,,840,,
+835,,2499,,
+836,,2499,,
+836,,3203,,
+836,,7655,,
+837,,6270,,
+837,,840,,
+837,,2499,,
+838,,6270,,
+838,,2499,,
+838,,6906,,
+839,,6270,,
+839,,2499,,
+839,,6906,,
+840,,6270,,
+840,,840,,
+840,,5010,,
+841,,2499,,
+841,,5006,,
+841,,7655,,
+842,,5006,,
+842,,800,,
+842,,6335,,
+843,,6270,,
+843,,2499,,
+843,,6906,,
+844,,6270,,
+844,,2499,,
+844,,6906,,
+845,,2499,,
+845,,6906,,
+845,,3203,,
+846,,6335,,
+846,,4253,,
+846,,590,,
+847,,6270,,
+847,,840,,
+847,,2499,,
+848,,5006,,
+848,,7655,,
+848,,2683,,
+849,,6270,,
+849,,2499,,
+849,,6906,,
+850,,6270,,
+850,,2499,,
+850,,6906,,
+851,,5006,,
+851,,3203,,
+851,,800,,
+852,,5006,,
+852,,3203,,
+852,,2683,,
+853,,5006,,
+853,,3203,,
+853,,7655,,
+854,,2499,,
+854,,2683,,
+854,,332,,
+855,,6270,,
+855,,2499,,
+855,,6906,,
+856,,3203,,
+856,,332,,
+856,,4253,,
+857,,5006,,
+857,,6335,,
+857,,63,,
+858,,5006,,
+858,,7655,,
+858,,3184,,
+859,,6270,,
+859,,2499,,
+859,,6906,,
+860,,3203,,
+860,,7655,,
+860,,2683,,
+861,,5006,,
+861,,3203,,
+861,,2683,,
+862,,6270,,
+862,,2499,,
+862,,6906,,
+863,,5010,,
+863,,5006,,
+863,,3203,,
+864,,6270,,
+864,,840,,
+864,,2499,,
+865,,6906,,
+865,,7655,,
+865,,2683,,
+866,,6270,,
+866,,2499,,
+866,,6906,,
+867,,6270,,
+867,,6906,,
+867,,5006,,
+868,,6270,,
+868,,840,,
+868,,2499,,
+869,,6270,,
+869,,2499,,
+869,,6906,,
+870,,2499,,
+870,,5010,,
+870,,6906,,
+871,,6270,,
+871,,6906,,
+871,,5006,,
+872,,6270,,
+872,,2499,,
+872,,6906,,
+873,,6270,,
+873,,2499,,
+873,,5010,,
+874,,5006,,
+874,,3203,,
+874,,7655,,
+875,,2499,,
+875,,5010,,
+875,,6906,,
+876,,6270,,
+876,,840,,
+876,,2499,,
+877,,2499,,
+877,,3203,,
+877,,7655,,
+878,,6270,,
+878,,2499,,
+878,,6906,,
+879,,6270,,
+879,,2499,,
+879,,6906,,
+880,,5006,,
+880,,3203,,
+880,,2683,,
+881,,2499,,
+881,,6906,,
+881,,5006,,
+882,,6270,,
+882,,2499,,
+882,,6906,,
+883,,6270,,
+883,,2499,,
+883,,6906,,
+884,,840,,
+884,,2499,,
+884,,5010,,
+885,,5010,,
+885,,6906,,
+885,,5006,,
+886,,6270,,
+886,,840,,
+886,,5010,,
+887,,6906,,
+887,,5006,,
+887,,3203,,
+888,,3203,,
+888,,800,,
+888,,332,,
+889,,6270,,
+889,,840,,
+889,,2499,,
+890,,6270,,
+890,,2499,,
+890,,6906,,
+891,,6270,,
+891,,840,,
+891,,2499,,
+892,,2499,,
+892,,5010,,
+892,,6906,,
+893,,840,,
+893,,2499,,
+893,,6906,,
+894,,6906,,
+894,,332,,
+894,,6335,,
+895,,6270,,
+895,,840,,
+895,,2499,,
+896,,6270,,
+896,,840,,
+896,,2499,,
+897,,6270,,
+897,,840,,
+897,,2499,,
+898,,6270,,
+898,,840,,
+898,,2499,,
+899,,5006,,
+899,,3203,,
+899,,7655,,
+900,,3184,,
+900,,6276,,
+900,,7449,,
+901,,800,,
+901,,7557,,
+901,,1093,,
+902,,800,,
+902,,6335,,
+902,,1168,,
+903,,3184,,
+903,,332,,
+903,,63,,
+904,,6906,,
+904,,5006,,
+904,,3203,,
+905,,3203,,
+905,,7655,,
+905,,4717,,
+906,,5006,,
+906,,3203,,
+906,,7655,,
+907,,800,,
+907,,332,,
+907,,335,,
+908,,4717,,
+908,,3184,,
+908,,332,,
+909,,2683,,
+909,,800,,
+909,,6335,,
+910,,6270,,
+910,,2499,,
+910,,6906,,
+911,,6270,,
+911,,2499,,
+911,,5010,,
+912,,6270,,
+912,,840,,
+912,,2499,,
+913,,6270,,
+913,,840,,
+913,,2499,,
+914,,5010,,
+914,,6906,,
+914,,5006,,
+915,,6270,,
+915,,5010,,
+915,,6906,,
+916,,6270,,
+916,,840,,
+916,,5010,,
+917,,6270,,
+917,,840,,
+917,,2499,,
+918,,840,,
+918,,2499,,
+918,,5010,,
+919,,6906,,
+919,,7655,,
+919,,5319,,
+920,,6270,,
+920,,2499,,
+920,,5010,,
+921,,6270,,
+921,,2499,,
+921,,6906,,
+922,,2683,,
+922,,800,,
+922,,3184,,
+923,,6270,,
+923,,840,,
+923,,2499,,
+924,,6270,,
+924,,2499,,
+924,,6906,,
+925,,6270,,
+925,,840,,
+925,,2499,,
+926,,800,,
+926,,6335,,
+926,,7449,,
+927,,6270,,
+927,,840,,
+927,,2499,,
+928,,6270,,
+928,,840,,
+928,,2499,,
+929,,1093,,
+929,,1910,,
+929,,6696,,
+930,,6906,,
+930,,3203,,
+930,,7655,,
+931,,800,,
+931,,332,,
+931,,63,,
+932,,2499,,
+932,,5010,,
+932,,6906,,
+933,,6906,,
+933,,3203,,
+933,,7655,,
+934,,6906,,
+934,,3203,,
+934,,7655,,
+935,,6270,,
+935,,6906,,
+935,,5006,,
+936,,840,,
+936,,7655,,
+936,,800,,
+937,,7655,,
+937,,2683,,
+937,,4253,,
+938,,2499,,
+938,,5006,,
+938,,2683,,
+939,,6270,,
+939,,840,,
+939,,2499,,
+940,,2683,,
+940,,800,,
+940,,6276,,
+941,,2499,,
+941,,5010,,
+941,,6906,,
+942,,7655,,
+942,,4717,,
+942,,2683,,
+943,,6270,,
+943,,840,,
+943,,2499,,
+944,,6270,,
+944,,840,,
+944,,2499,,
+945,,6270,,
+945,,840,,
+945,,2499,,
+946,,5010,,
+946,,5006,,
+946,,3184,,
+947,,6270,,
+947,,840,,
+947,,2499,,
+948,,5006,,
+948,,5319,,
+948,,3184,,
+949,,840,,
+949,,2499,,
+949,,5010,,
+950,,2499,,
+950,,5010,,
+950,,5006,,
+951,,840,,
+951,,2499,,
+951,,5010,,
+952,,840,,
+952,,2499,,
+952,,5010,,
+953,,6270,,
+953,,840,,
+953,,2499,,
+954,,6270,,
+954,,840,,
+954,,2499,,
+955,,6270,,
+955,,5010,,
+955,,4717,,
+956,,6270,,
+956,,840,,
+956,,2499,,
+957,,6270,,
+957,,840,,
+957,,2499,,
+958,,6270,,
+958,,2499,,
+958,,6906,,
+959,,6270,,
+959,,840,,
+959,,2499,,
+960,,5010,,
+960,,5006,,
+960,,3203,,
+961,,6270,,
+961,,840,,
+961,,2499,,
+962,,6270,,
+962,,840,,
+962,,2499,,
+963,,5006,,
+963,,3203,,
+963,,7655,,
+964,,840,,
+964,,2499,,
+964,,6906,,
+965,,6270,,
+965,,840,,
+965,,2499,,
+966,,6270,,
+966,,840,,
+966,,2499,,
+967,,6906,,
+967,,800,,
+967,,332,,
+968,,6270,,
+968,,2499,,
+968,,6906,,
+969,,6270,,
+969,,2499,,
+969,,5010,,
+970,,840,,
+970,,2499,,
+970,,6906,,
+971,,840,,
+971,,2499,,
+971,,6906,,
+972,,2499,,
+972,,5010,,
+972,,6906,,
+973,,840,,
+973,,5010,,
+973,,5006,,
+974,,2499,,
+974,,5010,,
+974,,6906,,
+975,,5006,,
+975,,3203,,
+975,,7655,,
+976,,6270,,
+976,,840,,
+976,,2499,,
+977,,5010,,
+977,,5006,,
+977,,3203,,
+978,,5006,,
+978,,800,,
+978,,3184,,
+979,,5010,,
+979,,7655,,
+979,,4717,,
+980,,7655,,
+980,,1168,,
+980,,7449,,
+981,,5010,,
+981,,5006,,
+981,,3203,,
+982,,6906,,
+982,,5006,,
+982,,800,,
+983,,840,,
+983,,5010,,
+983,,6906,,
+984,,840,,
+984,,5010,,
+984,,6906,,
+985,,6270,,
+985,,840,,
+985,,2499,,
+986,,840,,
+986,,2499,,
+986,,4717,,
+987,,6270,,
+987,,840,,
+987,,2499,,
+988,,840,,
+988,,2499,,
+988,,6906,,
+989,,840,,
+989,,2499,,
+989,,6906,,
+990,,6270,,
+990,,840,,
+990,,2499,,
+991,,2499,,
+991,,6906,,
+991,,3203,,
+992,,5010,,
+992,,6906,,
+992,,3203,,
+993,,6270,,
+993,,2499,,
+993,,5006,,
+994,,6270,,
+994,,840,,
+994,,2499,,
+995,,840,,
+995,,2499,,
+995,,6906,,
+996,,840,,
+996,,2499,,
+996,,5006,,
+997,,840,,
+997,,2499,,
+997,,6906,,
+998,,840,,
+998,,2499,,
+998,,6906,,
+999,,2499,,
+999,,800,,
+999,,3184,,
