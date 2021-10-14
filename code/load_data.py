@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from surprise import Reader
 from surprise import Dataset
 
@@ -68,5 +69,18 @@ def load_ingr_const(file_path= input_path + "ingr_const.csv"):
 # load nutrition related constraint data
 def load_nutr_const(file_path= input_path + "nutr_const.csv"):
     df = pd.read_csv(file_path)
+
+    return df
+
+
+# load constraint data
+def load_const(file_path = input_path + "const_data.csv"):
+    df = pd.read_csv(file_path)
+    df['nl'] = df['nl'].fillna('')
+    df = df.fillna(np.nan).replace([np.nan], [None])
+
+    df['nl'] = df['nl'].str.replace(" ", "")
+    df['nl'] = df['nl'].apply(lambda x: x[1:-1].split(',') if x != '' else x)
+    df['nl'] = df['nl'].apply(lambda x: float_cast(x) if x != '' else x)
 
     return df
