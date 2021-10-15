@@ -29,6 +29,7 @@ def load_rating_data(file_path = input_path + 'rating_data.csv'):
     reader = Reader(line_format='user item rating', sep=',', rating_scale=(0, 5))
     return Dataset.load_from_file(file_path, reader=reader)
 
+
 # load reduced rating data for surprise
 def load_reduced_rating_data(file_path = input_path + 'reduced_rating_data.csv'):
     reader = Reader(line_format='user item rating', sep=',', rating_scale=(0, 5))
