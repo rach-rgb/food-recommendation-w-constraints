@@ -22,7 +22,11 @@ class SVD_TF(SVD):
         known_item = self.trainset.knows_item(i)
         raw_u = int(self.trainset.to_raw_uid(u))
         raw_i = int(self.trainset.to_raw_iid(i))
-        constraint = self.const.loc[raw_u]
+        constraint_df = self.const.loc[self.const.u == raw_u]
+        if len(constraint_df) >= 1:
+            constraint = constraint_df.iloc[0]
+        else:
+            constraint = None
 
         if self.biased:
             est = self.trainset.global_mean
@@ -42,7 +46,7 @@ class SVD_TF(SVD):
             else:
                 raise PredictionImpossible('User and item are unknown.')
 
-        if not self.check_constraint(raw_i, constraint):
+        if (constraint is not None) and (not self.check_constraint(raw_i, constraint)):
             return 0
         else:
             return est
