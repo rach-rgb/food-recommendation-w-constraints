@@ -8,6 +8,9 @@ class SVD_TF(SVD):
 
         # Always call base method before doing anything.
         SVD.__init__(self)
+        user_max = 1000
+        item_max = 5000
+        self.cache = [[None for i in range(item_max)] for j in range(user_max)]
 
     # pandas dataframe related to attribute and constraints
     def set_data(self, attr_data, const_data):
@@ -23,6 +26,7 @@ class SVD_TF(SVD):
         raw_u = int(self.trainset.to_raw_uid(u))
         raw_i = int(self.trainset.to_raw_iid(i))
         constraint_df = self.const.loc[self.const.u == raw_u]
+
         if len(constraint_df) >= 1:
             constraint = constraint_df.iloc[0]
         else:
@@ -46,10 +50,13 @@ class SVD_TF(SVD):
             else:
                 raise PredictionImpossible('User and item are unknown.')
 
-        if (constraint is not None) and (not self.check_constraint(raw_i, constraint)):
-            return 0
-        else:
-            return est
+        if constraint is not None and est > 4:
+            if self.cache[u][i] is None:
+                self.cache[u][i] = self.check_constraint(raw_i, constraint)
+            if not self.cache[u][i]: # do not match constraints
+                return 0
+
+        return est
 
     # return T/F for constraint 1
     def check_constraint(self, raw_i, constraint):
