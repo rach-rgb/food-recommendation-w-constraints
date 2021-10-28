@@ -5,7 +5,7 @@ from surprise import SVD
 # setting path
 path.append('../code')
 
-import inter_rec
+import code.inter_rec as inter_rec
 
 
 class DummyAlgo(SVD):

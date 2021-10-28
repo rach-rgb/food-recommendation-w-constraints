@@ -1,13 +1,11 @@
 import unittest
 from sys import path
-import pandas as pd
-import numpy as np
 
 # setting path
 path.append('../code')
 
-import inter_rec
-import TF_algo
+import code.inter_rec as inter_rec
+import code.TF_algo as TF_algo
 
 
 class TestSVDTF(unittest.TestCase):

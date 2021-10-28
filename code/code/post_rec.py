@@ -114,5 +114,3 @@ class PostRec(FoodRecBase):
             if (target * (1 + (self.n_err / 100))) < value:
                 return False
         return True
-
-

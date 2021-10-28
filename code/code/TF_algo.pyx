@@ -1,4 +1,6 @@
+cimport numpy as np  # noqa
 import numpy as np
+from surprise.utils import get_rng
 from surprise import PredictionImpossible
 from surprise import SVD
 
@@ -12,9 +14,9 @@ class SVDtf(SVD):
         self.vio = None  # 0: satisfy ~ 1: not satisfy
 
     # pandas dataframe related to attribute and constraints
-    def set_data(self, attr, const, n_err):
+    def set_data(self, attr, cnst, n_err):
         self.i_attr = attr
-        self.const = const
+        self.const = cnst
         self.n_err = n_err
 
     # check constraints for all (u, i) pairs
@@ -106,7 +108,7 @@ class SVDtf(SVD):
                 print("Processing epoch {}".format(current_epoch))
             for u, i, r in trainset.all_ratings():
                 # if i violates constraint, ignore error
-                if self.vio[u][i] == 1.0:
+                if self.vio is not None and self.vio[u][i] == 1.0:
                     err = 0
                 else:
                     # compute current error
@@ -136,13 +138,13 @@ class SVDtf(SVD):
     # check item satisfies constraint
     # 0: satisfy constraint, 1: not
     # assume there's only one constraint # TODO
-    def check_constraint(self, item, const):
+    def check_constraint(self, item, cnst):
         ret = True
 
-        if const['i1'] is not None:
-            ret = self.include_ingr(item, const['i1'])
-        elif const['i2'] is not None:
-            ret = self.exclude_ingr(item, const['i2'])
+        if cnst['i1'] is not None:
+            ret = self.include_ingr(item, cnst['i1'])
+        elif cnst['i2'] is not None:
+            ret = self.exclude_ingr(item, cnst['i2'])
 
         if ret:
             return 0.0

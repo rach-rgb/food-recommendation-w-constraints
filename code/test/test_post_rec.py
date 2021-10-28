@@ -5,7 +5,7 @@ from sys import path
 # setting path
 path.append('../code')
 
-import post_rec
+import code.post_rec as post_rec
 
 
 class TestPostRec(unittest.TestCase):
