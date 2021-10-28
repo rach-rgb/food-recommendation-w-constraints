@@ -5,6 +5,7 @@ from surprise import Dataset
 
 input_path = "../data/"
 
+
 # helper function
 # cast list of string to list of integer
 def int_cast(str_list):
@@ -47,7 +48,7 @@ def load_attr(file_path):
 
 
 # load ingredient related constraint data
-def load_ingr_const(file_path= input_path + "ingr_const.csv"):
+def load_ingr_const(file_path=input_path + "ingr_const.csv"):
     df = pd.read_csv(file_path)
     df.set_index('u', inplace=True)
 
@@ -63,7 +64,7 @@ def load_ingr_const(file_path= input_path + "ingr_const.csv"):
 
 
 # load nutrition related constraint data
-def load_nutr_const(file_path= input_path + "nutr_const.csv"):
+def load_nutr_const(file_path=input_path + "nutr_const.csv"):
     df = pd.read_csv(file_path)
 
     return df

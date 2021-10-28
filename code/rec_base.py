@@ -1,9 +1,37 @@
 from abc import *
+import load_data as ld
 
 
 # Interface of Food Recommendation System with Constraints
 class FoodRecBase(metaclass=ABCMeta):
-    result_N = 10 # get 10 result
+    result_N = 10  # get 10 result
+    n_err = 5  # error bound for nutrient information
+
+    def __init__(self, rate_file, attr_file, const_file, algo):
+        # collect required file names
+        self.rate_file = rate_file
+        self.attr_file = attr_file
+        self.const_file = const_file
+
+        # algorithm to use
+        self.algo = algo
+
+        # required data
+        self.attr = None
+        self.const = None
+        self.train_set = None
+        self.test_set = None
+        self.predictions = None
+
+    def get_data(self):
+        # get attribute data
+        self.attr = ld.load_attr(self.attr_file)
+        self.const = ld.load_const(self.const_file)
+
+        # generate train_set and test_set
+        data = ld.load_rate(self.rate_file)
+        self.train_set = data.build_full_trainset()
+        self.test_set = self.train_set.build_anti_testset()
 
     # train with train_set
     def train(self):
@@ -13,10 +41,16 @@ class FoodRecBase(metaclass=ABCMeta):
     def test(self):
         self.predictions = self.algo.test(self.test_set)
 
-    # load required data
-    @abstractmethod
-    def get_data(self):
-        pass
+    # check if given constraints exist in const.file
+    def valid_constraint(self, uid, i1=None, i2=None):
+        const = self.const.loc[self.const.u == uid]
+        if len(const) < 1:  # no constraint for user
+            return False
+        else:
+            const = const.iloc[0]
+        return (const['i1'] == i1) and (const['i2'] == i2)
+
+        ##### To be implemented for const 3
 
     # return list of top-N recommended food for uid s.t. includes iid
     @abstractmethod
@@ -32,4 +66,9 @@ class FoodRecBase(metaclass=ABCMeta):
     # s.t satisfied target nutrient given iid as history
     @abstractmethod
     def top_n_const_3(self, uid, iid, target):
+        pass
+
+    # return recommendation and applied constants for entire user
+    @abstractmethod
+    def get_top_n(self):
         pass

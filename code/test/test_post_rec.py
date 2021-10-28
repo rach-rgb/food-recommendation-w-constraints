@@ -63,7 +63,7 @@ class TestPostRec(unittest.TestCase):
         self.assertTrue(self.rec.exclude_ingr(0, '1'))
 
     # test satisfy_nutr
-    ##### To be implemented
+    # TODO
 
     # test valid_constraint
     def test_valid_constraint(self):
@@ -72,12 +72,10 @@ class TestPostRec(unittest.TestCase):
         self.assertFalse(self.rec.valid_constraint(2))
         self.assertFalse(self.rec.valid_constraint(0, i1=1, i2=2))
 
-        ##### To be implemented for const 3
+        # TODO
 
     # test top_n_const_1
     def test_top_n_const_1(self):
-        self.rec.sort_prediction()
-
         result = self.rec.top_n_const_1(0, 1)
         attr1 = self.rec.attr.loc[1]
         attr3 = self.rec.attr.loc[3]
@@ -90,8 +88,6 @@ class TestPostRec(unittest.TestCase):
 
     # test top_n_const_2
     def test_top_n_const_2(self):
-        self.rec.sort_prediction()
-
         result = self.rec.top_n_const_2(1, 4)
         attr0 = self.rec.attr.loc[0]
 
@@ -101,11 +97,10 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual(0, len(self.rec.top_n_const_2(1, 3)))
 
     # test top_n_const_3
-    ##### To be implemented
+    # TODO
 
     # test rec result
     def test_get_top_n(self):
-        self.rec.sort_prediction()
         ret = self.rec.get_top_n()
 
         cols = [x for x in range(0, self.rec.result_N)]
