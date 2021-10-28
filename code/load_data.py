@@ -25,18 +25,13 @@ def float_cast(str_list):
 
 
 # load rating data for surprise
-def load_rating_data(file_path = input_path + 'rating_data.csv'):
+def load_rate(file_path):
     reader = Reader(line_format='user item rating', sep=',', rating_scale=(0, 5))
     return Dataset.load_from_file(file_path, reader=reader)
 
-
-# load reduced rating data for surprise
-def load_reduced_rating_data(file_path = input_path + 'reduced_rating_data.csv'):
-    reader = Reader(line_format='user item rating', sep=',', rating_scale=(0, 5))
-    return Dataset.load_from_file(file_path, reader=reader)
 
 # load recipe data
-def load_recipe_data(file_path = input_path + "recipe_data.csv"):
+def load_attr(file_path):
     df = pd.read_csv(file_path)
     df.set_index('fid', inplace=True)
 
@@ -75,9 +70,11 @@ def load_nutr_const(file_path= input_path + "nutr_const.csv"):
 
 
 # load constraint data
-def load_const(file_path = input_path + "const_data.csv"):
+def load_const(file_path):
     df = pd.read_csv(file_path)
     df['nl'] = df['nl'].fillna('')
+    df['i1'] = df['i1'].astype('Int64')
+    df['i2'] = df['i2'].astype('Int64')
     df = df.fillna(np.nan).replace([np.nan], [None])
 
     df['nl'] = df['nl'].str.replace(" ", "")
