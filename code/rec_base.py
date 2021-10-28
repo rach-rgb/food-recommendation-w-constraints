@@ -3,7 +3,7 @@ from abc import *
 
 # Interface of Food Recommendation System with Constraints
 class FoodRecBase(metaclass=ABCMeta):
-    top_N = 10 # get 10 result
+    result_N = 10 # get 10 result
 
     # train with train_set
     def train(self):

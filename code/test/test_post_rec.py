@@ -103,5 +103,18 @@ class TestPostRec(unittest.TestCase):
     # test top_n_const_3
     ##### To be implemented
 
+    # test rec result
+    def test_get_top_n(self):
+        self.rec.sort_prediction()
+        ret = self.rec.get_top_n()
+
+        cols = [x for x in range(0, self.rec.result_N)]
+        cols.extend(['i1', 'i2', 'hl', 'nl'])
+
+        self.assertEqual((4, 14), ret.shape)
+        self.assertEqual(cols, list(ret.columns))
+        self.assertEqual(4, len(ret))
+
+
 if __name__ == '__main__':
     unittest.main()

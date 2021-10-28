@@ -1,4 +1,6 @@
-from tood_rec_base import *
+import pandas as pd
+
+from rec_base import *
 import load_data as ld
 from surprise import SVD
 from collections import defaultdict
@@ -59,7 +61,7 @@ class PostRec(FoodRecBase):
         for f in self.top_K[uid]:
             if self.include_ingr(f[0], iid):
                 result.append(f[0])
-            if len(result) >= self.top_N:
+            if len(result) >= self.result_N:
                 break
 
         return result
@@ -73,7 +75,7 @@ class PostRec(FoodRecBase):
         for f in self.top_K[uid]:
             if self.exclude_ingr(f[0], iid):
                 result.append(f[0])
-            if len(result) >= self.top_N:
+            if len(result) >= self.result_N:
                 break
 
         return result
@@ -85,10 +87,31 @@ class PostRec(FoodRecBase):
         for f in self.top_K[str(uid)]:
             if self.satisfy_nutr(int(f[0]), iid, target):
                 result.append(int(f[0]))
-            if len(result) >= self.top_N:
+            if len(result) >= self.result_N:
                 break
 
         return result
+
+    # return recommendation and applied constants for entire user
+    def get_top_n(self):
+        top_N = defaultdict(list)
+        for u in self.top_K.keys():
+            const = self.const.loc[self.const.u == u]
+            if len(const) < 1: # no constraint
+                top_N[u] = [i for i, r in self.top_K[u]]
+                continue
+            const = const.iloc[0]
+
+            # assume there's only constraint
+            ##### To be implemented
+            if const['i1'] is not None:
+                top_N[u] = self.top_n_const_1(u, const['i1'])
+            elif const['i2'] is not None:
+                top_N[u] = self.top_n_const_2(u, const['i2'])
+
+        result = pd.DataFrame.from_dict(top_N, orient='index')
+        result = result.reindex(columns = [x for x in range (0, self.result_N)])
+        return result.join(self.const.set_index('u'))
 
     # return T/F for constraint 1
     def include_ingr(self, fid, iid):
