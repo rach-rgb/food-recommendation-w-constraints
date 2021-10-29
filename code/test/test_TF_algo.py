@@ -2,10 +2,10 @@ import unittest
 from sys import path
 
 # setting path
-path.append('../code')
+path.append('../src')
 
-import code.inter_rec as inter_rec
-import code.TF_algo as TF_algo
+import src.inter_rec as inter_rec
+import src.TF_algo as TF_algo
 
 
 class TestSVDTF(unittest.TestCase):

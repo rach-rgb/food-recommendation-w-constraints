@@ -3,9 +3,9 @@ from collections import defaultdict
 from sys import path
 
 # setting path
-path.append('../code')
+path.append('../src')
 
-import code.post_rec as post_rec
+import src.post_rec as post_rec
 
 
 class TestPostRec(unittest.TestCase):
