@@ -45,8 +45,8 @@ class NDCG():
         avg = 0
 
         for u in rdf.index:
-            answ = adf.loc[u, :self.alen-1].tolist()
-            result = rdf.loc[u, :self.rlen - 1].tolist()
+            answ = adf.loc[u, :str(self.alen-1)].tolist()
+            result = rdf.loc[u, :str(self.rlen - 1)].tolist()
             avg = avg + self.cal_ndcg(answ, result)
 
         return avg / len(rdf.index)

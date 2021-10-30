@@ -10,6 +10,7 @@ class PostRec(FoodRecBase):
         super().__init__(rate_file, attr_file, const_file, algo)
 
         # result
+        self.result_N = 100
         self.top_K = None  # dictionary of [(item, rate)] for each user
 
     # modify source form https://github.com/NicolasHug/Surprise/blob/master/examples/top_n_recommendations.py

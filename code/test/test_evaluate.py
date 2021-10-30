@@ -85,8 +85,8 @@ class TestEvaluate(unittest.TestCase):
     def test_avg_ndcg2(self):
         ev1 = ev.NDCG(5, 3)
 
-        adf = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 1: ['A', 'B', 'C', 'D', 'E']}).transpose()
-        rdf = pd.DataFrame({0: ['A', 'B', 'C'], 1: ['F', 'F', 'F']}).transpose()
+        adf = pd.DataFrame({'0': ['A', 'B', 'C', 'D', 'E'], '1': ['A', 'B', 'C', 'D', 'E']}).transpose()
+        rdf = pd.DataFrame({'0': ['A', 'B', 'C'], '1': ['F', 'F', 'F']}).transpose()
 
         ndcg = ev1.cal_ndcg(['A', 'B', 'C', 'D', 'E'], ['A', 'B', 'C']) / 2.0
 
@@ -96,8 +96,8 @@ class TestEvaluate(unittest.TestCase):
     def test_avg_ndcg3(self):
         ev1 = ev.NDCG(5, 3)
 
-        adf = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 1: ['A', 'B', 'C', 'D', 'E'], 2: ['A', 'B', 'C', 'D', 'E']}).transpose()
-        rdf = pd.DataFrame({0: ['A', 'B', 'C'], 1: ['F', 'F', 'F']}).transpose()
+        adf = pd.DataFrame({'0': ['A', 'B', 'C', 'D', 'E'], '1': ['A', 'B', 'C', 'D', 'E'], '2': ['A', 'B', 'C', 'D', 'E']}).transpose()
+        rdf = pd.DataFrame({'0': ['A', 'B', 'C'], '1': ['F', 'F', 'F']}).transpose()
 
         ndcg = ev1.cal_ndcg(['A', 'B', 'C', 'D', 'E'], ['A', 'B', 'C']) / 2.0
 
