@@ -6,11 +6,10 @@ from rec_base import *
 
 class PostRec(FoodRecBase):
 
-    def __init__(self, rate_file, attr_file, const_file, algo=SVD()):
-        super().__init__(rate_file, attr_file, const_file, algo)
+    def __init__(self, rate_file, attr_file, const_file, algo=SVD(), split=False):
+        super().__init__(rate_file, attr_file, const_file, algo, split)
 
         # result
-        self.result_N = 100
         self.top_K = None  # dictionary of [(item, rate)] for each user
 
     # modify source form https://github.com/NicolasHug/Surprise/blob/master/examples/top_n_recommendations.py

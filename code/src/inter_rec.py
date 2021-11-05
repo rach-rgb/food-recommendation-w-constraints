@@ -12,8 +12,8 @@ def get_items(items):
 
 class InterRec(FoodRecBase):
 
-    def __init__(self, rate_file, attr_file, const_file, algo):
-        super().__init__(rate_file, attr_file, const_file, algo)
+    def __init__(self, rate_file, attr_file, const_file, algo, split=False):
+        super().__init__(rate_file, attr_file, const_file, algo, split)
 
         # result
         self.top_N = None  # dictionary of [item] for each user

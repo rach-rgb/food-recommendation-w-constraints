@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from collections import defaultdict
 from surprise import Reader
 from surprise import Dataset
 
@@ -81,5 +82,34 @@ def load_const(file_path):
     df['nl'] = df['nl'].str.replace(" ", "")
     df['nl'] = df['nl'].apply(lambda x: x[1:-1].split(',') if x != '' else x)
     df['nl'] = df['nl'].apply(lambda x: float_cast(x) if x != '' else x)
+
+    return df
+
+
+# save (user, item, rate) list as dataframe
+def save_rates(rate_list, file_name, output_path='../../result/', ):
+    rates = defaultdict(list)
+    for (u, i, r) in rate_list:
+        if r >= 4:
+            rates[int(u)].append(int(i))
+
+    ul = []
+    il = []
+    for u in rates.keys():
+        ul.append(u)
+        il.append(rates[u])
+
+    data = { 'user': ul, 'related': il }
+    df = pd.DataFrame(data)
+    df.to_csv(output_path + file_name + '.csv', index=False)
+
+
+# parse rate data
+def load_rate_df(file_path):
+    df = pd.read_csv(file_path, index_col = 'user')
+
+    df['related'] = df['related'].str.replace(" ", "")
+    df['related'] = df['related'].apply(lambda x: x[1:-1].split(',') if x != '' else x)
+    df['related'] = df['related'].apply(lambda x: float_cast(x) if x != '' else x)
 
     return df
