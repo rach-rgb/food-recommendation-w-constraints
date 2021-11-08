@@ -106,7 +106,10 @@ class TestSVDTF(unittest.TestCase):
 
         self.assertNotEqual(0.0, self.algo.estimate(inner_uid('0'), inner_iid('0')))  # violate constraint
         self.assertEqual(0.0, self.algo.estimate(inner_uid('0'), inner_iid('2')))  # violate constraint
-
+        self.assertTrue(self.algo.estimate(inner_uid('2'), inner_iid('0')) >= 1.667)
+        self.assertTrue(self.algo.estimate(inner_uid('2'), inner_iid('0')) <= 2.5 + 1.667)
+        self.assertTrue(self.algo.estimate(inner_uid('2'), inner_iid('1')) >= 2.5)
+        self.assertTrue(self.algo.estimate(inner_uid('2'), inner_iid('1')) <= 2.5 + 1.667)
 
 if __name__ == '__main__':
     unittest.main()
