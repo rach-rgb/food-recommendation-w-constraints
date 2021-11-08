@@ -6,7 +6,13 @@ from surprise.model_selection import train_test_split
 # Interface of Food Recommendation System with Constraints
 class FoodRecBase(metaclass=ABCMeta):
     result_N = 10  # get 10 result
-    n_err = 5  # error bound for nutrient information
+    c_alp = 0.5  # weight for constraint
+    n_err = 5
+
+    # Constraint Related Columns
+    c_i1 = 'i1'  # ingredient to be included
+    c_i2 = 'i2'  # ingredient to be excluded
+    c_nl = 'nl'  # nutrient target
 
     def __init__(self, rate_file, attr_file, const_file, algo, split=False):
         # collect required file names
@@ -57,16 +63,13 @@ class FoodRecBase(metaclass=ABCMeta):
         return self.algo.test(self.test_set)
 
     # check if given constraints exist in const.file
-    def valid_constraint(self, uid, i1=None, i2=None):
+    def valid_constraint(self, uid, i1=None, i2=None, nl=None):
         const = self.const.loc[self.const.u == uid]
         if len(const) < 1:  # no constraint for user
             return False
         else:
             const = const.iloc[0]
-        return (const['i1'] == i1) and (const['i2'] == i2)
-
-        ##### To be implemented for const 3
-        ## TODO
+        return (const[self.c_i1] == i1) and (const[self.c_i2] == i2) and (const[self.c_nl] == nl)
 
     # return list of top-N recommended food for uid s.t. includes iid
     @abstractmethod

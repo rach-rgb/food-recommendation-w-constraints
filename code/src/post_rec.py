@@ -1,6 +1,10 @@
 from collections import defaultdict
+
 import pandas as pd
+from numpy import dot
+from numpy.linalg import norm
 from surprise import SVD
+
 from rec_base import *
 
 
@@ -57,16 +61,22 @@ class PostRec(FoodRecBase):
         return result
 
     # return list of top-N recommended food for uid
-    # s.t satisfied target nutrient given fid
-    # TODO
-    def top_n_const_3(self, uid, iid, target):
-        result = []
-        for f in self.top_K[str(uid)]:
-            if self.satisfy_nutr(int(f[0]), iid, target):
-                result.append(int(f[0]))
-            if len(result) >= self.result_N:
-                break
+    # s.t satisfies target nutrient
+    def top_n_const_3(self, uid, target):
+        if not self.valid_constraint(uid, nl=target):
+            return []
+        if self.top_K is None:
+            self.sort_prediction()
 
+        c3_rates = []
+        for f in self.top_K[uid]:
+            new_rate = self.apply_nutr(f[0], target) * self.c_alp * 5
+            new_rate = new_rate + f[1]
+            c3_rates.append((f[0], new_rate))
+
+        c3_rates.sort(key=lambda x: x[1], reverse=True)
+
+        result = [x[0] for x in c3_rates[:self.result_N]]
         return result
 
     # return recommendation and applied constants for entire user
@@ -83,11 +93,12 @@ class PostRec(FoodRecBase):
             const = const.iloc[0]
 
             # assume there's only constraint
-            # TODO
-            if const['i1'] is not None:
-                top_N[u] = self.top_n_const_1(u, const['i1'])
-            elif const['i2'] is not None:
-                top_N[u] = self.top_n_const_2(u, const['i2'])
+            if const[self.c_i1] is not None:
+                top_N[u] = self.top_n_const_1(u, const[self.c_i1])
+            elif const[self.c_i2] is not None:
+                top_N[u] = self.top_n_const_2(u, const[self.c_i2])
+            elif const[self.c_nl] is not None:
+                top_N[u] = self.top_n_const_3(u, const[self.c_nl])
 
         result = pd.DataFrame.from_dict(top_N, orient='index')
         result = result.reindex(columns=[x for x in range(0, self.result_N)])
@@ -101,16 +112,8 @@ class PostRec(FoodRecBase):
     def exclude_ingr(self, fid, iid):
         return iid not in self.attr.loc[fid].ingredient_ids
 
-    # return T/F for constraint 3
-    # TODO
-    def satisfy_nutr(self, fid, hid, target_nutr):
+    # return score for constraint 3
+    # 0 <= score <= 1
+    def apply_nutr(self, fid, target):
         nutr = self.attr.loc[fid].nutrition
-        nutr_hist = self.attr.loc[hid].nutrition
-        for i in range(0, len(nutr)):
-            target = target_nutr[i] - float(nutr_hist[i])
-            value = float(nutr[i])
-            if value < (target * (1 - (self.n_err / 100))):
-                return False
-            if (target * (1 + (self.n_err / 100))) < value:
-                return False
-        return True
+        return dot(nutr, target) / (norm(nutr) * norm(target))

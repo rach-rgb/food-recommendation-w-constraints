@@ -74,14 +74,13 @@ def load_nutr_const(file_path=input_path + "nutr_const.csv"):
 # load constraint data
 def load_const(file_path):
     df = pd.read_csv(file_path)
-    df['nl'] = df['nl'].fillna('')
     df['i1'] = df['i1'].astype('Int64')
     df['i2'] = df['i2'].astype('Int64')
     df = df.fillna(np.nan).replace([np.nan], [None])
 
     df['nl'] = df['nl'].str.replace(" ", "")
-    df['nl'] = df['nl'].apply(lambda x: x[1:-1].split(',') if x != '' else x)
-    df['nl'] = df['nl'].apply(lambda x: float_cast(x) if x != '' else x)
+    df['nl'] = df['nl'].apply(lambda x: x[1:-1].split(',') if x is not None else x)
+    df['nl'] = df['nl'].apply(lambda x: float_cast(x) if x is not None else x)
 
     return df
 

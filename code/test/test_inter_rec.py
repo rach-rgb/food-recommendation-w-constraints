@@ -37,13 +37,13 @@ class TestPostRec(unittest.TestCase):
         const = self.dummy.const.loc[self.rec.const.u == 0].iloc[0]
         self.assertEqual(1, const['i1'])
         self.assertEqual(None, const['i2'])
-        self.assertEqual(const['nl'], "")
+        self.assertEqual(const['nl'], None)
 
         # check algo() object const
         attr = self.dummy.i_attr.loc[0]
         self.assertIn(1, attr.ingredient_ids)
         self.assertNotIn(4, attr.ingredient_ids)
-        self.assertEqual(attr.nutrition[0], 200)
+        self.assertEqual(attr.nutrition[0], 0)
 
         # check algo() n_err
         self.assertEqual(self.rec.n_err, self.dummy.n_err)
