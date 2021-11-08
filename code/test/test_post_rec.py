@@ -1,5 +1,6 @@
 import unittest
 from collections import defaultdict
+from surprise import accuracy
 from sys import path
 
 # setting path
@@ -29,6 +30,11 @@ class TestPostRec(unittest.TestCase):
         self.assertIn(1, attr.ingredient_ids)
         self.assertNotIn(4, attr.ingredient_ids)
         self.assertEqual(attr.nutrition[0], 200)
+
+    # split input dataset
+    def test_get_data2(self):
+        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        rec2.get_data()
 
     # test result
     def test_test(self):
@@ -109,6 +115,14 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual((4, 14), ret.shape)
         self.assertEqual(cols, list(ret.columns))
         self.assertEqual(4, len(ret))
+
+    # evaluation using RMSE
+    def test_RMSE(self):
+        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        rec2.get_data()
+        rec2.train()
+        predictions = rec2.test_rmse()
+        accuracy.rmse(predictions)
 
 
 if __name__ == '__main__':
