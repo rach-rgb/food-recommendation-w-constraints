@@ -71,6 +71,9 @@ class SVDtf(SVD):
             else:
                 raise PredictionImpossible('User and item are unknown.')
 
+        if self.vio[u][i] != 1.0: # real-number constraint exists
+            est = est * (1 - self.c_alp) + (self.vio[u][i] - 1)
+
         return est
 
     # modify original SGD slightly
@@ -115,7 +118,7 @@ class SVDtf(SVD):
                 print("Processing epoch {}".format(current_epoch))
             for u, i, r in trainset.all_ratings():
                 # if i violates constraint, ignore error
-                if self.vio is not None and self.vio[u][i] == -1.0:
+                if self.vio is not None and self.vio[u][i] != 0.0:
                     err = 0
                 else:
                     # compute current error
