@@ -3,13 +3,6 @@ import pandas as pd
 from rec_base import *
 
 
-def get_items(items):
-    ret = []
-    for i, r in items:
-        ret.append(int(i))
-    return ret
-
-
 class InterRec(FoodRecBase):
 
     def __init__(self, rate_file, attr_file, const_file, algo, split=False):
@@ -21,7 +14,8 @@ class InterRec(FoodRecBase):
     def get_data(self):
         super().get_data()
 
-        self.algo.set_data(self.attr, self.const, self.n_err)
+        columns = [self.c_i1, self.c_i2, self.c_nl]
+        self.algo.set_data(self.attr, self.const, self.c_alp, columns)
 
     # sort prediction and get top_N directly
     def sort_predictions(self):
@@ -65,8 +59,11 @@ class InterRec(FoodRecBase):
         return self.top_N[uid]
 
     # return list of top-N recommended food for uid
-    # s.t satisfied target nutrient given fid
-    # TODO
-    def top_n_const_3(self, uid, iid, target):
-        id = self.map_uid(uid, None, None, iid, target)
-        return get_items(self.top_n[id])
+    # s.t satisfies target nutrient
+    def top_n_const_3(self, uid, target):
+        if not self.valid_constraint(uid, nl=target):
+            return []
+        if self.top_N is None:
+            self.sort_predictions()
+
+        return self.top_N[uid]

@@ -7,7 +7,6 @@ from surprise.model_selection import train_test_split
 class FoodRecBase(metaclass=ABCMeta):
     result_N = 10  # get 10 result
     c_alp = 0.5  # weight for constraint
-    n_err = 5
 
     # Constraint Related Columns
     c_i1 = 'i1'  # ingredient to be included
@@ -84,7 +83,7 @@ class FoodRecBase(metaclass=ABCMeta):
     # return list of top-N recommended food for uid
     # s.t satisfied target nutrient given iid as history
     @abstractmethod
-    def top_n_const_3(self, uid, iid, target):
+    def top_n_const_3(self, uid, target):
         pass
 
     # return recommendation and applied constants for entire user

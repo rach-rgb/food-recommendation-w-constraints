@@ -20,16 +20,21 @@ class TestSVDTF(unittest.TestCase):
         const = self.algo.const.loc[self.rec.const.u == 0].iloc[0]
         self.assertEqual(1, const['i1'])
         self.assertEqual(None, const['i2'])
-        self.assertEqual(const['nl'], "")
+        self.assertEqual(const['nl'], None)
 
         # check algo() object const
         attr = self.algo.i_attr.loc[0]
         self.assertIn(1, attr.ingredient_ids)
         self.assertNotIn(4, attr.ingredient_ids)
-        self.assertEqual(attr.nutrition[0], 200)
+        self.assertEqual(attr.nutrition[0], 0)
 
-        # check algo() n_err
-        self.assertEqual(self.rec.n_err, self.algo.n_err)
+        # check algo() c_alp
+        self.assertEqual(self.rec.c_alp, self.algo.c_alp)
+
+        # check algo() column names
+        self.assertEqual(self.rec.c_i1, self.algo.c_i1)
+        self.assertEqual(self.rec.c_i2, self.algo.c_i2)
+        self.assertEqual(self.rec.c_nl, self.algo.c_nl)
 
     # test include_ingr
     def test_include_ingr(self):
@@ -43,19 +48,38 @@ class TestSVDTF(unittest.TestCase):
         self.assertFalse(self.algo.exclude_ingr(0, 1))
         self.assertTrue(self.algo.exclude_ingr(0, '1'))
 
-    # test satisfy_nutr
-    # TODO
+    # test apply_nutr
+    def test_apply_nutr(self):
+        weight = self.algo.c_alp
+
+        # FYI
+        # self.rec.attr.loc[0].nutrition = [0, 1, 1, 1]
+        # self.rec.attr.loc[1].nutrition = [1, 0, 1, 1]
+        # self.rec.attr.loc[2].nutrition = [2, 0, 2, 2]
+        # self.rec.attr.loc[3].nutrition = [1, 0, 0, 0]
+
+        list1 = [1, 0, 1, 1]
+        list2 = [2, 0, 2, 2]
+        list3 = [1, 0, 0, 0]
+
+        self.assertEqual(1.667, round(self.algo.apply_nutr(0, list1), 3))
+        self.assertEqual(1.667, round(self.algo.apply_nutr(0, list2), 3))
+        self.assertEqual(2.500, round(self.algo.apply_nutr(1, list1), 3))
+        self.assertEqual(2.500, round(self.algo.apply_nutr(1, list2), 3))
+        self.assertEqual(0.000, round(self.algo.apply_nutr(0, list3), 3))
 
     # test check_constraint
-    # TODO add constraint 3
     def test_check_constraint(self):
         const1 = self.algo.const.loc[self.rec.const.u == 0].iloc[0]
         const2 = self.algo.const.loc[self.rec.const.u == 1].iloc[0]
+        const3 = self.algo.const.loc[self.rec.const.u == 2].iloc[0]
 
-        self.assertEqual(0.0, self.algo.check_constraint(0, const1))
-        self.assertEqual(1.0, self.algo.check_constraint(2, const1))
-        self.assertEqual(0.0, self.algo.check_constraint(0, const2))
-        self.assertEqual(1.0, self.algo.check_constraint(2, const2))
+        self.assertEqual(0.0, self.algo.check_constraint(0, const1))  # satisfy
+        self.assertEqual(-1.0, self.algo.check_constraint(2, const1))  # not satisfy
+        self.assertEqual(0.0, self.algo.check_constraint(0, const2))  # satisfy
+        self.assertEqual(-1.0, self.algo.check_constraint(2, const2))  # not satisfy
+        self.assertEqual(2.667, round(self.algo.check_constraint(0, const3), 3))  # score = 1.667
+        self.assertEqual(3.500, round(self.algo.check_constraint(1, const3), 3))  # score = 2.500
 
     # test fit()
     def test_fit(self):
@@ -64,12 +88,15 @@ class TestSVDTF(unittest.TestCase):
         inner_uid = self.algo.trainset.to_inner_uid
         inner_iid = self.algo.trainset.to_inner_iid
 
-        self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('0')])
-        self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('0')])
-        self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('1')])
-        self.assertEqual(1.0, sat[inner_uid('0')][inner_iid('2')])
-        self.assertEqual(0.0, sat[inner_uid('1')][inner_iid('0')])
-        self.assertEqual(1.0, sat[inner_uid('1')][inner_iid('2')])
+        self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('0')])  # satisfy
+        self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('0')])  # satisfy
+        self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('1')])  # satisfy
+        self.assertEqual(-1.0, sat[inner_uid('0')][inner_iid('2')])  # not satisfy
+        self.assertEqual(0.0, sat[inner_uid('1')][inner_iid('0')])  # satisfy
+        self.assertEqual(-1.0, sat[inner_uid('1')][inner_iid('2')])  # not satisfy
+        self.assertEqual(2.667, round(sat[inner_uid('2')][inner_iid('0')], 3))  # score = 1.667
+        self.assertEqual(3.500, round(sat[inner_uid('2')][inner_iid('1')], 3))  # score = 2.500
+        self.assertEqual(3.500, round(sat[inner_uid('2')][inner_iid('2')], 3))  # score = 2.500
 
     # test estimate()
     def test_estimate(self):
@@ -77,8 +104,8 @@ class TestSVDTF(unittest.TestCase):
         inner_uid = self.algo.trainset.to_inner_uid
         inner_iid = self.algo.trainset.to_inner_iid
 
-        self.assertNotEqual(0.0, self.algo.estimate(inner_uid('0'), inner_iid('0')))
-        self.assertEqual(0.0, self.algo.estimate(inner_uid('0'), inner_iid('2')))
+        self.assertNotEqual(0.0, self.algo.estimate(inner_uid('0'), inner_iid('0')))  # violate constraint
+        self.assertEqual(0.0, self.algo.estimate(inner_uid('0'), inner_iid('2')))  # violate constraint
 
 
 if __name__ == '__main__':

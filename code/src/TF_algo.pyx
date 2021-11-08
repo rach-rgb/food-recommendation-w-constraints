@@ -1,4 +1,4 @@
-cimport numpy as np  # noqa
+cimport numpy as np
 import numpy as np
 from surprise.utils import get_rng
 from surprise import PredictionImpossible
@@ -10,14 +10,21 @@ class SVDtf(SVD):
         SVD.__init__(self)
         self.i_attr = None
         self.const = None
-        self.n_err = None
+        self.c_alp = None
+        self.c_i1 = None
+        self.c_i2 = None
+        self.c_nl = None
+
         self.vio = None  # 0: satisfy ~ 1: not satisfy
 
     # pandas dataframe related to attribute and constraints
-    def set_data(self, attr, cnst, n_err):
+    def set_data(self, attr, cnst, c_alp, columns):
         self.i_attr = attr
         self.const = cnst
-        self.n_err = n_err
+        self.c_alp = c_alp
+        self.c_i1 = columns[0]
+        self.c_i2 = columns[1]
+        self.c_nl = columns[2]
 
     # check constraints for all (u, i) pairs
     def fit(self, train_set):
@@ -40,7 +47,7 @@ class SVDtf(SVD):
 
     # u, i inner id
     def estimate(self, u, i):
-        if self.vio[u][i] == 1.0:  # violate constraint
+        if self.vio[u][i] == -1.0:  # violate constraint
             return 0.0
 
         known_user = self.trainset.knows_user(u)
@@ -108,7 +115,7 @@ class SVDtf(SVD):
                 print("Processing epoch {}".format(current_epoch))
             for u, i, r in trainset.all_ratings():
                 # if i violates constraint, ignore error
-                if self.vio is not None and self.vio[u][i] == 1.0:
+                if self.vio is not None and self.vio[u][i] == -1.0:
                     err = 0
                 else:
                     # compute current error
@@ -135,21 +142,24 @@ class SVDtf(SVD):
         self.qi = qi
 
 
-    # check item satisfies constraint
-    # 0: satisfy constraint, 1: not
+    # score x to check item satisfies constraint
+    # x = 0: satisfy perfectly or no real number constraint
+    # x = -1: violate T/F constraint
+    # 1 <= x <= 6: satisfy T/F constraint & (1 + score) for real number constraint
     # assume there's only one constraint # TODO
     def check_constraint(self, item, cnst):
-        ret = True
+        ret = 0.0
 
         if cnst['i1'] is not None:
-            ret = self.include_ingr(item, cnst['i1'])
+            if self.include_ingr(item, cnst['i1']) is False:
+                ret = -1.0
         elif cnst['i2'] is not None:
-            ret = self.exclude_ingr(item, cnst['i2'])
+            if self.exclude_ingr(item, cnst['i2']) is False:
+                ret = -1.0
+        elif cnst['nl'] is not None:
+            ret = self.apply_nutr(item, cnst['nl']) + 1
 
-        if ret:
-            return 0.0
-        else:
-            return 1.0
+        return ret
 
     # return T/F for constraint 1
     def include_ingr(self, fid, iid):
@@ -159,16 +169,8 @@ class SVDtf(SVD):
     def exclude_ingr(self, fid, iid):
         return iid not in self.i_attr.loc[fid].ingredient_ids
 
-    # return T/F for constraint 3
-    # TODO
-    def satisfy_nutr(self, fid, hid, target_nutr):
+    # return score for constraint 3
+    # 0 <= score <= 1
+    def apply_nutr(self, fid, target):
         nutr = self.i_attr.loc[fid].nutrition
-        nutr_hist = self.i_attr.loc[hid].nutrition
-        for i in range(0, len(nutr)):
-            target = target_nutr[i] - float(nutr_hist[i])
-            value = float(nutr[i])
-            if value < (target * (1 - (self.n_err / 100))):
-                return False
-            if (target * (1 + (self.n_err / 100))) < value:
-                return False
-        return True
+        return (np.dot(nutr, target) / (np.linalg.norm(nutr) * np.linalg.norm(target))) * self.c_alp * 5
