@@ -110,9 +110,9 @@ class TestPostRec(unittest.TestCase):
         ret = self.rec.get_top_n()
 
         cols = [x for x in range(0, self.rec.result_N)]
-        cols.extend(['i1', 'i2', 'hl', 'nl'])
+        cols.extend(['i1', 'i2', 'nl'])
 
-        self.assertEqual((4, 14), ret.shape)
+        self.assertEqual((4, 13), ret.shape)
         self.assertEqual(cols, list(ret.columns))
         self.assertEqual(4, len(ret))
 
