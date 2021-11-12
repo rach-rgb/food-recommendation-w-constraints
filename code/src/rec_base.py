@@ -59,7 +59,7 @@ class FoodRecBase(metaclass=ABCMeta):
     def test_rmse(self):
         assert(self.split is True)
 
-        return self.algo.test(self.test_set)
+        return self.algo.test(self.test_RMSE_set)
 
     # check if given constraints exist in const.file
     def valid_constraint(self, uid, i1=None, i2=None, nl=None):

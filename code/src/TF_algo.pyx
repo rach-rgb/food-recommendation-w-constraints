@@ -47,11 +47,12 @@ class SVDtf(SVD):
 
     # u, i inner id
     def estimate(self, u, i):
-        if self.vio[u][i] == -1.0:  # violate constraint
-            return 0.0
-
         known_user = self.trainset.knows_user(u)
         known_item = self.trainset.knows_item(i)
+
+        if known_user and known_item:
+            if self.vio[u][i] == -1.0:  # violate constraint
+                return 0.0
 
         if self.biased:
             est = self.trainset.global_mean
@@ -71,8 +72,9 @@ class SVDtf(SVD):
             else:
                 raise PredictionImpossible('User and item are unknown.')
 
-        if self.vio[u][i] != 1.0: # real-number constraint exists
-            est = est * (1 - self.c_alp) + (self.vio[u][i] - 1)
+        if known_user and known_item:
+            if self.vio[u][i] != 1.0: # real-number constraint exists
+                est = est * (1 - self.c_alp) + (self.vio[u][i] - 1)
 
         return est
 

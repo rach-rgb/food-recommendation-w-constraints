@@ -131,3 +131,11 @@ class PostRec(FoodRecBase):
     def apply_nutr(self, fid, target):
         nutr = self.attr.loc[fid].nutrition
         return dot(nutr, target) / (norm(nutr) * norm(target))
+
+    # make prediction with test_RMSE set
+    def test_rmse(self):
+        assert(self.split is True)
+
+        # test_RMSE_set: (str(u), str(i), real rate) tuple
+
+        return self.algo.test(self.test_RMSE_set)
