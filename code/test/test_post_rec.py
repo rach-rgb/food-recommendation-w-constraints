@@ -128,7 +128,16 @@ class TestPostRec(unittest.TestCase):
         self.rec.c_alp = 1
         result = self.rec.top_n_const_3(2, [1, 0, 1, 1])
 
-        self.assertEqual([1, 2, 0], result)
+        self.assertEqual(0, result[2])
+
+    # test top_n_const_3 slice results
+    def test_top_n_const_3_2(self):
+        # modify arguments for testing
+        self.rec.result_N = 1
+        self.rec.c_alp = 1
+        result = self.rec.top_n_const_3(2, [1, 0, 1, 1])
+
+        self.assertTrue((result[0] == 1) or (result[0] == 2))
 
     # test recommendation results for entire user
     def test_get_top_n(self):

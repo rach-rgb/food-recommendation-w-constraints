@@ -1,4 +1,5 @@
 from collections import defaultdict
+import heapq
 
 import pandas as pd
 from numpy import dot
@@ -68,15 +69,28 @@ class PostRec(FoodRecBase):
         if self.top_K is None:
             self.sort_prediction()
 
-        c3_rates = []
-        for f in self.top_K[uid]:
+        c3_rates = []  # (rate, ID)
+        for f in self.top_K[uid][:self.result_N]:
             new_rate = self.apply_nutr(f[0], target) * self.c_alp * 5
-            new_rate = new_rate + f[1]
-            c3_rates.append((f[0], new_rate))
+            new_rate = new_rate + (1 - self.c_alp) * f[1]
+            heapq.heappush(c3_rates, (new_rate, f[0]))
 
-        c3_rates.sort(key=lambda x: x[1], reverse=True)
+        for f in self.top_K[uid][self.result_N:]:
+            if (1 - self.c_alp) * f[1] + 5 * self.c_alp < c3_rates[0][0]:
+                break
 
-        result = [x[0] for x in c3_rates[:self.result_N]]
+            new_rate = self.apply_nutr(f[0], target) * self.c_alp * 5
+            new_rate = new_rate + (1 - self.c_alp) * f[1]
+            if new_rate > c3_rates[0][0]:
+                heapq.heappop(c3_rates)
+                heapq.heappush(c3_rates, (new_rate, f[0]))
+
+        result = []
+        while len(c3_rates) > 0:
+            result.append(heapq.heappop(c3_rates)[1])
+
+        result.reverse()
+
         return result
 
     # return recommendation and applied constants for entire user

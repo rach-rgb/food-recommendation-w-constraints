@@ -111,5 +111,6 @@ class TestSVDTF(unittest.TestCase):
         self.assertTrue(self.algo.estimate(inner_uid('2'), inner_iid('1')) >= 2.5)
         self.assertTrue(self.algo.estimate(inner_uid('2'), inner_iid('1')) <= 2.5 + 1.667)
 
+
 if __name__ == '__main__':
     unittest.main()
