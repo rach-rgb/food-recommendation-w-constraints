@@ -100,10 +100,12 @@ class TestPostRec(unittest.TestCase):
     def test_top_n_const_1(self):
         result = self.rec.top_n_const_1(0, 1)
         attr1 = self.rec.attr.loc[1]
+        attr2 = self.rec.attr.loc[2]
         attr3 = self.rec.attr.loc[3]
 
         self.assertEqual([1, 3], sorted(result))
         self.assertIn(1, attr1.ingredient_ids)
+        self.assertNotIn(1, attr2.ingredient_ids)
         self.assertIn(1, attr3.ingredient_ids)
 
         self.assertEqual(0, len(self.rec.top_n_const_1(0, 2)))
@@ -156,7 +158,30 @@ class TestPostRec(unittest.TestCase):
         rec2.get_data()
         rec2.train()
         predictions = rec2.test_rmse()
-        accuracy.rmse(predictions)
+        accuracy.rmse(predictions, False)
+
+    # check post-processing in test_RMSE
+    def test_RMSE2(self):
+        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        rec2.get_data()
+        rec2.train()
+
+        # Post-RS estimate each rating as 0
+        rec2.test_RMSE_set = [('0', '2', 5.0), ('1', '2', 5.0), ('1', '2', 5.0)]
+        predictions = rec2.test_rmse()
+        self.assertEqual(5.0, accuracy.rmse(predictions, False))
+
+        # Post-RS estimate ratings considering nutrient score = 1
+        rec2.test_RMSE_set = [('2', '1', 5.0)]
+        predictions = rec2.test_rmse()
+
+        est_algo = rec2.algo.predict('2', '1')[3] * (1 - rec2.c_alp) + 5.0 * rec2.c_alp
+        self.assertEqual(round(predictions[0][3], 5), round(est_algo, 5))
+
+        # Post-RS estimate ratings same (No constraint)
+        rec2.test_RMSE_set = [('3', '1', 5.0)]
+        predictions = rec2.test_rmse()
+        self.assertEqual(predictions[0][3], rec2.algo.predict('3', '1')[3])
 
 
 if __name__ == '__main__':

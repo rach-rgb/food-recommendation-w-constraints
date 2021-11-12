@@ -5,6 +5,7 @@ import pandas as pd
 from numpy import dot
 from numpy.linalg import norm
 from surprise import SVD
+from surprise.prediction_algorithms.predictions import Prediction
 
 from rec_base import *
 
@@ -136,6 +137,29 @@ class PostRec(FoodRecBase):
     def test_rmse(self):
         assert(self.split is True)
 
-        # test_RMSE_set: (str(u), str(i), real rate) tuple
+        pre = self.algo.test(self.test_RMSE_set)
+        for i in range (0, len(pre)):
+            uid, iid, true_r, est, _ = pre[i]
 
-        return self.algo.test(self.test_RMSE_set)
+            const = self.const.loc[self.const.u == int(uid)]
+            if len(const) < 1:  # no constraint
+                continue
+            const = const.iloc[0]
+
+            # apply constraint
+            # assume there's only constraint (TODO)
+            new_est = 0
+            if const[self.c_i1] is not None:
+                if not self.include_ingr(int(iid), const[self.c_i1]):
+                    new_est = 0.0 # make est = 0
+            elif const[self.c_i2] is not None:
+                if not self.exclude_ingr(int(iid), const[self.c_i2]):
+                    new_est = 0.0
+            elif const[self.c_nl] is not None:
+                adder = self.apply_nutr(int(iid), const[self.c_nl])
+                est = est * (1-self.c_alp) + self.c_alp * 5 * adder
+                new_est = est
+
+            pre[i] = Prediction(uid, iid, true_r, new_est, _)
+
+        return pre
