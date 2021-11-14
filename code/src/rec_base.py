@@ -89,7 +89,7 @@ class FoodRecBase(metaclass=ABCMeta):
         return dot(nutr, target) / (norm(nutr) * norm(target))
 
     # get relevance score for (uid, iid)
-    def get_rel(self, uid, iid):
+    def cal_rel(self, uid, iid):
         const = self.get_constraint(uid)
         if const is None:
             return 1
@@ -108,21 +108,13 @@ class FoodRecBase(metaclass=ABCMeta):
             return 1
 
     # save (user, item, rate) list as dataframe
-    def save_rates(self, rate_list, file_name, output_path='../../result/', ):
+    def get_rel(self):
         rates = defaultdict(list)
-        for (u, i, r) in rate_list:
-            if r >= 4 and self.get_rel(int(u), int(i)) >= self.rel_th:
+        for (u, i, r) in self.test_RMSE_set:
+            if r >= 4 and self.cal_rel(int(u), int(i)) >= self.rel_th:
                 rates[int(u)].append(int(i))
 
-        ul = []
-        il = []
-        for u in rates.keys():
-            ul.append(u)
-            il.append(rates[u])
-
-        data = {'user': ul, 'related': il}
-        df = DataFrame(data)
-        df.to_csv(output_path + file_name + '.csv', index=False)
+        return rates
 
     # check if given constraints exist in const.file
     def valid_constraint(self, uid, i1=None, i2=None, nl=None):

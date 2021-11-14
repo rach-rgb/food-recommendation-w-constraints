@@ -85,8 +85,8 @@ def load_const(file_path):
     return df
 
 
-# parse rate data
-def load_rate_df(file_path):
+# parse relevance data
+def load_rel(file_path):
     df = pd.read_csv(file_path, index_col='user')
 
     df['related'] = df['related'].str.replace(" ", "")

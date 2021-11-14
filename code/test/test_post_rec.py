@@ -7,6 +7,7 @@ from sys import path
 path.append('../src')
 
 import src.post_rec as post_rec
+from src.evaluate import Evaluation as ev
 
 
 class TestPostRec(unittest.TestCase):
@@ -115,6 +116,18 @@ class TestPostRec(unittest.TestCase):
         rec2.test_RMSE_set = [('3', '1', 5.0)]
         predictions = rec2.test_rmse()
         self.assertEqual(predictions[0][3], rec2.algo.predict('3', '1')[3])
+
+    # use rate_dict from RS
+    def test_calculate_ndcg3(self):
+        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        rel_dict = rec2.get_rel()
+        top_n_df = rec2.get_top_n()
+
+        ev.calculate_ndcg(rel_dict, top_n_df, 10)
 
 
 if __name__ == '__main__':

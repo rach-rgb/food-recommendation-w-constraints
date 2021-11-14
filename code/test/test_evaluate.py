@@ -1,108 +1,112 @@
 import unittest
-import math
 from sys import path
+from collections import defaultdict
 import pandas as pd
+from surprise import SVD
 
 # setting path
 path.append('../src')
 
-import src.evaluate as ev
-import src.post_rec as post_rec
-import src.load_data as ld
+from src.evaluate import Evaluation as ev
+from src.rec_base import FoodRecBase
 
 
-class TestEvaluate(unittest.TestCase):
+class TestNDCG(unittest.TestCase):
+    # Dummy Recommendation System for testing
+    class DummyRS(FoodRecBase):
+        def top_n_const_1(self, uid, iid):
+            return []
 
-    # test constructing relevancy list
-    def test_construct(self):
-        ev1 = ev.NDCG()
+        def top_n_const_2(self, uid, iid):
+            return []
 
-        self.assertEqual(10, ev1.alen)
-        self.assertEqual([3, 3, 3, 2, 2, 2, 1, 1, 1, 1], ev1.rel)
+        def top_n_const_3(self, uid, target):
+            return []
 
-        ev2 = ev.NDCG(3, 3)
-        self.assertEqual([3, 2, 1], ev2.rel)
+        def get_top_n(self):
+            top_N = defaultdict(list)
+            for (u, i, r) in self.test_RMSE_set:
+                top_N[int(u)].append(i)
 
-    # test cal_idcg
-    def test_cal_idcg(self):
-        ev1 = ev.NDCG(5, 5)
-        val1 = 3 / math.log(2, 2) + 2 / math.log(3, 2) + 1 / math.log(4, 2) + 1 / math.log(5, 2) + 1 / math.log(6, 2)
-        self.assertEqual(val1, ev1.cal_idcg(5))
+            result = pd.DataFrame.from_dict(top_N, orient='index')
+            result = result.reindex(columns=[x for x in range(0, self.result_N)])
+            return result.join(self.const.set_index('u'))
 
-        ev2 = ev.NDCG(10, 10)
-        val2 = 3 / math.log(2, 2) + 3 / math.log(3, 2) + 3 / math.log(4, 2)
-        val2 = val2 + 2 / math.log(5, 2) + 2 / math.log(6, 2) + 2 / math.log(7, 2)
-        val2 = val2 + 1 / math.log(8, 2) + 1 / math.log(9, 2) + 1 / math.log(10, 2) + 1 / math.log(11, 2)
-        self.assertEqual(val2, ev2.cal_idcg(10))
+    def setUp(self):
+        self.rec = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), split=True)
+        self.rec.get_data()
+        self.rec.train()
 
-    # test cal_ndcg
+    # calculate_rmse()
+    def test_calculate_rmse(self):
+        predictions = self.rec.test_rmse()
+
+        self.assertGreater(5.0, ev.calculate_rmse(predictions))
+        self.assertLessEqual(0.0, ev.calculate_rmse(predictions))
+
+    # cal_ndcg()
     def test_cal_ndcg(self):
-        ev1 = ev.NDCG(5, 5)
-
-        answ1 = [1, 2, 3, 4, 5]
+        gt = [1, 2, 3, 4, 5]
         res1 = [1, 2, 3, 4, 5]  # perfect result
         res2 = [5, 4, 3, 2, 1]
         res3 = [6, 7, 8, 9, 10]
+        res4 = [6, 7, 3, 2, 1]
+        res5 = [3, 2, 1, 6, 7]
 
-        self.assertEqual(1.0, ev1.cal_ndcg(answ1, res1))
-        self.assertEqual(0.0, ev1.cal_ndcg(answ1, res3))
-        self.assertGreater(ev1.cal_ndcg(answ1, res1), ev1.cal_ndcg(answ1, res2))
+        self.assertEqual(1.0, ev.cal_ndcg(gt, res1))
+        self.assertEqual(1.0, ev.cal_ndcg(gt, res2))
+        self.assertEqual(0.0, ev.cal_ndcg(gt, res3))
+        self.assertEqual(ev.cal_ndcg(gt, res1), ev.cal_ndcg(gt, res2))
+        self.assertGreater(ev.cal_ndcg(gt, res2), ev.cal_ndcg(gt, res3))
+        self.assertGreater(ev.cal_ndcg(gt, res5), ev.cal_ndcg(gt, res4))
 
-    # cal_ndcg for len(answ) != len(res)
+    # cal_ndcg() when len(gt) != len(prediction)
     def test_cal_ndcg2(self):
-        ev1 = ev.NDCG(6, 5)
-        ev1.rel = [3, 3, 2, 2, 1, 1]
+        gt = [1, 2, 3]
+        res1 = [1, 2, 3, 4, 5]
+        res2 = [5, 4, 3, 2, 1]
+        res3 = [6, 7, 8, 9, 10]
 
-        answ = ['A', 'B', 'C', 'D', 'E', 'F']
-        res1 = ['A', 'E', 'C', 'D', 'F']
-        res2 = ['A', 'B', 'C', 'G', 'E']
+        self.assertEqual(1.0, ev.cal_ndcg(gt, res1))
+        self.assertGreater(1.0, ev.cal_ndcg(gt, res2))
+        self.assertEqual(0.0, ev.cal_ndcg(gt, res3))
 
-        self.assertEqual(7.141, round(ev1.cal_idcg(5), 3))
-        self.assertEqual(0.823, round(ev1.cal_ndcg(answ, res1), 3))
-        self.assertEqual(0.879, round(ev1.cal_ndcg(answ, res2), 3))
-
-    # cal_ndcg if result contains None
+    # cal_ndcg() when result contains None
     def test_cal_ndcg3(self):
-        ev1 = ev.NDCG(5, 5)
+        gt = [1, 2, 3]
+        res = [1, 2, 3, None, None]
 
-        answ = ['A', 'B', 'C', 'D', 'E']
-        res1 = ['A', 'B', 'C', None, None]
-        res2 = ['A', 'B', 'C', 'D', 'E']
+        self.assertEqual(1.0, ev.cal_ndcg(gt, res))
 
-        self.assertGreater(ev1.cal_ndcg(answ, res2), ev1.cal_ndcg(answ, res1))
+    # calculate_ndcg()
+    def test_calculate_ndcg(self):
+        rel_dict = {0: ['A', 'B', 'C', 'D', 'E']}
+        top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E']}).transpose()
 
-    # test avg_ndcg
-    def test_avg_ndcg(self):
-        ev1 = ev.NDCG(5, 5)
+        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 3))
+        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 1))
 
-        adf = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E']}).transpose()
-        rdf = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E']}).transpose()
-        self.assertEqual(1.0, ev1.avg_ndcg(adf, rdf))
+        rel_dict = {0: ['A', 'B', 'C', 'D', 'E']}
+        top_n_df = pd.DataFrame({0: ['F', 'G', 'C', 'D', 'E']}).transpose()
 
-        adf = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 1: ['A', 'B', 'C', 'D', 'E']}).transpose()
-        rdf = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 1: ['F', 'F', 'F', 'F', 'F']}).transpose()
-        self.assertEqual(0.5, ev1.avg_ndcg(adf, rdf))
+        self.assertGreater(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 3), ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertEqual(0.0, ev.calculate_ndcg(rel_dict, top_n_df, 1))
 
-    # avg_ndcg for len(answ) != len(result)
-    def test_avg_ndcg2(self):
-        ev1 = ev.NDCG(5, 3)
+    # calculate_ndcg() for multiple users
+    def test_calculate_ndcg2(self):
+        rel_dict = {0: ['A', 'B', 'C', 'D', 'E'], 3: ['A', 'B', 'C', 'D', 'E']}
+        top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 3: ['F', 'G', 'C', 'D', 'E']}).transpose()
 
-        adf = pd.DataFrame({'0': ['A', 'B', 'C', 'D', 'E'], '1': ['A', 'B', 'C', 'D', 'E']}).transpose()
-        rdf = pd.DataFrame({'0': ['A', 'B', 'C'], '1': ['F', 'F', 'F']}).transpose()
+        self.assertGreater(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertEqual(0.5, ev.calculate_ndcg(rel_dict, top_n_df, 2))
 
-        ndcg = ev1.cal_ndcg(['A', 'B', 'C', 'D', 'E'], ['A', 'B', 'C']) / 2.0
+    # use rate_dict from RS
+    def test_calculate_ndcg3(self):
+        rel_dict = self.rec.get_rel()
+        top_n_df = self.rec.get_top_n()
 
-        self.assertEqual(ndcg, ev1.avg_ndcg(adf, rdf))
-
-    # avg_ndcg test
-    def test_avg_ndcg3(self):
-        ev1 = ev.NDCG(5, 3)
-
-        adf = pd.DataFrame({'0': ['A', 'B', 'C', 'D', 'E'], '1': ['A', 'B', 'C', 'D', 'E'],
-                            '2': ['A', 'B', 'C', 'D', 'E']}).transpose()
-        rdf = pd.DataFrame({'0': ['A', 'B', 'C'], '1': ['F', 'F', 'F']}).transpose()
-
-        ndcg = ev1.cal_ndcg(['A', 'B', 'C', 'D', 'E'], ['A', 'B', 'C']) / 2.0
-
-        self.assertEqual(ndcg, ev1.avg_ndcg(adf, rdf))
-
+        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 10), 1.0)
+        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 5), 1.0)
+        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 3), 1.0)

@@ -5,7 +5,7 @@ from surprise import accuracy
 
 path.append('../src')
 from src.rec_base import FoodRecBase
-from src.load_data import load_rate_df
+from src.load_data import load_rel
 
 
 class TestRecBase(unittest.TestCase):
@@ -121,13 +121,13 @@ class TestRecBase(unittest.TestCase):
     def test_get_rel(self):
         self.rec.get_data()
 
-        self.assertEqual(0, self.rec.get_rel(0, 2))
-        self.assertEqual(1, self.rec.get_rel(0, 0))
-        self.assertEqual(1, self.rec.get_rel(1, 0))
-        self.assertEqual(0, self.rec.get_rel(1, 2))
-        self.assertEqual(1.00, round(self.rec.get_rel(2, 1), 3))
-        self.assertGreater(1, self.rec.get_rel(2, 0))
-        self.assertEqual(1, self.rec.get_rel(3, 0))
+        self.assertEqual(0, self.rec.cal_rel(0, 2))
+        self.assertEqual(1, self.rec.cal_rel(0, 0))
+        self.assertEqual(1, self.rec.cal_rel(1, 0))
+        self.assertEqual(0, self.rec.cal_rel(1, 2))
+        self.assertEqual(1.00, round(self.rec.cal_rel(2, 1), 3))
+        self.assertGreater(1, self.rec.cal_rel(2, 0))
+        self.assertEqual(1, self.rec.cal_rel(3, 0))
 
     # read rate files from RS
     def test_save_rates(self):
@@ -136,18 +136,11 @@ class TestRecBase(unittest.TestCase):
         # manipulate DummyRS.test_RMSE_set for testing
         rec2.test_RMSE_set = [('0', '0', 5.0), ('0', '1', 4.0), ('0', '2', 3.0), ('1', '0', 5.0), ('2', '1', 4.0),
                               ('2', '2', 2.0), ('3', '1', 4.0)]
-        rec2.save_rates(rec2.test_RMSE_set, 'test')
-        df = load_rate_df('../../result/test.csv')
+        rel_dict = rec2.get_rel()
 
-        list0 = df.loc[0].iloc[0]
-        list1 = df.loc[1].iloc[0]
-        list2 = df.loc[2].iloc[0]
-        list3 = df.loc[3].iloc[0]
-
-        self.assertEqual([0, 1], sorted(list0))
-        self.assertEqual([0], sorted(list1))
-        self.assertEqual([1], sorted(list2))
-        self.assertEqual([1], sorted(list3))
+        self.assertEqual([0], rel_dict[1])
+        self.assertEqual([1], rel_dict[2])
+        self.assertEqual([1], rel_dict[3])
 
     # valid_constraint()
     def test_valid_constraint(self):

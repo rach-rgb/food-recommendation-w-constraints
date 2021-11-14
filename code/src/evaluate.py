@@ -1,52 +1,44 @@
-import pandas as pd
 import math
+from surprise import accuracy
 
 
-class NDCG():
-    def __init__(self, answ_length=10, res_length=10):
-        self.alen = answ_length
-        self.rlen = res_length
-        self.rel = [3 for i in range (0, int(self.alen / 3))]
-        self.rel = self.rel + [2 for i in range (0, int(self.alen / 3))]
-        self.rel = self.rel + [1 for i in range (0, self.alen - int(self.alen / 3) * 2)]
-        self.idcg = self.cal_idcg(self.rlen)
+class Evaluation:
+    @staticmethod
+    def calculate_rmse(predictions):
+        return accuracy.rmse(predictions, False)
 
-    # calculate IDCG
-    def cal_idcg(self, p):
-        assert(p <= self.alen)
+    @staticmethod
+    def calculate_ndcg(rel_dict, top_n_df, k):
+        ndcg_sum = 0
+        ndcg_target = 0
 
-        idcg = 0
-        # calculate IDCG
-        for i in range (0, p):
-            idcg = idcg + self.rel[i] / math.log(i + 2, 2)
+        for u in top_n_df.index:
+            gt = rel_dict[u]
+            if len(gt) > k:
+                gt = gt[:k]
+            if len(gt) == 0:
+                continue # skip
+            prediction = top_n_df.loc[u, :(k-1)].tolist()
+            ndcg_sum = ndcg_sum + Evaluation.cal_ndcg(gt, prediction)
+            ndcg_target = ndcg_target + 1
 
-        return idcg
+        return ndcg_sum / ndcg_target
 
-    # calculate NDCG between answer and result
-    # assume len(result) < rel_length
-    def cal_ndcg(self, answer, result):
+    @staticmethod
+    def cal_ndcg(gt, prediction):
         # initialize
         dcg = 0
+        idcg = 0
 
         # calculate dcg
-        for item in result:
-            if item in answer:
-                answ_idx = answer.index(item)
-                res_idx = result.index(item)
-                dcg = dcg + (self.rel[answ_idx] / math.log(res_idx + 2, 2))
+        for i in range(0, len(prediction)):
+            item = prediction[i]
+            if item in gt:
+                dcg = dcg + 1 / math.log(i + 2, 2)  # relevance is all 1
+            if i < len(gt):
+                idcg = idcg + 1 / math.log(i + 2, 2)
 
         if dcg == 0:
             return 0
 
-        return dcg / self.idcg
-
-    # calculate average ndcg for dataframe adf(answer) and rdf(result)
-    def avg_ndcg(self, adf, rdf):
-        avg = 0
-
-        for u in rdf.index:
-            answ = adf.loc[u, :str(self.alen-1)].tolist()
-            result = rdf.loc[u, :str(self.rlen - 1)].tolist()
-            avg = avg + self.cal_ndcg(answ, result)
-
-        return avg / len(rdf.index)
+        return dcg / idcg
