@@ -106,18 +106,3 @@ class TestEvaluate(unittest.TestCase):
 
         self.assertEqual(ndcg, ev1.avg_ndcg(adf, rdf))
 
-    # test save_rates in load_data.py
-    def test_save_rates(self):
-        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
-        rec2.test_RMSE_set = [('0', '0', 5.0), ('0', '1', 4.0), ('0', '2', 3.0), ('1', '0', 5.0), ('3', '1', 4.0)]
-
-        ld.save_rates(rec2.test_RMSE_set, 'test')
-        df = ld.load_rate_df('../../result/test.csv')
-
-        list0 = df.loc[0].iloc[0]
-        list1 = df.loc[1].iloc[0]
-        list3 = df.loc[3].iloc[0]
-
-        self.assertEqual([0, 1], sorted(list0))
-        self.assertEqual([0], sorted(list1))
-        self.assertEqual([1], sorted(list3))

@@ -104,16 +104,6 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual(cols, list(ret.columns))
         self.assertEqual(4, len(ret))
 
-    # evaluation using RMSE
-    def test_RMSE(self):
-        dummy2 = DummyAlgo()
-        rec2 = inter_rec.InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', dummy2, split=True)
-        rec2.get_data()
-        rec2.train()
-
-        predictions = rec2.test_rmse()
-        accuracy.rmse(predictions)
-
 
 if __name__ == '__main__':
     unittest.main()

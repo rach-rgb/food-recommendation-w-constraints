@@ -17,25 +17,6 @@ class TestPostRec(unittest.TestCase):
         self.rec.train()
         self.rec.test()
 
-    # load required data
-    def test_get_data(self):
-        # check const data
-        const = self.rec.const.loc[self.rec.const.u == 0].iloc[0]
-        self.assertEqual(1, const['i1'])
-        self.assertEqual(None, const['i2'])
-        self.assertEqual(const['nl'], None)
-
-        # check attr data
-        attr = self.rec.attr.loc[0]
-        self.assertIn(1, attr.ingredient_ids)
-        self.assertNotIn(4, attr.ingredient_ids)
-        self.assertEqual(attr.nutrition[0], 0)
-
-    # split input dataset
-    def test_get_data2(self):
-        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
-        rec2.get_data()
-
     # test result
     def test_test(self):
         result = defaultdict(list)
@@ -55,46 +36,6 @@ class TestPostRec(unittest.TestCase):
         # check sorted list
         self.assertEqual(sorted(self.rec.top_K[0]), self.rec.top_K[0])
         self.assertEqual(3, len(self.rec.top_K[3]))
-
-    # test include_ingr
-    def test_include_ingr(self):
-        self.assertTrue(self.rec.include_ingr(0, 1))
-        self.assertFalse(self.rec.include_ingr(0, 4))
-        self.assertFalse(self.rec.include_ingr(0, '1'))
-
-    # test exclude_ingr
-    def test_exclude_ingr(self):
-        self.assertTrue(self.rec.exclude_ingr(0, 4))
-        self.assertFalse(self.rec.exclude_ingr(0, 1))
-        self.assertTrue(self.rec.exclude_ingr(0, '1'))
-
-    # test apply_nutr
-    def test_apply_nutr(self):
-        # FYI
-        # self.rec.attr.loc[0].nutrition = [0, 1, 1, 1]
-        # self.rec.attr.loc[1].nutrition = [1, 0, 1, 1]
-        # self.rec.attr.loc[2].nutrition = [2, 0, 2, 2]
-        # self.rec.attr.loc[3].nutrition = [1, 0, 0, 0]
-
-        list1 = [1, 0, 1, 1]
-        list2 = [2, 0, 2, 2]
-        list3 = [1, 0, 0, 0]
-
-        self.assertEqual(0.67, round(self.rec.apply_nutr(0, list1), 2))
-        self.assertEqual(0.67, round(self.rec.apply_nutr(0, list2), 2))
-        self.assertEqual(1.00, round(self.rec.apply_nutr(1, list1), 2))
-        self.assertEqual(1.00, round(self.rec.apply_nutr(1, list2), 2))
-        self.assertEqual(0.00, round(self.rec.apply_nutr(0, list3), 2))
-
-    # test valid_constraint
-    def test_valid_constraint(self):
-        self.assertTrue(self.rec.valid_constraint(0, i1=1))
-        self.assertTrue(self.rec.valid_constraint(1, i2=4))
-        self.assertTrue(self.rec.valid_constraint(2, nl=[1, 0, 1, 1]))
-
-        self.assertFalse(self.rec.valid_constraint(0, i1=1, i2=2))
-        self.assertFalse(self.rec.valid_constraint(2, nl=[1, 0, 1, 0.5]))
-        self.assertFalse(self.rec.valid_constraint(3))  # No constraint for user 3
 
     # test top_n_const_1
     def test_top_n_const_1(self):
@@ -151,14 +92,6 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual((4, 13), ret.shape)
         self.assertEqual(cols, list(ret.columns))
         self.assertEqual(4, len(ret))
-
-    # evaluation using RMSE
-    def test_RMSE(self):
-        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
-        rec2.get_data()
-        rec2.train()
-        predictions = rec2.test_rmse()
-        accuracy.rmse(predictions, False)
 
     # check post-processing in test_RMSE
     def test_RMSE2(self):

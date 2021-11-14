@@ -1,9 +1,5 @@
-from collections import defaultdict
 import heapq
-
 import pandas as pd
-from numpy import dot
-from numpy.linalg import norm
 from surprise import SVD
 from surprise.prediction_algorithms.predictions import Prediction
 
@@ -118,20 +114,6 @@ class PostRec(FoodRecBase):
         result = pd.DataFrame.from_dict(top_N, orient='index')
         result = result.reindex(columns=[x for x in range(0, self.result_N)])
         return result.join(self.const.set_index('u'))
-
-    # return T/F for constraint 1
-    def include_ingr(self, fid, iid):
-        return iid in self.attr.loc[fid].ingredient_ids
-
-    # return T/F for constraint 2
-    def exclude_ingr(self, fid, iid):
-        return iid not in self.attr.loc[fid].ingredient_ids
-
-    # return score for constraint 3
-    # 0 <= score <= 1
-    def apply_nutr(self, fid, target):
-        nutr = self.attr.loc[fid].nutrition
-        return dot(nutr, target) / (norm(nutr) * norm(target))
 
     # make prediction with test_RMSE set
     def test_rmse(self):

@@ -1,12 +1,17 @@
 from abc import *
-import load_data as ld
+from collections import defaultdict
+from pandas import DataFrame
+from numpy import dot
+from numpy.linalg import norm
 from surprise.model_selection import train_test_split
+import load_data as ld
 
 
 # Interface of Food Recommendation System with Constraints
 class FoodRecBase(metaclass=ABCMeta):
     result_N = 10  # get 10 result
     c_alp = 0.5  # weight for constraint
+    rel_th = 0.5 # relevance threshold
 
     # Constraint Related Columns
     c_i1 = 'i1'  # ingredient to be included
@@ -60,6 +65,64 @@ class FoodRecBase(metaclass=ABCMeta):
         assert(self.split is True)
 
         return self.algo.test(self.test_RMSE_set)
+
+    # get constraint of user u, return None if there's no constraint
+    def get_constraint(self, u):
+        const = self.const.loc[self.const.u == u]
+        if len(const) < 1:
+            return None
+        else:
+            return const.iloc[0]
+
+    # return T/F for constraint 1
+    def include_ingr(self, fid, iid):
+        return iid in self.attr.loc[fid].ingredient_ids
+
+    # return T/F for constraint 2
+    def exclude_ingr(self, fid, iid):
+        return iid not in self.attr.loc[fid].ingredient_ids
+
+    # return score for constraint 3
+    # 0 <= score <= 1
+    def apply_nutr(self, fid, target):
+        nutr = self.attr.loc[fid].nutrition
+        return dot(nutr, target) / (norm(nutr) * norm(target))
+
+    # get relevance score for (uid, iid)
+    def get_rel(self, uid, iid):
+        const = self.get_constraint(uid)
+        if const is None:
+            return 1
+        else:
+            # apply constraint
+            # assume there's only one constraint TODO
+            if const[self.c_i1] is not None:
+                if not self.include_ingr(iid, const[self.c_i1]):
+                    return 0
+            elif const[self.c_i2] is not None:
+                if not self.exclude_ingr(iid, const[self.c_i2]):
+                    return 0
+            elif const[self.c_nl] is not None:
+                adder = self.apply_nutr(iid, const[self.c_nl])
+                return adder
+            return 1
+
+    # save (user, item, rate) list as dataframe
+    def save_rates(self, rate_list, file_name, output_path='../../result/', ):
+        rates = defaultdict(list)
+        for (u, i, r) in rate_list:
+            if r >= 4 and self.get_rel(int(u), int(i)) >= self.rel_th:
+                rates[int(u)].append(int(i))
+
+        ul = []
+        il = []
+        for u in rates.keys():
+            ul.append(u)
+            il.append(rates[u])
+
+        data = {'user': ul, 'related': il}
+        df = DataFrame(data)
+        df.to_csv(output_path + file_name + '.csv', index=False)
 
     # check if given constraints exist in const.file
     def valid_constraint(self, uid, i1=None, i2=None, nl=None):
