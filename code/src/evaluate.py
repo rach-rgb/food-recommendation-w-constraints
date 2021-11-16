@@ -8,21 +8,22 @@ class Evaluation:
         return accuracy.rmse(predictions, False)
 
     @staticmethod
+    # assume k < top_n of RS
     def calculate_ndcg(rel_dict, top_n_df, k):
         ndcg_sum = 0
         denom = 0
 
-        for u in top_n_df.index:
+        for u in rel_dict.keys():
+            if u not in top_n_df.index:
+                continue
             gt = rel_dict[u]
             if len(gt) > k:
                 gt = gt[:k]
-            if len(gt) == 0:
-                continue  # skip
             prediction = top_n_df.loc[u, :(k-1)].tolist()
             ndcg_sum = ndcg_sum + Evaluation.cal_ndcg(gt, prediction)
             denom = denom + 1
 
-        if denom == 0: # no answer
+        if denom == 0:  # no answer
             return math.nan
         return ndcg_sum / denom
 

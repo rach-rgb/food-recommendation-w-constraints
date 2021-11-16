@@ -1,5 +1,6 @@
 import unittest
 from sys import path
+import math
 from collections import defaultdict
 import pandas as pd
 from surprise import SVD
@@ -11,7 +12,7 @@ from src.evaluate import Evaluation as ev
 from src.rec_base import FoodRecBase
 
 
-class TestNDCG(unittest.TestCase):
+class TestEval(unittest.TestCase):
     # Dummy Recommendation System for testing
     class DummyRS(FoodRecBase):
         def top_n_const_1(self, uid, iid):
@@ -102,11 +103,22 @@ class TestNDCG(unittest.TestCase):
         self.assertGreater(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
         self.assertEqual(0.5, ev.calculate_ndcg(rel_dict, top_n_df, 2))
 
-    # use rate_dict from RS
+    # skip either rel_dict[u] is empty or top_n_df.loc[u] is empty
     def test_calculate_ndcg3(self):
-        rel_dict = self.rec.get_rel()
+        rel_dict = {0: ['A', 'B', 'C', 'D', 'E']}
+        top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 3: ['F', 'G', 'C', 'D', 'E']}).transpose()
+
+        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+
+        rel_dict = {0: ['A', 'B', 'C', 'D', 'E'], 4: ['A', 'B', 'C', 'D', 'E']}
+        top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 3: ['F', 'G', 'C', 'D', 'E']}).transpose()
+
+        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+
+    # return nan for empty rel_dict
+    def test_calculate_ndcg4(self):
+        rel_dict = {}
         top_n_df = self.rec.get_top_n()
 
-        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 10), 1.0)
-        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 5), 1.0)
-        self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 3), 1.0)
+        self.assertTrue(math.isnan(ev.calculate_ndcg(rel_dict, top_n_df, 5)))
+

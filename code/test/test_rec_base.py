@@ -2,6 +2,7 @@ import unittest
 from sys import path
 from surprise import SVD
 from surprise import accuracy
+from collections import defaultdict
 
 path.append('../src')
 from src.rec_base import FoodRecBase
@@ -138,8 +139,11 @@ class TestRecBase(unittest.TestCase):
                               ('2', '2', 2.0), ('3', '1', 4.0)]
         rel_dict = rec2.get_rel()
 
-        self.assertEqual([0], rel_dict[1])
-        self.assertEqual([1], rel_dict[2])
+        # known_user: 0, 1, 3
+        # known_items: 1, 2
+        self.assertEqual([1], rel_dict[0])
+        self.assertFalse(1 in rel_dict.keys())  # item '0' is unknown
+        self.assertFalse(2 in rel_dict.keys())  # user '2' is unknown
         self.assertEqual([1], rel_dict[3])
 
     # valid_constraint()
