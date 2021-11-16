@@ -111,15 +111,17 @@ class TestRecBase(unittest.TestCase):
         list1 = [1, 0, 1, 1]
         list2 = [2, 0, 2, 2]
         list3 = [1, 0, 0, 0]
+        list4 = [0, 0, 0, 0,]
 
         self.assertEqual(0.67, round(self.rec.apply_nutr(0, list1), 2))
         self.assertEqual(0.67, round(self.rec.apply_nutr(0, list2), 2))
         self.assertEqual(1.00, round(self.rec.apply_nutr(1, list1), 2))
         self.assertEqual(1.00, round(self.rec.apply_nutr(1, list2), 2))
         self.assertEqual(0.00, round(self.rec.apply_nutr(0, list3), 2))
+        self.assertEqual(0.00, round(self.rec.apply_nutr(0, list4), 2))
 
-    # get_rel()
-    def test_get_rel(self):
+    # cal_rel() for single constraint
+    def test_cal_rel(self):
         self.rec.get_data()
 
         self.assertEqual(0, self.rec.cal_rel(0, 2))
@@ -129,6 +131,34 @@ class TestRecBase(unittest.TestCase):
         self.assertEqual(1.00, round(self.rec.cal_rel(2, 1), 3))
         self.assertGreater(1, self.rec.cal_rel(2, 0))
         self.assertEqual(1, self.rec.cal_rel(3, 0))
+
+    # cal_rel() for multiple constraint
+    def test_cal_rel2(self):
+        rec2 = self.DummyRS('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', SVD())
+        rec2.get_data()
+
+        self.assertEqual(1, rec2.cal_rel(3, 0))
+        self.assertEqual(0, rec2.cal_rel(3, 1))
+        self.assertEqual(0, rec2.cal_rel(3, 3))
+        self.assertEqual(1, rec2.cal_rel(4, 0))
+        self.assertEqual(0, rec2.cal_rel(4, 2))
+        self.assertEqual(0, rec2.cal_rel(4, 1))
+        self.assertEqual(1, rec2.cal_rel(5, 0))
+        self.assertEqual(0, rec2.cal_rel(5, 2))
+        self.assertEqual(0, rec2.cal_rel(5, 3))
+        self.assertEqual(1, rec2.cal_rel(6, 0))
+        for i in range (0, 7):
+            self.assertEqual(1, rec2.cal_rel(7, i))
+
+    # get_rel()
+    def test_get_rel(self):
+        rec2 = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), True)
+        rec2.get_data()
+
+        rel_dict = rec2.get_rel()
+        for u in rel_dict.keys():
+            for i in rel_dict[u]:
+                self.assertGreaterEqual(self.rec.cal_rel(int(u), int(i)), rec2.rel_th)
 
     # read rate files from RS
     def test_save_rates(self):

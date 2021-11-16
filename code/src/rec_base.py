@@ -86,7 +86,10 @@ class FoodRecBase(metaclass=ABCMeta):
     # 0 <= score <= 1
     def apply_nutr(self, fid, target):
         nutr = self.attr.loc[fid].nutrition
-        return dot(nutr, target) / (norm(nutr) * norm(target))
+        d = dot(nutr, target)
+        if d == 0:
+            return 0
+        return d / (norm(nutr) * norm(target))
 
     # get relevance score for (uid, iid)
     def cal_rel(self, uid, iid):
@@ -95,28 +98,28 @@ class FoodRecBase(metaclass=ABCMeta):
             return 1
         else:
             # apply constraint
-            # assume there's only one constraint TODO
             if const[self.c_i1] is not None:
                 if not self.include_ingr(iid, const[self.c_i1]):
                     return 0
-            elif const[self.c_i2] is not None:
+            if const[self.c_i2] is not None:
                 if not self.exclude_ingr(iid, const[self.c_i2]):
                     return 0
-            elif const[self.c_nl] is not None:
+            if const[self.c_nl] is not None:
                 adder = self.apply_nutr(iid, const[self.c_nl])
-                return adder
+                return round(adder, 1)
             return 1
 
     # save (user, item, rate) list as dataframe
     def get_rel(self):
-        rates = defaultdict(list)
+        rel = defaultdict(list)
+
         for (u, i, r) in self.test_RMSE_set:
             if r >= 4 and self.cal_rel(int(u), int(i)) >= self.rel_th:
                 if u in self.train_set._raw2inner_id_users.keys():
                     if i in self.train_set._raw2inner_id_items.keys():
-                        rates[int(u)].append(int(i))
+                        rel[int(u)].append(int(i))
 
-        return rates
+        return rel
 
     # check if given constraints exist in const.file
     def valid_constraint(self, uid, i1=None, i2=None, nl=None):
