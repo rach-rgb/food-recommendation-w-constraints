@@ -10,19 +10,21 @@ class Evaluation:
     @staticmethod
     def calculate_ndcg(rel_dict, top_n_df, k):
         ndcg_sum = 0
-        ndcg_target = 0
+        denom = 0
 
         for u in top_n_df.index:
             gt = rel_dict[u]
             if len(gt) > k:
                 gt = gt[:k]
             if len(gt) == 0:
-                continue # skip
+                continue  # skip
             prediction = top_n_df.loc[u, :(k-1)].tolist()
             ndcg_sum = ndcg_sum + Evaluation.cal_ndcg(gt, prediction)
-            ndcg_target = ndcg_target + 1
+            denom = denom + 1
 
-        return ndcg_sum / ndcg_target
+        if denom == 0: # no answer
+            return math.nan
+        return ndcg_sum / denom
 
     @staticmethod
     def cal_ndcg(gt, prediction):

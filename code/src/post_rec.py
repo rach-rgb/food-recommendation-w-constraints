@@ -113,7 +113,7 @@ class PostRec(FoodRecBase):
 
         result = pd.DataFrame.from_dict(top_N, orient='index')
         result = result.reindex(columns=[x for x in range(0, self.result_N)])
-        return result.join(self.const.set_index('u'))
+        return result.join(self.const.set_index('u')).sort_index()
 
     # make prediction with test_RMSE set
     def test_rmse(self):

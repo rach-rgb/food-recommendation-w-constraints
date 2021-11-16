@@ -112,7 +112,8 @@ class FoodRecBase(metaclass=ABCMeta):
         rates = defaultdict(list)
         for (u, i, r) in self.test_RMSE_set:
             if r >= 4 and self.cal_rel(int(u), int(i)) >= self.rel_th:
-                rates[int(u)].append(int(i))
+                if self.train_set.knows_user(u) and self.train_set.know_item(i):
+                    rates[u].append(i)
 
         return rates
 
