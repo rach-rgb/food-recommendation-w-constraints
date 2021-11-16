@@ -5,5 +5,5 @@ code/src/__pycache__
 code/src/build
 notebooks/.ipynb_checkpoints
 notebooks/__pycache__
-result/InterRec*
-result/PostRec*
+result/
+code/test/sample.py
