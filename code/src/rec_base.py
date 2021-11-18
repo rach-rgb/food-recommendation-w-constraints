@@ -146,6 +146,12 @@ class FoodRecBase(metaclass=ABCMeta):
     def top_n_const_3(self, uid, target):
         pass
 
+    # return list of top-N recommended food for uid
+    # s.t satisfies specific constraint
+    @abstractmethod
+    def top_n_const(self, uid):
+        pass
+
     # return recommendation and applied constants for entire user
     @abstractmethod
     def get_top_n(self):

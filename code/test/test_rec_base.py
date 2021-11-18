@@ -19,6 +19,9 @@ class TestRecBase(unittest.TestCase):
         def top_n_const_3(self, uid, target):
             return []
 
+        def top_n_const(self, uid):
+            return []
+
         def get_top_n(self):
             return []
 
@@ -185,3 +188,14 @@ class TestRecBase(unittest.TestCase):
         self.assertFalse(self.rec.valid_constraint(0, i1=1, i2=2))
         self.assertFalse(self.rec.valid_constraint(2, nl=[1, 0, 1, 0.5]))
         self.assertFalse(self.rec.valid_constraint(3))  # No constraint for user 3
+
+    # valid_constraint() for mixed constraints
+    def test_valid_constraint2(self):
+        rec2 = self.DummyRS('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', SVD())
+        rec2.get_data()
+
+        self.assertTrue(rec2.valid_constraint(3, i1=0, i2=1))
+        self.assertFalse(rec2.valid_constraint(3, i1=0, i2=1, nl=[1, 1]))
+        self.assertTrue(rec2.valid_constraint(4, i2=1, nl=[1, 1]))
+        self.assertFalse(rec2.valid_constraint(4))
+        self.assertTrue(rec2.valid_constraint(6, i1=0, i2=1, nl=[1, 1]))
