@@ -8,8 +8,8 @@ from surprise import SVD
 # setting path
 path.append('../src')
 
-from src.evaluate import Evaluation as ev
-from src.rec_base import FoodRecBase
+from evaluate import Evaluation as ev
+from rec_base import FoodRecBase
 
 
 class TestEval(unittest.TestCase):

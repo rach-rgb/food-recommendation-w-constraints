@@ -2,11 +2,9 @@ import unittest
 from sys import path
 from surprise import SVD
 from surprise import accuracy
-from collections import defaultdict
 
 path.append('../src')
-from src.rec_base import FoodRecBase
-from src.load_data import load_rel
+from rec_base import FoodRecBase
 
 
 class TestRecBase(unittest.TestCase):

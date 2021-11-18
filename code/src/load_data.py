@@ -83,14 +83,3 @@ def load_const(file_path):
     df['nl'] = df['nl'].apply(lambda x: float_cast(x) if x is not None else x)
 
     return df
-
-
-# parse relevance data
-def load_rel(file_path):
-    df = pd.read_csv(file_path, index_col='user')
-
-    df['related'] = df['related'].str.replace(" ", "")
-    df['related'] = df['related'].apply(lambda x: x[1:-1].split(',') if x != '' else x)
-    df['related'] = df['related'].apply(lambda x: float_cast(x) if x != '' else x)
-
-    return df

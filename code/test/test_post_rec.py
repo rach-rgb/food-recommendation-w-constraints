@@ -6,14 +6,14 @@ from sys import path
 # setting path
 path.append('../src')
 
-import src.post_rec as post_rec
-from src.evaluate import Evaluation as ev
+from post_rec import PostRec
+from evaluate import Evaluation as ev
 
 
 class TestPostRec(unittest.TestCase):
 
     def setUp(self):
-        self.rec = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv')
+        self.rec = PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv')
         self.rec.get_data()
         self.rec.train()
         self.rec.test()
@@ -96,7 +96,7 @@ class TestPostRec(unittest.TestCase):
 
     # check post-processing in test_RMSE
     def test_RMSE2(self):
-        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        rec2 = PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
         rec2.get_data()
         rec2.train()
 
@@ -119,7 +119,7 @@ class TestPostRec(unittest.TestCase):
 
     # use rate_dict from RS
     def test_calculate_ndcg3(self):
-        rec2 = post_rec.PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        rec2 = PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
         rec2.get_data()
         rec2.train()
         rec2.test()

@@ -4,14 +4,14 @@ from sys import path
 # setting path
 path.append('../src')
 
-import src.inter_rec as inter_rec
-import src.TF_algo as TF_algo
+from inter_rec import InterRec
+import TF_algo
 
 
 class TestSVDTF(unittest.TestCase):
     def setUp(self):
         self.algo = TF_algo.SVDtf()
-        self.rec = inter_rec.InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
+        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
         self.rec.get_data()
 
     # test set_data

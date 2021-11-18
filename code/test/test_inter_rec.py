@@ -6,7 +6,7 @@ from surprise import accuracy
 # setting path
 path.append('../src')
 
-import src.inter_rec as inter_rec
+from inter_rec import InterRec
 
 
 class DummyAlgo(SVD):
@@ -33,7 +33,7 @@ class TestPostRec(unittest.TestCase):
 
     def setUp(self):
         self.dummy = DummyAlgo()
-        self.rec = inter_rec.InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.dummy)
+        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.dummy)
         self.rec.get_data()
         self.rec.train()
         self.rec.test()
