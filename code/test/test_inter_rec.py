@@ -9,30 +9,28 @@ path.append('../src')
 from inter_rec import InterRec
 
 
-class DummyAlgo(SVD):
-    def __init__(self):
-        SVD.__init__(self)
-
-        self.i_attr = None
-        self.const = None
-        self.c_alp = None
-        self.c_i1 = None
-        self.c_i2 = None
-        self.c_nl = None
-
-    def set_data(self, attr, const, c_alp, columns):
-        self.i_attr = attr
-        self.const = const
-        self.c_alp = c_alp
-        self.c_i1 = columns[0]
-        self.c_i2 = columns[1]
-        self.c_nl = columns[2]
-
-
 class TestPostRec(unittest.TestCase):
+    class DummyAlgo(SVD):
+        def __init__(self):
+            SVD.__init__(self)
+
+            self.i_attr = None
+            self.const = None
+            self.c_alp = None
+            self.c_i1 = None
+            self.c_i2 = None
+            self.c_nl = None
+
+        def set_data(self, attr, const, c_alp, columns):
+            self.i_attr = attr
+            self.const = const
+            self.c_alp = c_alp
+            self.c_i1 = columns[0]
+            self.c_i2 = columns[1]
+            self.c_nl = columns[2]
 
     def setUp(self):
-        self.dummy = DummyAlgo()
+        self.dummy = self.DummyAlgo()
         self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.dummy)
         self.rec.get_data()
         self.rec.train()
@@ -89,9 +87,30 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual(0, len(self.rec.top_n_const_2(0, 0)))
 
     # test top_n_const_3
+    # caution: dummy algorithm doesn't apply constraints
     def test_top_n_const_3(self):
         self.assertEqual([0, 1, 2], sorted(self.rec.top_n_const_3(2, [1, 0, 1, 1])))
-        self.assertEqual(0, len(self.rec.top_n_const_3(0, [1, 0, 1, 1,])))
+        self.assertEqual(0, len(self.rec.top_n_const_3(0, [1, 0, 1, 1])))
+
+    # test top_n_const
+    # caution: dummy algorithm doesn't apply constraints
+    def test_top_n_const(self):
+        rec2 = InterRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', self.dummy)
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        self.assertEqual(0, len(rec2.top_n_const(0, 1, 1, [1, 1])))  # invalid constraint
+
+        inner_uid = rec2.algo.trainset.to_inner_uid
+        inner_iid = rec2.algo.trainset.to_inner_iid
+
+        self.assertEqual(6, len(rec2.top_n_const(6, 0, 1, [1, 1])))
+        pre = rec2.top_n_const(6, 0, 1, [1, 1])
+        for i in range(1, 6):
+            e1 = rec2.algo.predict(inner_uid('6'), inner_iid(str(pre[i-1])))[3]
+            e2 = rec2.algo.predict(inner_uid('6'), inner_iid(str(pre[i])))[3]
+            self.assertGreaterEqual(e1, e2)
 
     # test rec result
     def test_get_top_n(self):
@@ -101,6 +120,20 @@ class TestPostRec(unittest.TestCase):
         cols.extend(['i1', 'i2', 'nl'])
 
         self.assertEqual((4, 13), ret.shape)
+        self.assertEqual(cols, list(ret.columns))
+        self.assertEqual(4, len(ret))
+
+    def test_get_top_n2(self):
+        rec2 = InterRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', self.dummy)
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        cols = [x for x in range(0, self.rec.result_N)]
+        cols.extend(['i1', 'i2', 'nl'])
+
+        ret = rec2.get_top_n()
+        self.assertEqual((8, 13), ret.shape)
         self.assertEqual(cols, list(ret.columns))
         self.assertEqual(4, len(ret))
 

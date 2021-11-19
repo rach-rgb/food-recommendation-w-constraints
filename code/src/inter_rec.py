@@ -67,3 +67,13 @@ class InterRec(FoodRecBase):
             self.sort_predictions()
 
         return self.top_N[uid]
+
+    # return list of top-N recommended food for uid
+    # s.t satisfies specific constraint
+    def top_n_const(self, uid, iid1=None, iid2=None, target=None):
+        if not self.valid_constraint(uid, iid1, iid2, target):
+            return []
+        if self.top_N is None:
+            self.sort_predictions()
+
+        return self.top_N[uid]
