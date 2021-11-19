@@ -123,11 +123,10 @@ class FoodRecBase(metaclass=ABCMeta):
 
     # check if given constraints exist in const.file
     def valid_constraint(self, uid, i1=None, i2=None, nl=None):
-        const = self.const.loc[self.const.u == uid]
-        if len(const) < 1:  # no constraint for user
-            return False
-        else:
-            const = const.iloc[0]
+        const = self.get_constraint(uid)
+        if const is None:
+            return (i1 is None) and (i2 is None) and (nl is None)
+
         return (const[self.c_i1] == i1) and (const[self.c_i2] == i2) and (const[self.c_nl] == nl)
 
     # return list of top-N recommended food for uid s.t. includes iid
@@ -149,7 +148,7 @@ class FoodRecBase(metaclass=ABCMeta):
     # return list of top-N recommended food for uid
     # s.t satisfies specific constraint
     @abstractmethod
-    def top_n_const(self, uid):
+    def top_n_const(self, uid, iid1, iid2, target):
         pass
 
     # return recommendation and applied constants for entire user

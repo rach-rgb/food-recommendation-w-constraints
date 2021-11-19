@@ -187,7 +187,7 @@ class TestRecBase(unittest.TestCase):
 
         self.assertFalse(self.rec.valid_constraint(0, i1=1, i2=2))
         self.assertFalse(self.rec.valid_constraint(2, nl=[1, 0, 1, 0.5]))
-        self.assertFalse(self.rec.valid_constraint(3))  # No constraint for user 3
+        self.assertTrue(self.rec.valid_constraint(3))  # No constraint for user 3
 
     # valid_constraint() for mixed constraints
     def test_valid_constraint2(self):
