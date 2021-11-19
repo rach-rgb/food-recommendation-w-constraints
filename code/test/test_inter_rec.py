@@ -135,7 +135,7 @@ class TestPostRec(unittest.TestCase):
         ret = rec2.get_top_n()
         self.assertEqual((8, 13), ret.shape)
         self.assertEqual(cols, list(ret.columns))
-        self.assertEqual(4, len(ret))
+        self.assertEqual(8, len(ret))
 
 
 if __name__ == '__main__':

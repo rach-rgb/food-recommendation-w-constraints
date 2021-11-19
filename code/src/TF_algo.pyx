@@ -73,7 +73,7 @@ class SVDtf(SVD):
                 raise PredictionImpossible('User and item are unknown.')
 
         if known_user and known_item:
-            if self.vio[u][i] != 1.0: # real-number constraint exists
+            if self.vio[u][i] != 0.0: # real-number constraint exists
                 est = est * (1 - self.c_alp) + (self.vio[u][i] - 1)
 
         return est
@@ -120,7 +120,7 @@ class SVDtf(SVD):
                 print("Processing epoch {}".format(current_epoch))
             for u, i, r in trainset.all_ratings():
                 # if i violates constraint, ignore error
-                if self.vio is not None and self.vio[u][i] != 0.0:
+                if self.vio is not None and self.vio[u][i] == -1.0:
                     err = 0
                 else:
                     # compute current error
@@ -151,20 +151,19 @@ class SVDtf(SVD):
     # x = 0: satisfy perfectly or no real number constraint
     # x = -1: violate T/F constraint
     # 1 <= x <= 6: satisfy T/F constraint & (1 + score) for real number constraint
-    # assume there's only one constraint # TODO
     def check_constraint(self, item, cnst):
         ret = 0.0
 
         if cnst['i1'] is not None:
             if self.include_ingr(item, cnst['i1']) is False:
-                ret = -1.0
-        elif cnst['i2'] is not None:
+                return -1.0
+        if cnst['i2'] is not None:
             if self.exclude_ingr(item, cnst['i2']) is False:
-                ret = -1.0
-        elif cnst['nl'] is not None:
-            ret = self.apply_nutr(item, cnst['nl']) + 1
+                return -1.0
+        if cnst['nl'] is not None:
+            return self.apply_nutr(item, cnst['nl']) + 1
 
-        return ret
+        return ret # shouldn't reach here
 
     # return T/F for constraint 1
     def include_ingr(self, fid, iid):
@@ -178,4 +177,8 @@ class SVDtf(SVD):
     # 0 <= score <= 1
     def apply_nutr(self, fid, target):
         nutr = self.i_attr.loc[fid].nutrition
-        return (np.dot(nutr, target) / (np.linalg.norm(nutr) * np.linalg.norm(target))) * self.c_alp * 5
+        d = np.dot(nutr, target)
+        if d == 0:
+            return 0
+        score = d / (np.linalg.norm(nutr) * np.linalg.norm(target)) * self.c_alp * 5
+        return np.clip(score, 0, self.c_alp * 5)

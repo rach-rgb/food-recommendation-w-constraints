@@ -191,7 +191,7 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual(0, pre[1][3])
         self.assertEqual(0, pre[2][3])
         est_algo = rec2.algo.predict('4', '0')[3] * (1 - rec2.c_alp) + 5.0 * rec2.c_alp
-        self.assertEqual(est_algo, pre[3][3])
+        self.assertEqual(round(est_algo, 5), round(pre[3][3], 5))
         self.assertLess(0, pre[4][3])
         self.assertEqual(0, pre[5][3])
 

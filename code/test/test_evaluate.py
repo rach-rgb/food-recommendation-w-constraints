@@ -24,6 +24,9 @@ class TestEval(unittest.TestCase):
         def top_n_const_3(self, uid, target):
             return []
 
+        def top_n_const(self, uid, iid1, iid2, target):
+            return []
+
         def get_top_n(self):
             top_N = defaultdict(list)
             for (u, i, r) in self.test_RMSE_set:
