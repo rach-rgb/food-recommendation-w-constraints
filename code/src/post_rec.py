@@ -27,6 +27,7 @@ class PostRec(FoodRecBase):
             user_ratings.sort(key=lambda x: x[1], reverse=True)
 
     # return list of top-N recommended food for uid s.t. includes iid
+    # uid, iid is integer
     def top_n_const_1(self, uid, iid):
         if not self.valid_constraint(uid, i1=iid):
             return []
@@ -90,6 +91,58 @@ class PostRec(FoodRecBase):
 
         return result
 
+    # return list of top-N recommended food for uid
+    # s.t satisfies specific constraint
+    def top_n_const(self, uid, iid1=None, iid2=None, target=None):
+        if not self.valid_constraint(uid, iid1, iid2, target):
+            return []
+        if self.top_K is None:
+            self.sort_prediction()
+
+        candidates = []  # (rates, ID)
+        check = 0
+        for f in self.top_K[uid]:
+            check = check + 1
+            rate = f[1]
+            if iid1 is not None:
+                if not self.include_ingr(f[0], iid1):
+                    continue
+            if iid2 is not None:
+                if not self.exclude_ingr(f[0], iid2):
+                    continue
+            if target is not None:
+                adder = self.apply_nutr(f[0], target) * self.c_alp * 5
+                rate = adder + (1 - self.c_alp) * f[1]
+            heapq.heappush(candidates, (rate, f[0]))
+
+            if len(candidates) == self.result_N:
+                break
+
+        if target is not None:
+            for f in self.top_K[uid][check:]:
+                if (1 - self.c_alp) * f[1] + 5 * self.c_alp < candidates[0][0]:
+                    break
+
+                if iid1 is not None:
+                    if not self.include_ingr(f[0], iid1):
+                        continue
+                if iid2 is not None:
+                    if not self.exclude_ingr(f[0], iid2):
+                        continue
+
+                new_rate = self.apply_nutr(f[0], target) * self.c_alp * 5
+                new_rate = new_rate + (1 - self.c_alp) * f[1]
+                if new_rate > candidates[0][0]:
+                    heapq.heappop(candidates)
+                    heapq.heappush(candidates, (new_rate, f[0]))
+
+        result = []
+        while len(candidates) > 0:
+            result.append(heapq.heappop(candidates)[1])
+
+        result.reverse()
+        return result
+
     # return recommendation and applied constants for entire user
     def get_top_n(self):
         if self.top_K is None:
@@ -103,13 +156,7 @@ class PostRec(FoodRecBase):
                 continue
             const = const.iloc[0]
 
-            # assume there's only constraint
-            if const[self.c_i1] is not None:
-                top_N[u] = self.top_n_const_1(u, const[self.c_i1])
-            elif const[self.c_i2] is not None:
-                top_N[u] = self.top_n_const_2(u, const[self.c_i2])
-            elif const[self.c_nl] is not None:
-                top_N[u] = self.top_n_const_3(u, const[self.c_nl])
+            top_N[u] = self.top_n_const(u, const[self.c_i1], const[self.c_i2], const[self.c_nl])
 
         result = pd.DataFrame.from_dict(top_N, orient='index')
         result = result.reindex(columns=[x for x in range(0, self.result_N)])
@@ -120,28 +167,26 @@ class PostRec(FoodRecBase):
         assert(self.split is True)
 
         pre = self.algo.test(self.test_RMSE_set)
-        for i in range (0, len(pre)):
+        for i in range(0, len(pre)):
             uid, iid, true_r, est, _ = pre[i]
 
-            const = self.const.loc[self.const.u == int(uid)]
-            if len(const) < 1:  # no constraint
+            const = self.get_constraint(int(uid))
+            if const is None:
                 continue
-            const = const.iloc[0]
 
             # apply constraint
-            # assume there's only constraint (TODO)
-            new_est = 0
+            new_est = est
             if const[self.c_i1] is not None:
                 if not self.include_ingr(int(iid), const[self.c_i1]):
-                    new_est = 0.0 # make est = 0
-            elif const[self.c_i2] is not None:
+                    new_est = 0.0  # make est = 0
+            if new_est != 0.0 and const[self.c_i2] is not None:
                 if not self.exclude_ingr(int(iid), const[self.c_i2]):
                     new_est = 0.0
-            elif const[self.c_nl] is not None:
+            if new_est != 0.0 and const[self.c_nl] is not None:
                 adder = self.apply_nutr(int(iid), const[self.c_nl])
-                est = est * (1-self.c_alp) + self.c_alp * 5 * adder
-                new_est = est
+                new_est = est * (1-self.c_alp) + self.c_alp * 5 * adder
 
-            pre[i] = Prediction(uid, iid, true_r, new_est, _)
+            if new_est != est:
+                pre[i] = Prediction(uid, iid, true_r, new_est, _)
 
         return pre

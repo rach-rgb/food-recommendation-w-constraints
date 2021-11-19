@@ -83,6 +83,46 @@ class TestPostRec(unittest.TestCase):
 
         self.assertTrue((result[0] == 1) or (result[0] == 2))
 
+    # test top_n_const when there's no constraint for user
+    def test_top_n_const(self):
+        rec2 = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv')
+
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        self.assertEqual([0, 1, 2, 3, 4, 5], sorted(rec2.top_n_const(7)))  # No constraint
+
+    # top_n_const for mixed constraints
+    def test_top_n_const2(self):
+        rec2 = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv')
+
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        self.assertEqual([0, 1, 2], sorted(rec2.top_n_const(0, 0)))
+        self.assertEqual([0, 2, 3, 5], sorted(rec2.top_n_const(1, iid2=1)))
+        self.assertEqual([0, 1, 3, 4], sorted(rec2.top_n_const(2, target=[1, 1])[:4]))
+        self.assertEqual([2, 5], sorted(rec2.top_n_const(2, target=[1, 1])[4:]))
+        self.assertEqual([0, 2], sorted(rec2.top_n_const(3, 0, 1)))
+        self.assertEqual([0, 3], sorted(rec2.top_n_const(4, iid2=1, target=[1, 1])[:2]))
+        self.assertEqual([2, 5], sorted(rec2.top_n_const(4, iid2=1, target=[1, 1])[2:]))
+        self.assertEqual([0, 1], sorted(rec2.top_n_const(5, 0, target=[1, 1])[:2]))
+        self.assertEqual([2], sorted(rec2.top_n_const(5, 0, target=[1, 1])[2:]))
+        self.assertEqual([0], sorted(rec2.top_n_const(6, 0, 1, [1, 1])[:1]))
+        self.assertEqual([2], sorted(rec2.top_n_const(6, 0, 1, [1, 1])[1:]))
+
+    # top_n_const for invalid constraint
+    def test_top_n_const3(self):
+        rec2 = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', split=True)
+
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        self.assertEqual([], rec2.top_n_const(0, 1, 1, 1))
+
     # test recommendation results for entire user
     def test_get_top_n(self):
         ret = self.rec.get_top_n()
@@ -94,8 +134,21 @@ class TestPostRec(unittest.TestCase):
         self.assertEqual(cols, list(ret.columns))
         self.assertEqual(4, len(ret))
 
+    def test_get_top_n2(self):
+        rec2 = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv')
+        rec2.get_data()
+        rec2.train()
+        rec2.test()
+
+        cols = [x for x in range(0, self.rec.result_N)]
+        cols.extend(['i1', 'i2', 'nl'])
+
+        ret = rec2.get_top_n()
+        self.assertEqual((8, 13), ret.shape)
+        self.assertEqual(cols, list(ret.columns))
+
     # check post-processing in test_RMSE
-    def test_RMSE2(self):
+    def test_RMSE1(self):
         rec2 = PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
         rec2.get_data()
         rec2.train()
@@ -116,6 +169,31 @@ class TestPostRec(unittest.TestCase):
         rec2.test_RMSE_set = [('3', '1', 5.0)]
         predictions = rec2.test_rmse()
         self.assertEqual(predictions[0][3], rec2.algo.predict('3', '1')[3])
+
+        # Post-RS estimate ratings same as algo() (satfisy constraint)
+        rec2.test_RMSE_set = [('0', '0', 4.0)]
+        predictions = rec2.test_rmse()
+        pre_algo = rec2.algo.test(rec2.test_RMSE_set)
+        self.assertEqual(pre_algo[0][3], predictions[0][3])
+
+    # check post-processing in test_RMSE for mixed constraint
+    def test_RMSE2(self):
+        rec2 = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', split=True)
+        rec2.get_data()
+        rec2.train()
+
+        rec2.test_RMSE_set = [('0', '0', 3), ('3', '1', 3), ('3', '3', 3), ('4', '0', 4),
+                              ('6', '2', 3), ('6', '3', 4)]
+        pre_algo = rec2.algo.test(rec2.test_RMSE_set)
+        pre = rec2.test_rmse()
+
+        self.assertEqual(pre_algo[0][3], pre[0][3])
+        self.assertEqual(0, pre[1][3])
+        self.assertEqual(0, pre[2][3])
+        est_algo = rec2.algo.predict('4', '0')[3] * (1 - rec2.c_alp) + 5.0 * rec2.c_alp
+        self.assertEqual(est_algo, pre[3][3])
+        self.assertLess(0, pre[4][3])
+        self.assertEqual(0, pre[5][3])
 
     # use rate_dict from RS
     def test_calculate_ndcg3(self):
