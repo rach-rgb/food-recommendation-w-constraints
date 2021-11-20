@@ -5,7 +5,7 @@ from surprise import PredictionImpossible
 from surprise import SVD
 
 
-class SVDtf(SVD):
+class CnstSVD(SVD):
     def __init__(self):
         SVD.__init__(self)
         self.i_attr = None
@@ -120,7 +120,7 @@ class SVDtf(SVD):
                 print("Processing epoch {}".format(current_epoch))
             for u, i, r in trainset.all_ratings():
                 # if i violates constraint, ignore error
-                if self.vio is not None and self.vio[u][i] == -1.0:
+                if self.exclude_train(u, i):
                     err = 0
                 else:
                     # compute current error
@@ -182,3 +182,28 @@ class SVDtf(SVD):
             return 0
         score = d / (np.linalg.norm(nutr) * np.linalg.norm(target)) * self.c_alp * 5
         return np.clip(score, 0, self.c_alp * 5)
+
+    # exclude if constraint 1/2 is violated or constraint 3 exists
+    def exclude_train(self, u, i):
+        if self.vio is not None and self.vio[u][i] != 0.0:
+            return True
+        return False
+
+# train all samples
+class CnstSVD_all(CnstSVD):
+    def exclude_train(self, u, i):
+        return False;
+
+# exclude only when constraint 1/2 is violated
+class CnstSVD_weaker(CnstSVD):
+    def exclude_train(self, u, i):
+        if self.vio is not None and self.vio[u][i] == -1.0:
+            return True
+        return False
+
+# exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+class CnstSVD_weak(CnstSVD):
+    def exclude_train(self, u, i):
+        if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+            return True
+        return False

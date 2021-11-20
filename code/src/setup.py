@@ -3,6 +3,6 @@ from Cython.Build import cythonize
 import numpy
 
 setup(
-    ext_modules=cythonize("TF_algo.pyx"),
+    ext_modules=cythonize("svd_constraint.pyx"),
     include_dirs=[numpy.get_include()]
 )

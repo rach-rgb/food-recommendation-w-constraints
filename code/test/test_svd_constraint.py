@@ -6,16 +6,16 @@ from sys import path
 path.append('../src')
 
 from inter_rec import InterRec
-import TF_algo
+import svd_constraint
 
 
-class TestSVDTF(unittest.TestCase):
+class TestCnstSVD(unittest.TestCase):
     def setUp(self):
-        self.algo = TF_algo.SVDtf()
+        self.algo = svd_constraint.CnstSVD()
         self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
         self.rec.get_data()
 
-        self.algo2 = TF_algo.SVDtf()
+        self.algo2 = svd_constraint.CnstSVD()
         self.rec2 = InterRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', self.algo2)
         self.rec2.get_data()
 

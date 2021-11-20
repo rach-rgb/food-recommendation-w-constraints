@@ -19,7 +19,7 @@ class TestRecBase(unittest.TestCase):
         def top_n_const_3(self, uid, target):
             return []
 
-        def top_n_const(self, uid):
+        def top_n_const(self, uid, iid1, iid2, target):
             return []
 
         def get_top_n(self):
