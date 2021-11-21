@@ -5,6 +5,7 @@ from surprise import PredictionImpossible
 from surprise import SVD
 
 
+# SVD algorithm w/ constraint
 class CnstSVD(SVD):
     def __init__(self):
         SVD.__init__(self)
@@ -45,7 +46,6 @@ class CnstSVD(SVD):
 
         return self
 
-    # u, i inner id
     def estimate(self, u, i):
         known_user = self.trainset.knows_user(u)
         known_item = self.trainset.knows_item(i)
@@ -173,8 +173,8 @@ class CnstSVD(SVD):
     def exclude_ingr(self, fid, iid):
         return iid not in self.i_attr.loc[fid].ingredient_ids
 
-    # return score for constraint 3
-    # 0 <= score <= 1
+    # return scaled score for constraint 3
+    # 0 <= score <= 5
     def apply_nutr(self, fid, target):
         nutr = self.i_attr.loc[fid].nutrition
         d = np.dot(nutr, target)
@@ -205,5 +205,5 @@ class CnstSVD_weaker(CnstSVD):
 class CnstSVD_weak(CnstSVD):
     def exclude_train(self, u, i):
         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
-            return True
-        return False
+            return False
+        return True

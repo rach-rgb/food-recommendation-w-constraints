@@ -2,12 +2,14 @@ import math
 from surprise import accuracy
 
 
+# Method for evaluation
 class Evaluation:
     @staticmethod
     def calculate_rmse(predictions):
         return accuracy.rmse(predictions, False)
 
     @staticmethod
+    # calculate average of ndcg
     # assume k < top_n of RS
     def calculate_ndcg(rel_dict, top_n_df, k):
         ndcg_sum = 0
@@ -28,6 +30,7 @@ class Evaluation:
         return ndcg_sum / denom
 
     @staticmethod
+    # calculate ndcg
     def cal_ndcg(gt, prediction):
         # initialize
         dcg = 0

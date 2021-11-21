@@ -2198,8 +2198,8 @@ static PyObject *__pyx_codeobj__26;
 static PyObject *__pyx_codeobj__28;
 /* Late includes */
 
-/* "src/svd_constraint.pyx":9
- * 
+/* "src/svd_constraint.pyx":10
+ * # SVD algorithm w/ constraint
  * class CnstSVD(SVD):
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         SVD.__init__(self)
@@ -2231,16 +2231,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD___init__(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "src/svd_constraint.pyx":10
+  /* "src/svd_constraint.pyx":11
  * class CnstSVD(SVD):
  *     def __init__(self):
  *         SVD.__init__(self)             # <<<<<<<<<<<<<<
  *         self.i_attr = None
  *         self.const = None
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2255,76 +2255,76 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD___init__(CYTHON_UNUSED 
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_self) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_self);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/svd_constraint.pyx":11
+  /* "src/svd_constraint.pyx":12
  *     def __init__(self):
  *         SVD.__init__(self)
  *         self.i_attr = None             # <<<<<<<<<<<<<<
  *         self.const = None
  *         self.c_alp = None
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_i_attr, Py_None) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_i_attr, Py_None) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":12
+  /* "src/svd_constraint.pyx":13
  *         SVD.__init__(self)
  *         self.i_attr = None
  *         self.const = None             # <<<<<<<<<<<<<<
  *         self.c_alp = None
  *         self.c_i1 = None
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_const, Py_None) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_const, Py_None) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":13
+  /* "src/svd_constraint.pyx":14
  *         self.i_attr = None
  *         self.const = None
  *         self.c_alp = None             # <<<<<<<<<<<<<<
  *         self.c_i1 = None
  *         self.c_i2 = None
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_alp, Py_None) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_alp, Py_None) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":14
+  /* "src/svd_constraint.pyx":15
  *         self.const = None
  *         self.c_alp = None
  *         self.c_i1 = None             # <<<<<<<<<<<<<<
  *         self.c_i2 = None
  *         self.c_nl = None
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i1, Py_None) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i1, Py_None) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":15
+  /* "src/svd_constraint.pyx":16
  *         self.c_alp = None
  *         self.c_i1 = None
  *         self.c_i2 = None             # <<<<<<<<<<<<<<
  *         self.c_nl = None
  * 
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i2, Py_None) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i2, Py_None) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":16
+  /* "src/svd_constraint.pyx":17
  *         self.c_i1 = None
  *         self.c_i2 = None
  *         self.c_nl = None             # <<<<<<<<<<<<<<
  * 
  *         self.vio = None  # 0: satisfy ~ 1: not satisfy
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_nl, Py_None) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_nl, Py_None) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":18
+  /* "src/svd_constraint.pyx":19
  *         self.c_nl = None
  * 
  *         self.vio = None  # 0: satisfy ~ 1: not satisfy             # <<<<<<<<<<<<<<
  * 
  *     # pandas dataframe related to attribute and constraints
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vio, Py_None) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vio, Py_None) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":9
- * 
+  /* "src/svd_constraint.pyx":10
+ * # SVD algorithm w/ constraint
  * class CnstSVD(SVD):
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         SVD.__init__(self)
@@ -2346,7 +2346,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD___init__(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "src/svd_constraint.pyx":21
+/* "src/svd_constraint.pyx":22
  * 
  *     # pandas dataframe related to attribute and constraints
  *     def set_data(self, attr, cnst, c_alp, columns):             # <<<<<<<<<<<<<<
@@ -2398,29 +2398,29 @@ static PyObject *__pyx_pw_3src_14svd_constraint_7CnstSVD_3set_data(PyObject *__p
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_attr)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 1); __PYX_ERR(0, 21, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 1); __PYX_ERR(0, 22, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_cnst)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 2); __PYX_ERR(0, 21, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 2); __PYX_ERR(0, 22, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_c_alp)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 3); __PYX_ERR(0, 21, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 3); __PYX_ERR(0, 22, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_columns)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 4); __PYX_ERR(0, 21, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, 4); __PYX_ERR(0, 22, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_data") < 0)) __PYX_ERR(0, 21, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_data") < 0)) __PYX_ERR(0, 22, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -2439,7 +2439,7 @@ static PyObject *__pyx_pw_3src_14svd_constraint_7CnstSVD_3set_data(PyObject *__p
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 21, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_data", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("src.svd_constraint.CnstSVD.set_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2461,70 +2461,70 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_2set_data(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("set_data", 0);
 
-  /* "src/svd_constraint.pyx":22
+  /* "src/svd_constraint.pyx":23
  *     # pandas dataframe related to attribute and constraints
  *     def set_data(self, attr, cnst, c_alp, columns):
  *         self.i_attr = attr             # <<<<<<<<<<<<<<
  *         self.const = cnst
  *         self.c_alp = c_alp
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_i_attr, __pyx_v_attr) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_i_attr, __pyx_v_attr) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":23
+  /* "src/svd_constraint.pyx":24
  *     def set_data(self, attr, cnst, c_alp, columns):
  *         self.i_attr = attr
  *         self.const = cnst             # <<<<<<<<<<<<<<
  *         self.c_alp = c_alp
  *         self.c_i1 = columns[0]
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_const, __pyx_v_cnst) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_const, __pyx_v_cnst) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":24
+  /* "src/svd_constraint.pyx":25
  *         self.i_attr = attr
  *         self.const = cnst
  *         self.c_alp = c_alp             # <<<<<<<<<<<<<<
  *         self.c_i1 = columns[0]
  *         self.c_i2 = columns[1]
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_alp, __pyx_v_c_alp) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_alp, __pyx_v_c_alp) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":25
+  /* "src/svd_constraint.pyx":26
  *         self.const = cnst
  *         self.c_alp = c_alp
  *         self.c_i1 = columns[0]             # <<<<<<<<<<<<<<
  *         self.c_i2 = columns[1]
  *         self.c_nl = columns[2]
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_columns, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_columns, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i1, __pyx_t_1) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i1, __pyx_t_1) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/svd_constraint.pyx":26
+  /* "src/svd_constraint.pyx":27
  *         self.c_alp = c_alp
  *         self.c_i1 = columns[0]
  *         self.c_i2 = columns[1]             # <<<<<<<<<<<<<<
  *         self.c_nl = columns[2]
  * 
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_columns, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_columns, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i2, __pyx_t_1) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_i2, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/svd_constraint.pyx":27
+  /* "src/svd_constraint.pyx":28
  *         self.c_i1 = columns[0]
  *         self.c_i2 = columns[1]
  *         self.c_nl = columns[2]             # <<<<<<<<<<<<<<
  * 
  *     # check constraints for all (u, i) pairs
  */
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_columns, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_columns, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_nl, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_c_nl, __pyx_t_1) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/svd_constraint.pyx":21
+  /* "src/svd_constraint.pyx":22
  * 
  *     # pandas dataframe related to attribute and constraints
  *     def set_data(self, attr, cnst, c_alp, columns):             # <<<<<<<<<<<<<<
@@ -2545,7 +2545,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_2set_data(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "src/svd_constraint.pyx":30
+/* "src/svd_constraint.pyx":31
  * 
  *     # check constraints for all (u, i) pairs
  *     def fit(self, train_set):             # <<<<<<<<<<<<<<
@@ -2588,11 +2588,11 @@ static PyObject *__pyx_pw_3src_14svd_constraint_7CnstSVD_5fit(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_train_set)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("fit", 1, 2, 2, 1); __PYX_ERR(0, 30, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("fit", 1, 2, 2, 1); __PYX_ERR(0, 31, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fit") < 0)) __PYX_ERR(0, 30, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fit") < 0)) __PYX_ERR(0, 31, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2605,7 +2605,7 @@ static PyObject *__pyx_pw_3src_14svd_constraint_7CnstSVD_5fit(PyObject *__pyx_se
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("fit", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 30, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("fit", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 31, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("src.svd_constraint.CnstSVD.fit", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2643,16 +2643,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fit", 0);
 
-  /* "src/svd_constraint.pyx":31
+  /* "src/svd_constraint.pyx":32
  *     # check constraints for all (u, i) pairs
  *     def fit(self, train_set):
  *         SVD.fit(self, train_set)             # <<<<<<<<<<<<<<
  * 
  *         self.vio = np.zeros((self.trainset.n_users, self.trainset.n_items))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2670,7 +2670,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_self, __pyx_v_train_set};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -2678,13 +2678,13 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_self, __pyx_v_train_set};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 32, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_2) {
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -2695,36 +2695,36 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
     __Pyx_INCREF(__pyx_v_train_set);
     __Pyx_GIVEREF(__pyx_v_train_set);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_train_set);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/svd_constraint.pyx":33
+  /* "src/svd_constraint.pyx":34
  *         SVD.fit(self, train_set)
  * 
  *         self.vio = np.zeros((self.trainset.n_users, self.trainset.n_items))             # <<<<<<<<<<<<<<
  *         for u in self.trainset.all_users():
  *             raw_u = int(self.trainset.to_raw_uid(u))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_n_users); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_n_users); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_n_items); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_n_items); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
@@ -2745,22 +2745,22 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
   __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vio, __pyx_t_1) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vio, __pyx_t_1) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/svd_constraint.pyx":34
+  /* "src/svd_constraint.pyx":35
  * 
  *         self.vio = np.zeros((self.trainset.n_users, self.trainset.n_items))
  *         for u in self.trainset.all_users():             # <<<<<<<<<<<<<<
  *             raw_u = int(self.trainset.to_raw_uid(u))
  *             const = self.const.loc[self.const.u == raw_u]
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_all_users); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_all_users); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -2775,16 +2775,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
   }
   __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_3 = __pyx_t_1; __Pyx_INCREF(__pyx_t_3); __pyx_t_7 = 0;
     __pyx_t_8 = NULL;
   } else {
-    __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
+    __pyx_t_7 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 35, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 34, __pyx_L1_error)
+    __pyx_t_8 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 35, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -2792,17 +2792,17 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 35, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 35, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_3, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -2812,7 +2812,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 34, __pyx_L1_error)
+          else __PYX_ERR(0, 35, __pyx_L1_error)
         }
         break;
       }
@@ -2821,16 +2821,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_u, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "src/svd_constraint.pyx":35
+    /* "src/svd_constraint.pyx":36
  *         self.vio = np.zeros((self.trainset.n_users, self.trainset.n_items))
  *         for u in self.trainset.all_users():
  *             raw_u = int(self.trainset.to_raw_uid(u))             # <<<<<<<<<<<<<<
  *             const = self.const.loc[self.const.u == raw_u]
  *             if len(const) < 1:  # no constraint
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_to_raw_uid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_to_raw_uid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -2845,53 +2845,53 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_5, __pyx_v_u) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_v_u);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_raw_u, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "src/svd_constraint.pyx":36
+    /* "src/svd_constraint.pyx":37
  *         for u in self.trainset.all_users():
  *             raw_u = int(self.trainset.to_raw_uid(u))
  *             const = self.const.loc[self.const.u == raw_u]             # <<<<<<<<<<<<<<
  *             if len(const) < 1:  # no constraint
  *                 continue
  */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_const); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_const); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 37, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_loc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_loc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_const); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_const); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 37, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_u); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_u); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 37, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_5, __pyx_v_raw_u, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_6 = PyObject_RichCompare(__pyx_t_5, __pyx_v_raw_u, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 37, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 37, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_XDECREF_SET(__pyx_v_const, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "src/svd_constraint.pyx":37
+    /* "src/svd_constraint.pyx":38
  *             raw_u = int(self.trainset.to_raw_uid(u))
  *             const = self.const.loc[self.const.u == raw_u]
  *             if len(const) < 1:  # no constraint             # <<<<<<<<<<<<<<
  *                 continue
  *             const = const.iloc[0]
  */
-    __pyx_t_9 = PyObject_Length(__pyx_v_const); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 37, __pyx_L1_error)
+    __pyx_t_9 = PyObject_Length(__pyx_v_const); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 38, __pyx_L1_error)
     __pyx_t_10 = ((__pyx_t_9 < 1) != 0);
     if (__pyx_t_10) {
 
-      /* "src/svd_constraint.pyx":38
+      /* "src/svd_constraint.pyx":39
  *             const = self.const.loc[self.const.u == raw_u]
  *             if len(const) < 1:  # no constraint
  *                 continue             # <<<<<<<<<<<<<<
@@ -2900,7 +2900,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
  */
       goto __pyx_L3_continue;
 
-      /* "src/svd_constraint.pyx":37
+      /* "src/svd_constraint.pyx":38
  *             raw_u = int(self.trainset.to_raw_uid(u))
  *             const = self.const.loc[self.const.u == raw_u]
  *             if len(const) < 1:  # no constraint             # <<<<<<<<<<<<<<
@@ -2909,29 +2909,29 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
  */
     }
 
-    /* "src/svd_constraint.pyx":39
+    /* "src/svd_constraint.pyx":40
  *             if len(const) < 1:  # no constraint
  *                 continue
  *             const = const.iloc[0]             # <<<<<<<<<<<<<<
  * 
  *             for i in train_set.all_items():
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_const, __pyx_n_s_iloc); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 39, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_const, __pyx_n_s_iloc); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 39, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF_SET(__pyx_v_const, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "src/svd_constraint.pyx":41
+    /* "src/svd_constraint.pyx":42
  *             const = const.iloc[0]
  * 
  *             for i in train_set.all_items():             # <<<<<<<<<<<<<<
  *                 raw_i = int(self.trainset.to_raw_iid(i))
  * 
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_train_set, __pyx_n_s_all_items); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_train_set, __pyx_n_s_all_items); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -2945,16 +2945,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
     }
     __pyx_t_6 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 41, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 42, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (likely(PyList_CheckExact(__pyx_t_6)) || PyTuple_CheckExact(__pyx_t_6)) {
       __pyx_t_5 = __pyx_t_6; __Pyx_INCREF(__pyx_t_5); __pyx_t_9 = 0;
       __pyx_t_11 = NULL;
     } else {
-      __pyx_t_9 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
+      __pyx_t_9 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 42, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_11 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 41, __pyx_L1_error)
+      __pyx_t_11 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 42, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     for (;;) {
@@ -2962,17 +2962,17 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
         if (likely(PyList_CheckExact(__pyx_t_5))) {
           if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_9); __Pyx_INCREF(__pyx_t_6); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 41, __pyx_L1_error)
+          __pyx_t_6 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_9); __Pyx_INCREF(__pyx_t_6); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 42, __pyx_L1_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 41, __pyx_L1_error)
+          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 42, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           #endif
         } else {
           if (__pyx_t_9 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_9); __Pyx_INCREF(__pyx_t_6); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 41, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_9); __Pyx_INCREF(__pyx_t_6); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 42, __pyx_L1_error)
           #else
-          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 41, __pyx_L1_error)
+          __pyx_t_6 = PySequence_ITEM(__pyx_t_5, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 42, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           #endif
         }
@@ -2982,7 +2982,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 41, __pyx_L1_error)
+            else __PYX_ERR(0, 42, __pyx_L1_error)
           }
           break;
         }
@@ -2991,16 +2991,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "src/svd_constraint.pyx":42
+      /* "src/svd_constraint.pyx":43
  * 
  *             for i in train_set.all_items():
  *                 raw_i = int(self.trainset.to_raw_iid(i))             # <<<<<<<<<<<<<<
  * 
  *                 self.vio[u][i] = self.check_constraint(raw_i, const)
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_trainset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_to_raw_iid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_to_raw_iid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
@@ -3015,23 +3015,23 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
       }
       __pyx_t_6 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_i) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_i);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 42, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_XDECREF_SET(__pyx_v_raw_i, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "src/svd_constraint.pyx":44
+      /* "src/svd_constraint.pyx":45
  *                 raw_i = int(self.trainset.to_raw_iid(i))
  * 
  *                 self.vio[u][i] = self.check_constraint(raw_i, const)             # <<<<<<<<<<<<<<
  * 
  *         return self
  */
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_constraint); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_constraint); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 45, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __pyx_t_1 = NULL;
       __pyx_t_4 = 0;
@@ -3048,7 +3048,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_6)) {
         PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_raw_i, __pyx_v_const};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
@@ -3056,13 +3056,13 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
         PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_raw_i, __pyx_v_const};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       {
-        __pyx_t_12 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_12 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 45, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
         if (__pyx_t_1) {
           __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -3073,21 +3073,21 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
         __Pyx_INCREF(__pyx_v_const);
         __Pyx_GIVEREF(__pyx_v_const);
         PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_4, __pyx_v_const);
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 45, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_12 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_v_u); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_GetItem(__pyx_t_6, __pyx_v_u); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 45, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(PyObject_SetItem(__pyx_t_12, __pyx_v_i, __pyx_t_2) < 0)) __PYX_ERR(0, 44, __pyx_L1_error)
+      if (unlikely(PyObject_SetItem(__pyx_t_12, __pyx_v_i, __pyx_t_2) < 0)) __PYX_ERR(0, 45, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "src/svd_constraint.pyx":41
+      /* "src/svd_constraint.pyx":42
  *             const = const.iloc[0]
  * 
  *             for i in train_set.all_items():             # <<<<<<<<<<<<<<
@@ -3097,7 +3097,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "src/svd_constraint.pyx":34
+    /* "src/svd_constraint.pyx":35
  * 
  *         self.vio = np.zeros((self.trainset.n_users, self.trainset.n_items))
  *         for u in self.trainset.all_users():             # <<<<<<<<<<<<<<
@@ -3108,19 +3108,19 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/svd_constraint.pyx":46
+  /* "src/svd_constraint.pyx":47
  *                 self.vio[u][i] = self.check_constraint(raw_i, const)
  * 
  *         return self             # <<<<<<<<<<<<<<
  * 
- *     # u, i inner id
+ *     def estimate(self, u, i):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_self);
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "src/svd_constraint.pyx":30
+  /* "src/svd_constraint.pyx":31
  * 
  *     # check constraints for all (u, i) pairs
  *     def fit(self, train_set):             # <<<<<<<<<<<<<<
@@ -3150,8 +3150,8 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_4fit(CYTHON_UNUSED PyOb
 }
 
 /* "src/svd_constraint.pyx":49
+ *         return self
  * 
- *     # u, i inner id
  *     def estimate(self, u, i):             # <<<<<<<<<<<<<<
  *         known_user = self.trainset.knows_user(u)
  *         known_item = self.trainset.knows_item(i)
@@ -3254,7 +3254,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_6estimate(CYTHON_UNUSED
   __Pyx_RefNannySetupContext("estimate", 0);
 
   /* "src/svd_constraint.pyx":50
- *     # u, i inner id
+ * 
  *     def estimate(self, u, i):
  *         known_user = self.trainset.knows_user(u)             # <<<<<<<<<<<<<<
  *         known_item = self.trainset.knows_item(i)
@@ -3839,8 +3839,8 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_6estimate(CYTHON_UNUSED
   goto __pyx_L0;
 
   /* "src/svd_constraint.pyx":49
+ *         return self
  * 
- *     # u, i inner id
  *     def estimate(self, u, i):             # <<<<<<<<<<<<<<
  *         known_user = self.trainset.knows_user(u)
  *         known_item = self.trainset.knows_item(i)
@@ -6025,7 +6025,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_14exclude_ingr(CYTHON_U
  *     def exclude_ingr(self, fid, iid):
  *         return iid not in self.i_attr.loc[fid].ingredient_ids             # <<<<<<<<<<<<<<
  * 
- *     # return score for constraint 3
+ *     # return scaled score for constraint 3
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_i_attr); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
@@ -6068,8 +6068,8 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_14exclude_ingr(CYTHON_U
 }
 
 /* "src/svd_constraint.pyx":178
- *     # return score for constraint 3
- *     # 0 <= score <= 1
+ *     # return scaled score for constraint 3
+ *     # 0 <= score <= 5
  *     def apply_nutr(self, fid, target):             # <<<<<<<<<<<<<<
  *         nutr = self.i_attr.loc[fid].nutrition
  *         d = np.dot(nutr, target)
@@ -6170,7 +6170,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_16apply_nutr(CYTHON_UNU
   __Pyx_RefNannySetupContext("apply_nutr", 0);
 
   /* "src/svd_constraint.pyx":179
- *     # 0 <= score <= 1
+ *     # 0 <= score <= 5
  *     def apply_nutr(self, fid, target):
  *         nutr = self.i_attr.loc[fid].nutrition             # <<<<<<<<<<<<<<
  *         d = np.dot(nutr, target)
@@ -6429,8 +6429,8 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_16apply_nutr(CYTHON_UNU
   goto __pyx_L0;
 
   /* "src/svd_constraint.pyx":178
- *     # return score for constraint 3
- *     # 0 <= score <= 1
+ *     # return scaled score for constraint 3
+ *     # 0 <= score <= 5
  *     def apply_nutr(self, fid, target):             # <<<<<<<<<<<<<<
  *         nutr = self.i_attr.loc[fid].nutrition
  *         d = np.dot(nutr, target)
@@ -6943,7 +6943,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(C
  * class CnstSVD_weak(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return True
+ *             return False
  */
 
 /* Python wrapper */
@@ -7040,8 +7040,8 @@ static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYT
  * class CnstSVD_weak(CnstSVD):
  *     def exclude_train(self, u, i):
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):             # <<<<<<<<<<<<<<
- *             return True
- *         return False
+ *             return False
+ *         return True
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -7102,31 +7102,31 @@ static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYT
     /* "src/svd_constraint.pyx":208
  *     def exclude_train(self, u, i):
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return True             # <<<<<<<<<<<<<<
- *         return False
+ *             return False             # <<<<<<<<<<<<<<
+ *         return True
  */
     __Pyx_XDECREF(__pyx_r);
-    __Pyx_INCREF(Py_True);
-    __pyx_r = Py_True;
+    __Pyx_INCREF(Py_False);
+    __pyx_r = Py_False;
     goto __pyx_L0;
 
     /* "src/svd_constraint.pyx":207
  * class CnstSVD_weak(CnstSVD):
  *     def exclude_train(self, u, i):
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):             # <<<<<<<<<<<<<<
- *             return True
- *         return False
+ *             return False
+ *         return True
  */
   }
 
   /* "src/svd_constraint.pyx":209
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return True
- *         return False             # <<<<<<<<<<<<<<
+ *             return False
+ *         return True             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(Py_False);
-  __pyx_r = Py_False;
+  __Pyx_INCREF(Py_True);
+  __pyx_r = Py_True;
   goto __pyx_L0;
 
   /* "src/svd_constraint.pyx":206
@@ -7134,7 +7134,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYT
  * class CnstSVD_weak(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return True
+ *             return False
  */
 
   /* function exit code */
@@ -8209,45 +8209,45 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "src/svd_constraint.pyx":9
- * 
+  /* "src/svd_constraint.pyx":10
+ * # SVD algorithm w/ constraint
  * class CnstSVD(SVD):
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         SVD.__init__(self)
  *         self.i_attr = None
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_init, 9, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_init, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 10, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":21
+  /* "src/svd_constraint.pyx":22
  * 
  *     # pandas dataframe related to attribute and constraints
  *     def set_data(self, attr, cnst, c_alp, columns):             # <<<<<<<<<<<<<<
  *         self.i_attr = attr
  *         self.const = cnst
  */
-  __pyx_tuple__5 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_attr, __pyx_n_s_cnst, __pyx_n_s_c_alp, __pyx_n_s_columns); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_attr, __pyx_n_s_cnst, __pyx_n_s_c_alp, __pyx_n_s_columns); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_set_data, 21, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_set_data, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 22, __pyx_L1_error)
 
-  /* "src/svd_constraint.pyx":30
+  /* "src/svd_constraint.pyx":31
  * 
  *     # check constraints for all (u, i) pairs
  *     def fit(self, train_set):             # <<<<<<<<<<<<<<
  *         SVD.fit(self, train_set)
  * 
  */
-  __pyx_tuple__7 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_train_set, __pyx_n_s_u, __pyx_n_s_raw_u, __pyx_n_s_const, __pyx_n_s_i, __pyx_n_s_raw_i); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_train_set, __pyx_n_s_u, __pyx_n_s_raw_u, __pyx_n_s_const, __pyx_n_s_i, __pyx_n_s_raw_i); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_fit, 30, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_fit, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 31, __pyx_L1_error)
 
   /* "src/svd_constraint.pyx":49
+ *         return self
  * 
- *     # u, i inner id
  *     def estimate(self, u, i):             # <<<<<<<<<<<<<<
  *         known_user = self.trainset.knows_user(u)
  *         known_item = self.trainset.knows_item(i)
@@ -8306,8 +8306,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_exclude_ingr, 173, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 173, __pyx_L1_error)
 
   /* "src/svd_constraint.pyx":178
- *     # return score for constraint 3
- *     # 0 <= score <= 1
+ *     # return scaled score for constraint 3
+ *     # 0 <= score <= 5
  *     def apply_nutr(self, fid, target):             # <<<<<<<<<<<<<<
  *         nutr = self.i_attr.loc[fid].nutrition
  *         d = np.dot(nutr, target)
@@ -8358,7 +8358,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * class CnstSVD_weak(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return True
+ *             return False
  */
   __pyx_tuple__27 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_u, __pyx_n_s_i); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
@@ -8759,64 +8759,64 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/svd_constraint.pyx":8
+  /* "src/svd_constraint.pyx":9
  * 
- * 
+ * # SVD algorithm w/ constraint
  * class CnstSVD(SVD):             # <<<<<<<<<<<<<<
  *     def __init__(self):
  *         SVD.__init__(self)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_SVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_CnstSVD, __pyx_n_s_CnstSVD, (PyObject *) NULL, __pyx_n_s_src_svd_constraint, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_CnstSVD, __pyx_n_s_CnstSVD, (PyObject *) NULL, __pyx_n_s_src_svd_constraint, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "src/svd_constraint.pyx":9
- * 
+  /* "src/svd_constraint.pyx":10
+ * # SVD algorithm w/ constraint
  * class CnstSVD(SVD):
  *     def __init__(self):             # <<<<<<<<<<<<<<
  *         SVD.__init__(self)
  *         self.i_attr = None
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_1__init__, 0, __pyx_n_s_CnstSVD___init, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_1__init__, 0, __pyx_n_s_CnstSVD___init, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/svd_constraint.pyx":21
+  /* "src/svd_constraint.pyx":22
  * 
  *     # pandas dataframe related to attribute and constraints
  *     def set_data(self, attr, cnst, c_alp, columns):             # <<<<<<<<<<<<<<
  *         self.i_attr = attr
  *         self.const = cnst
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_3set_data, 0, __pyx_n_s_CnstSVD_set_data, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_3set_data, 0, __pyx_n_s_CnstSVD_set_data, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_set_data, __pyx_t_4) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_set_data, __pyx_t_4) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/svd_constraint.pyx":30
+  /* "src/svd_constraint.pyx":31
  * 
  *     # check constraints for all (u, i) pairs
  *     def fit(self, train_set):             # <<<<<<<<<<<<<<
  *         SVD.fit(self, train_set)
  * 
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_5fit, 0, __pyx_n_s_CnstSVD_fit, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__8)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_5fit, 0, __pyx_n_s_CnstSVD_fit, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__8)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_fit, __pyx_t_4) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_fit, __pyx_t_4) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "src/svd_constraint.pyx":49
+ *         return self
  * 
- *     # u, i inner id
  *     def estimate(self, u, i):             # <<<<<<<<<<<<<<
  *         known_user = self.trainset.knows_user(u)
  *         known_item = self.trainset.knows_item(i)
@@ -8875,8 +8875,8 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "src/svd_constraint.pyx":178
- *     # return score for constraint 3
- *     # 0 <= score <= 1
+ *     # return scaled score for constraint 3
+ *     # 0 <= score <= 5
  *     def apply_nutr(self, fid, target):             # <<<<<<<<<<<<<<
  *         nutr = self.i_attr.loc[fid].nutrition
  *         d = np.dot(nutr, target)
@@ -8898,16 +8898,16 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_exclude_train, __pyx_t_4) < 0) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "src/svd_constraint.pyx":8
+  /* "src/svd_constraint.pyx":9
  * 
- * 
+ * # SVD algorithm w/ constraint
  * class CnstSVD(SVD):             # <<<<<<<<<<<<<<
  *     def __init__(self):
  *         SVD.__init__(self)
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_CnstSVD, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_CnstSVD, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CnstSVD, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CnstSVD, __pyx_t_4) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -9029,7 +9029,7 @@ if (!__Pyx_RefNanny) {
  * class CnstSVD_weak(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
  *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return True
+ *             return False
  */
   __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_12CnstSVD_weak_1exclude_train, 0, __pyx_n_s_CnstSVD_weak_exclude_train, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);

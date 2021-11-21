@@ -55,25 +55,16 @@ class TestCnstSVD(unittest.TestCase):
 
     # test apply_nutr
     def test_apply_nutr(self):
-        weight = self.algo.c_alp
+        def round_apply_nutr(id, target):
+            return round(self.algo.apply_nutr(id, target), 3)
 
-        # FYI
-        # self.rec.attr.loc[0].nutrition = [0, 1, 1, 1]
-        # self.rec.attr.loc[1].nutrition = [1, 0, 1, 1]
-        # self.rec.attr.loc[2].nutrition = [2, 0, 2, 2]
-        # self.rec.attr.loc[3].nutrition = [1, 0, 0, 0]
+        self.assertEqual(1.667, round_apply_nutr(0, [1, 0, 1, 1]))
+        self.assertEqual(1.667, round_apply_nutr(0, [2, 0, 2, 2]))
+        self.assertEqual(2.500, round_apply_nutr(1, [1, 0, 1, 1]))
+        self.assertEqual(2.500, round_apply_nutr(1, [2, 0, 2, 2]))
+        self.assertEqual(0.000, round_apply_nutr(0, [1, 0, 0, 0]))
 
-        list1 = [1, 0, 1, 1]
-        list2 = [2, 0, 2, 2]
-        list3 = [1, 0, 0, 0]
-
-        self.assertEqual(1.667, round(self.algo.apply_nutr(0, list1), 3))
-        self.assertEqual(1.667, round(self.algo.apply_nutr(0, list2), 3))
-        self.assertEqual(2.500, round(self.algo.apply_nutr(1, list1), 3))
-        self.assertEqual(2.500, round(self.algo.apply_nutr(1, list2), 3))
-        self.assertEqual(0.000, round(self.algo.apply_nutr(0, list3), 3))
-
-    # test check_constraint
+    # check_constraint() for single constraint
     def test_check_constraint(self):
         def get_const(u):
             return self.algo.const.loc[self.rec.const.u == u].iloc[0]
@@ -89,7 +80,7 @@ class TestCnstSVD(unittest.TestCase):
         self.assertEqual(2.667, round(self.algo.check_constraint(0, const2), 3))  # score = 1.667
         self.assertEqual(3.500, round(self.algo.check_constraint(1, const2), 3))  # score = 2.500
 
-    # test check_constraint for mixed constraint
+    # check_constraint for mixed constraint
     def test_check_constraint2(self):
         def get_const(u):
             return self.algo2.const.loc[self.rec2.const.u == u].iloc[0]
@@ -112,13 +103,14 @@ class TestCnstSVD(unittest.TestCase):
         self.assertEqual(3.500, round(self.algo2.check_constraint(0, const6), 3))  # score = 2.500
         self.assertEqual(-1.0, self.algo2.check_constraint(3, const6)) # violates constraint 2
 
-    # test fit()
+    # fit() for single constraint
     def test_fit(self):
         self.rec.train()  # this calls self.algo.fit()
         sat = self.algo.vio
         inner_uid = self.algo.trainset.to_inner_uid
         inner_iid = self.algo.trainset.to_inner_iid
 
+        self.assertEqual(0.0, sat[inner_uid('3')][inner_iid('0')])  # no constraint
         self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('0')])  # satisfy
         self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('0')])  # satisfy
         self.assertEqual(0.0, sat[inner_uid('0')][inner_iid('1')])  # satisfy
@@ -129,7 +121,7 @@ class TestCnstSVD(unittest.TestCase):
         self.assertEqual(3.500, round(sat[inner_uid('2')][inner_iid('1')], 3))  # score = 2.500
         self.assertEqual(3.500, round(sat[inner_uid('2')][inner_iid('2')], 3))  # score = 2.500
 
-    # test fit() for mixed constraint
+    # fit() for mixed constraint
     def test_fit2(self):
         self.rec2.train()
         sat = self.algo2.vio
@@ -153,7 +145,7 @@ class TestCnstSVD(unittest.TestCase):
             for i in range(0, 7):
                 self.assertEqual(m[u][i], round(sat[inner_uid(str(u))][inner_iid(str(i))], 2))
 
-    # test estimate()
+    # estimate() for single constraint
     def test_estimate(self):
         self.rec.train()
         inner_uid = self.algo.trainset.to_inner_uid
@@ -174,10 +166,11 @@ class TestCnstSVD(unittest.TestCase):
         u = inner_uid('3')
         i = inner_iid('0')
         est = self.algo.trainset.global_mean + self.algo.bu[u] + self.algo.bi[i] \
-              + np.dot(self.algo.qi[i], self.algo.pu[u])  # no constraint
+              + np.dot(self.algo.qi[i], self.algo.pu[u])
+        # follow original SVD method if there's no constraint
         self.assertEqual(self.algo.estimate(inner_uid('3'), inner_iid('0')), est)
 
-    # test estimate for  mixed constraint
+    # estimate() for mixed constraint
     def test_estimate2(self):
         self.rec2.train()
         inner_uid = self.algo2.trainset.to_inner_uid
@@ -193,6 +186,90 @@ class TestCnstSVD(unittest.TestCase):
         self.assertGreaterEqual(self.algo2.estimate(inner_uid('6'), inner_iid('0')),
                                 self.algo2.estimate(inner_uid('6'), inner_iid('2')))
         self.assertEqual(0.0, self.algo2.estimate(inner_uid('6'), inner_iid('3')))
+
+    # exclude_train() for CnstSVD
+    def test_exclude_train(self):
+        self.rec.train()
+
+        # change values for test
+        self.algo.vio[0][0] = -1.0
+        self.algo.vio[0][1] = 0.0
+        self.algo.vio[0][2] = 1.0
+        self.algo.vio[1][0] = 3.5
+        self.algo.vio[1][1] = 6.0
+
+        self.assertTrue(self.algo.exclude_train(0, 0))
+        # include train
+        self.assertFalse(self.algo.exclude_train(0, 1))
+        self.assertTrue(self.algo.exclude_train(0, 2))
+        self.assertTrue(self.algo.exclude_train(1, 0))
+        self.assertTrue(self.algo.exclude_train(1, 1))
+
+
+class TestCnstSVD_all(unittest.TestCase):
+    def setUp(self):
+        self.algo = svd_constraint.CnstSVD_all()
+        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
+        self.rec.get_data()
+        self.rec.train()
+
+    def test_exclude_train(self):
+        # change values for test
+        self.algo.vio[0][0] = -1.0
+        self.algo.vio[0][1] = 0.0
+        self.algo.vio[0][2] = 1.0
+        self.algo.vio[1][0] = 3.5
+        self.algo.vio[1][1] = 6.0
+
+        self.assertFalse(self.algo.exclude_train(0, 0))
+        self.assertFalse(self.algo.exclude_train(0, 1))
+        self.assertFalse(self.algo.exclude_train(0, 2))
+        self.assertFalse(self.algo.exclude_train(1, 0))
+        self.assertFalse(self.algo.exclude_train(1, 1))
+
+
+class TestCnstSVD_weaker(unittest.TestCase):
+    def setUp(self):
+        self.algo = svd_constraint.CnstSVD_weaker()
+        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
+        self.rec.get_data()
+        self.rec.train()
+
+    def test_exclude_train(self):
+        # change values for test
+        self.algo.vio[0][0] = -1.0
+        self.algo.vio[0][1] = 0.0
+        self.algo.vio[0][2] = 1.0
+        self.algo.vio[1][0] = 3.5
+        self.algo.vio[1][1] = 6.0
+
+        self.assertTrue(self.algo.exclude_train(0, 0))
+        self.assertFalse(self.algo.exclude_train(0, 1))
+        self.assertFalse(self.algo.exclude_train(0, 2))
+        self.assertFalse(self.algo.exclude_train(1, 0))
+        self.assertFalse(self.algo.exclude_train(1, 1))
+
+
+class TestCnstSVD_weak(unittest.TestCase):
+    def setUp(self):
+        self.algo = svd_constraint.CnstSVD_weak()
+        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
+        self.rec.get_data()
+        self.rec.train()
+
+    def test_exclude_train(self):
+        # change values for test
+        self.algo.vio[0][0] = -1.0
+        self.algo.vio[0][1] = 0.0
+        self.algo.vio[0][2] = 1.0
+        self.algo.vio[1][0] = 3.5
+        self.algo.vio[1][1] = 6.0
+
+        self.assertTrue(self.algo.exclude_train(0, 0))
+        self.assertFalse(self.algo.exclude_train(0, 1))
+        self.assertTrue(self.algo.exclude_train(0, 2))
+        self.assertFalse(self.algo.exclude_train(1, 0))
+        self.assertFalse(self.algo.exclude_train(1, 1))
 
 
 if __name__ == '__main__':

@@ -1,52 +1,54 @@
 from abc import *
 from collections import defaultdict
-from pandas import DataFrame
 from numpy import dot
 from numpy.linalg import norm
 from surprise.model_selection import train_test_split
+
 import load_data as ld
 
 
 # Interface of Food Recommendation System with Constraints
 class FoodRecBase(metaclass=ABCMeta):
     result_N = 10  # get 10 result
-    c_alp = 0.5  # weight for constraint
-    rel_th = 0.5 # relevance threshold
+    c_alp = 0.5  # weight for real number constraint
+    rel_th = 0.5  # relevance threshold
 
-    # Constraint Related Columns
+    # constraint related columns
     c_i1 = 'i1'  # ingredient to be included
     c_i2 = 'i2'  # ingredient to be excluded
     c_nl = 'nl'  # nutrient target
 
+    # Recommendation System Initialization
     def __init__(self, rate_file, attr_file, const_file, algo, split=False):
-        # collect required file names
-        self.rate_file = rate_file
-        self.attr_file = attr_file
-        self.const_file = const_file
+        # data file name
+        self.rate_file = rate_file  # user-item rate pairs w/o constraint
+        self.attr_file = attr_file  # item attributes
+        self.const_file = const_file  # constraints for each user
 
-        # algorithm to use
+        # prediction algorithm
         self.algo = algo
 
-        # required data
+        # data
         self.attr = None
         self.const = None
         self.train_set = None
-        self.test_set = None
-        self.test_RMSE_set = None
+        self.test_set = None  # anti-set of train_set
+        self.test_RMSE_set = None  # test set for RMSE evaluation
         self.predictions = None
 
-        # flags
+        # generate test set for RMSE evaluation if split is True
         self.split = split
 
+    # collects required data
     def get_data(self):
-        # get attribute data
+        # get attribute & constraint data
         self.attr = ld.load_attr(self.attr_file)
         self.const = ld.load_const(self.const_file)
 
         # generate train_set and test_set
         data = ld.load_rate(self.rate_file)
 
-        if self.split is True:  # split to test RMSE
+        if self.split is True:  # split train set to create test_RMSE_set
             self.train_set, self.test_RMSE_set = train_test_split(data, test_size=0.25, random_state=42)
         else:
             self.train_set = data.build_full_trainset()
@@ -56,11 +58,11 @@ class FoodRecBase(metaclass=ABCMeta):
     def train(self):
         self.algo.fit(self.train_set)
 
-    # make prediction with test_set
+    # save prediction for test_set at self.prediction
     def test(self):
         self.predictions = self.algo.test(self.test_set)
 
-    # make prediction with test_RMSE
+    # return prediction for test_RMSE_set
     def test_rmse(self):
         assert(self.split is True)
 
@@ -92,6 +94,7 @@ class FoodRecBase(metaclass=ABCMeta):
         return d / (norm(nutr) * norm(target))
 
     # get relevance score for (uid, iid)
+    # 0 <= rel <= 1
     def cal_rel(self, uid, iid):
         const = self.get_constraint(uid)
         if const is None:
@@ -109,7 +112,8 @@ class FoodRecBase(metaclass=ABCMeta):
                 return round(adder, 1)
             return 1
 
-    # save (user, item, rate) list as dataframe
+    # return (user, item, rate) dictionary
+    # s.t (relevance of user-item) >= rel_th, where default value of rel_th is 4
     def get_rel(self):
         rel = defaultdict(list)
 

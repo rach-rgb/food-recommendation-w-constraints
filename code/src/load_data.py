@@ -1,6 +1,5 @@
-import pandas as pd
 import numpy as np
-from collections import defaultdict
+import pandas as pd
 from surprise import Reader
 from surprise import Dataset
 
@@ -44,29 +43,6 @@ def load_attr(file_path):
     df['nutrition'] = df['nutrition'].str.replace(" ", "")
     df['nutrition'] = df['nutrition'].apply(lambda x: x[1:-1].split(','))
     df['nutrition'] = df['nutrition'].apply(lambda x: float_cast(x))
-
-    return df
-
-
-# load ingredient related constraint data
-def load_ingr_const(file_path=input_path + "ingr_const.csv"):
-    df = pd.read_csv(file_path)
-    df.set_index('u', inplace=True)
-
-    # parse ingredient list
-    df['include'] = df['include'].str.replace(" ", "")
-    df['include'] = df['include'].apply(lambda x: x[1:-1].split(','))
-    df['include'] = df['include'].apply(lambda x: int_cast(x))
-    df['exclude'] = df['exclude'].str.replace(" ", "")
-    df['exclude'] = df['exclude'].apply(lambda x: x[1:-1].split(','))
-    df['exclude'] = df['exclude'].apply(lambda x: int_cast(x))
-
-    return df
-
-
-# load nutrition related constraint data
-def load_nutr_const(file_path=input_path + "nutr_const.csv"):
-    df = pd.read_csv(file_path)
 
     return df
 

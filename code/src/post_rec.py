@@ -6,23 +6,49 @@ from surprise.prediction_algorithms.predictions import Prediction
 from rec_base import *
 
 
+# This recommendation system applies constraints after training
 class PostRec(FoodRecBase):
-
     def __init__(self, rate_file, attr_file, const_file, algo=SVD(), split=False):
         super().__init__(rate_file, attr_file, const_file, algo, split)
 
         # result
         self.top_K = None  # dictionary of [(item, rate)] for each user
 
-    # modify source form https://github.com/NicolasHug/Surprise/blob/master/examples/top_n_recommendations.py
+    # return prediction with test_RMSE set
+    def test_rmse(self):
+        assert(self.split is True)
+
+        pre = self.algo.test(self.test_RMSE_set)
+        for i in range(0, len(pre)):
+            uid, iid, true_r, est, _ = pre[i]
+
+            const = self.get_constraint(int(uid))
+            if const is None:
+                continue
+
+            # apply constraint
+            new_est = est
+            if const[self.c_i1] is not None:
+                if not self.include_ingr(int(iid), const[self.c_i1]):
+                    new_est = 0.0  # make est = 0
+            if new_est != 0.0 and const[self.c_i2] is not None:
+                if not self.exclude_ingr(int(iid), const[self.c_i2]):
+                    new_est = 0.0
+            if new_est != 0.0 and const[self.c_nl] is not None:
+                adder = self.apply_nutr(int(iid), const[self.c_nl])
+                new_est = est * (1-self.c_alp) + self.c_alp * 5 * adder
+
+            if new_est != est:
+                pre[i] = Prediction(uid, iid, true_r, new_est, _)
+
+        return pre
+
     # sort prediction and get top_K
     def sort_prediction(self):
-        # First map the predictions to each user.
         self.top_K = defaultdict(list)
         for uid, iid, true_r, est, _ in self.predictions:
-            self.top_K[int(uid)].append((int(iid), est))  # get uid and iid as integer
+            self.top_K[int(uid)].append((int(iid), est))
 
-        # Then sort the predictions for each user and retrieve the k highest ones.
         for uid, user_ratings in self.top_K.items():
             user_ratings.sort(key=lambda x: x[1], reverse=True)
 
@@ -162,31 +188,3 @@ class PostRec(FoodRecBase):
         result = result.reindex(columns=[x for x in range(0, self.result_N)])
         return result.join(self.const.set_index('u')).sort_index()
 
-    # make prediction with test_RMSE set
-    def test_rmse(self):
-        assert(self.split is True)
-
-        pre = self.algo.test(self.test_RMSE_set)
-        for i in range(0, len(pre)):
-            uid, iid, true_r, est, _ = pre[i]
-
-            const = self.get_constraint(int(uid))
-            if const is None:
-                continue
-
-            # apply constraint
-            new_est = est
-            if const[self.c_i1] is not None:
-                if not self.include_ingr(int(iid), const[self.c_i1]):
-                    new_est = 0.0  # make est = 0
-            if new_est != 0.0 and const[self.c_i2] is not None:
-                if not self.exclude_ingr(int(iid), const[self.c_i2]):
-                    new_est = 0.0
-            if new_est != 0.0 and const[self.c_nl] is not None:
-                adder = self.apply_nutr(int(iid), const[self.c_nl])
-                new_est = est * (1-self.c_alp) + self.c_alp * 5 * adder
-
-            if new_est != est:
-                pre[i] = Prediction(uid, iid, true_r, new_est, _)
-
-        return pre

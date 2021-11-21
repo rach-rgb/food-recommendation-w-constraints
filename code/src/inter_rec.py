@@ -1,10 +1,10 @@
-from collections import defaultdict
 import pandas as pd
+from collections import defaultdict
 from rec_base import *
 
 
+# This recommendation system applies constraints during training
 class InterRec(FoodRecBase):
-
     def __init__(self, rate_file, attr_file, const_file, algo, split=False):
         super().__init__(rate_file, attr_file, const_file, algo, split)
 
@@ -31,14 +31,6 @@ class InterRec(FoodRecBase):
             user_ratings.sort(key=lambda x: x[1], reverse=True)
             top_n_rate[uid] = user_ratings[:self.result_N]
             self.top_N[uid] = [i for i, r in top_n_rate[uid]]
-
-    def get_top_n(self):
-        if self.top_N is None:
-            self.sort_predictions()
-
-        result = pd.DataFrame.from_dict(self.top_N, orient='index')
-        result = result.reindex(columns=[x for x in range(0, self.result_N)])
-        return result.join(self.const.set_index('u'))
 
     # return list of top-N recommended food for uid s.t. includes iid
     def top_n_const_1(self, uid, iid):
@@ -77,3 +69,11 @@ class InterRec(FoodRecBase):
             self.sort_predictions()
 
         return self.top_N[uid]
+
+    def get_top_n(self):
+        if self.top_N is None:
+            self.sort_predictions()
+
+        result = pd.DataFrame.from_dict(self.top_N, orient='index')
+        result = result.reindex(columns=[x for x in range(0, self.result_N)])
+        return result.join(self.const.set_index('u'))
