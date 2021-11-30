@@ -29,7 +29,7 @@ class TestEval(unittest.TestCase):
 
         def get_top_n(self):
             top_N = defaultdict(list)
-            for (u, i, r) in self.test_RMSE_set:
+            for (u, i, r) in self.test_set:
                 top_N[int(u)].append(i)
 
             result = pd.DataFrame.from_dict(top_N, orient='index')
@@ -37,7 +37,7 @@ class TestEval(unittest.TestCase):
             return result.join(self.const.set_index('u'))
 
     def setUp(self):
-        self.rec = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), split=True)
+        self.rec = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), need_test=True)
         self.rec.get_data()
         self.rec.train()
 

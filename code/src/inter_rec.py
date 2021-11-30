@@ -5,8 +5,8 @@ from rec_base import *
 
 # This recommendation system applies constraints during training
 class InterRec(FoodRecBase):
-    def __init__(self, rate_file, attr_file, const_file, algo, split=False):
-        super().__init__(rate_file, attr_file, const_file, algo, split)
+    def __init__(self, rate_file, attr_file, const_file, algo, need_test=False):
+        super().__init__(rate_file, attr_file, const_file, algo, need_test)
 
         # result
         self.top_N = None  # dictionary of [item] for each user

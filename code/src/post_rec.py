@@ -8,17 +8,17 @@ from rec_base import *
 
 # This recommendation system applies constraints after training
 class PostRec(FoodRecBase):
-    def __init__(self, rate_file, attr_file, const_file, algo=SVD(), split=False):
-        super().__init__(rate_file, attr_file, const_file, algo, split)
+    def __init__(self, rate_file, attr_file, const_file, algo=SVD(), need_test=False):
+        super().__init__(rate_file, attr_file, const_file, algo, need_test)
 
         # result
         self.top_K = None  # dictionary of [(item, rate)] for each user
 
     # return prediction with test_RMSE set
     def test_rmse(self):
-        assert(self.split is True)
+        assert(self.need_test is True)
 
-        pre = self.algo.test(self.test_RMSE_set)
+        pre = self.algo.test(self.test_set)
         for i in range(0, len(pre)):
             uid, iid, true_r, est, _ = pre[i]
 

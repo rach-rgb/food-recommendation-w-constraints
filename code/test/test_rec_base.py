@@ -27,7 +27,7 @@ class TestRecBase(unittest.TestCase):
 
     def setUp(self):
         self.rec = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD())
-        self.rec_split = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), split=True)
+        self.rec_split = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), need_test=True)
         self.rec2 = self.DummyRS('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', SVD())
 
     # initialization
@@ -36,7 +36,7 @@ class TestRecBase(unittest.TestCase):
         self.assertEqual(self.rec.attr_file, './data/attr.csv')
         self.assertEqual(self.rec.const_file, './data/const.csv')
         self.assertIsNotNone(self.rec.algo)
-        self.assertFalse(self.rec.split)
+        self.assertFalse(self.rec.need_test)
 
     # get_data()
     def test_get_data(self):
@@ -54,15 +54,15 @@ class TestRecBase(unittest.TestCase):
         self.assertEqual(None, const['i2'])
         self.assertEqual(const['nl'], None)
 
-        # no test_RMSE_set when split is False
-        self.assertIsNone(self.rec.test_RMSE_set)
+        # no test_set when need_test is False
+        self.assertIsNone(self.rec.test_set)
 
-    # get_data() when split is True
+    # get_data() when need_test is True
     def test_get_data2(self):
         self.rec_split.get_data()
 
-        # create test_RMSE_set
-        self.assertIsNotNone(self.rec_split.test_RMSE_set)
+        # create test_set
+        self.assertIsNotNone(self.rec_split.test_set)
 
     # train() & test()
     def test_inference(self):
@@ -169,9 +169,9 @@ class TestRecBase(unittest.TestCase):
     def test_save_rates(self):
         self.rec_split = self.DummyRS('./data/rate.csv', './data/attr.csv', './data/const.csv', SVD(), True)
         self.rec_split.get_data()
-        # manipulate DummyRS.test_RMSE_set for testing
-        self.rec_split.test_RMSE_set = [('0', '0', 5.0), ('0', '1', 4.0), ('0', '2', 3.0), ('1', '0', 5.0), ('2', '1', 4.0),
-                              ('2', '2', 2.0), ('3', '1', 4.0)]
+        # manipulate DummyRS.test_set for testing
+        self.rec_split.test_set = [('0', '0', 5.0), ('0', '1', 4.0), ('0', '2', 3.0), ('1', '0', 5.0), ('2', '1', 4.0),
+                                   ('2', '2', 2.0), ('3', '1', 4.0)]
         rel_dict = self.rec_split.get_rel()
 
         # known_user: 0, 1, 3 & known_items: 1, 2

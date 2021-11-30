@@ -18,7 +18,7 @@ class TestPostRec(unittest.TestCase):
         self.rec.train()
         self.rec.test()
 
-        self.rec_split = PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', split=True)
+        self.rec_split = PostRec('./data/rate.csv', './data/attr.csv', './data/const.csv', need_test=True)
         self.rec_split.get_data()
         self.rec_split.train()
         self.rec_split.test()
@@ -28,7 +28,7 @@ class TestPostRec(unittest.TestCase):
         self.rec2.train()
         self.rec2.test()
 
-        self.rec2_split = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', split=True)
+        self.rec2_split = PostRec('./data/rate2.csv', './data/attr2.csv', './data/const2.csv', need_test=True)
         self.rec2_split.get_data()
         self.rec2_split.train()
         self.rec2_split.test()
@@ -51,25 +51,25 @@ class TestPostRec(unittest.TestCase):
         def predict_by_algo(u, i):
             return self.rec_split.algo.predict(u, i)[3]
 
-        self.rec_split.test_RMSE_set = [('0', '2', 5.0), ('1', '2', 5.0)]
+        self.rec_split.test_set = [('0', '2', 5.0), ('1', '2', 5.0)]
         # Post-RS predicts rate as 0 if constraint is violated
         self.assertEqual(5.0, accuracy.rmse(self.rec_split.test_rmse(), False))
 
-        self.rec_split.test_RMSE_set = [('0', '0', 4.0)]
+        self.rec_split.test_set = [('0', '0', 4.0)]
         # Post-RS follows rating from algorithm if constraint is satisfied
         self.assertEqual(predict_by_algo('0', '0'), self.rec_split.test_rmse()[0][3])
 
-        self.rec_split.test_RMSE_set = [('3', '1', 5.0)]
+        self.rec_split.test_set = [('3', '1', 5.0)]
         # Post-RS follows rating from algorithm if there's no constraint
         self.assertEqual(predict_by_algo('3', '1'), self.rec_split.test_rmse()[0][3])
 
-        self.rec_split.test_RMSE_set = [('2', '1', 5.0)]
+        self.rec_split.test_set = [('2', '1', 5.0)]
         # Post-RS applies nutrient score
         predictions = self.rec_split.test_rmse()
         est_algo = predict_by_algo('2', '1') * (1 - self.rec_split.c_alp) + 5.0 * self.rec_split.c_alp
         self.assertEqual(round(est_algo, 5), round(predictions[0][3], 5))
 
-        self.rec_split.test_RMSE_set = [('2', '0', 5.0)]
+        self.rec_split.test_set = [('2', '0', 5.0)]
         # Post-RS applies nutrient score
         predictions = self.rec_split.test_rmse()
         est_algo = predict_by_algo('2', '0') * (1 - self.rec_split.c_alp) \
@@ -81,9 +81,9 @@ class TestPostRec(unittest.TestCase):
         def predict_by_algo(u, i):
             return self.rec2_split.algo.predict(u, i)[3]
 
-        self.rec2_split.test_RMSE_set = [('0', '0', 3), ('3', '1', 3), ('3', '3', 3), ('4', '0', 4),
-                        ('6', '2', 3), ('6', '3', 4)]
-        pre_by_algo = self.rec2_split.algo.test(self.rec2_split.test_RMSE_set)
+        self.rec2_split.test_set = [('0', '0', 3), ('3', '1', 3), ('3', '3', 3), ('4', '0', 4),
+                                    ('6', '2', 3), ('6', '3', 4)]
+        pre_by_algo = self.rec2_split.algo.test(self.rec2_split.test_set)
         pre_by_rs = self.rec2_split.test_rmse()
 
         self.assertEqual(pre_by_algo[0][3], pre_by_rs[0][3])

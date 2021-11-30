@@ -19,7 +19,7 @@ class FoodRecBase(metaclass=ABCMeta):
     c_nl = 'nl'  # nutrient target
 
     # Recommendation System Initialization
-    def __init__(self, rate_file, attr_file, const_file, algo, split=False):
+    def __init__(self, rate_file, attr_file, const_file, algo, need_test=False):
         # data file name
         self.rate_file = rate_file  # user-item rate pairs w/o constraint
         self.attr_file = attr_file  # item attributes
@@ -32,12 +32,12 @@ class FoodRecBase(metaclass=ABCMeta):
         self.attr = None
         self.const = None
         self.train_set = None
-        self.test_set = None  # anti-set of train_set
-        self.test_RMSE_set = None  # test set for RMSE evaluation
+        self.predict_set = None  # anti-set of train_set
+        self.test_set = None  # test set for RMSE evaluation
         self.predictions = None
 
-        # generate test set for RMSE evaluation if split is True
-        self.split = split
+        # generate test set for RMSE evaluation if need_test is True
+        self.need_test = need_test
 
     # collects required data
     def get_data(self):
@@ -45,28 +45,28 @@ class FoodRecBase(metaclass=ABCMeta):
         self.attr = ld.load_attr(self.attr_file)
         self.const = ld.load_const(self.const_file)
 
-        # generate train_set and test_set
+        # generate train_set and predict_set
         data = ld.load_rate(self.rate_file)
 
-        if self.split is True:  # split train set to create test_RMSE_set
-            self.train_set, self.test_RMSE_set = train_test_split(data, test_size=0.25, random_state=42)
+        if self.need_test is True:  # split train set to create test_set
+            self.train_set, self.test_set = train_test_split(data, test_size=0.25, random_state=42)
         else:
             self.train_set = data.build_full_trainset()
-        self.test_set = self.train_set.build_anti_testset()
+        self.predict_set = self.train_set.build_anti_testset()
 
     # train with train_set
     def train(self):
         self.algo.fit(self.train_set)
 
-    # save prediction for test_set at self.prediction
+    # save prediction for predict_set at self.prediction
     def test(self):
-        self.predictions = self.algo.test(self.test_set)
+        self.predictions = self.algo.test(self.predict_set)
 
-    # return prediction for test_RMSE_set
+    # return prediction for test_set
     def test_rmse(self):
-        assert(self.split is True)
+        assert(self.need_test is True)
 
-        return self.algo.test(self.test_RMSE_set)
+        return self.algo.test(self.test_set)
 
     # get constraint of user u, return None if there's no constraint
     def get_constraint(self, u):
@@ -117,7 +117,7 @@ class FoodRecBase(metaclass=ABCMeta):
     def get_rel(self):
         rel = defaultdict(list)
 
-        for (u, i, r) in self.test_RMSE_set:
+        for (u, i, r) in self.test_set:
             if r >= 4 and self.cal_rel(int(u), int(i)) >= self.rel_th:
                 if u in self.train_set._raw2inner_id_users.keys():
                     if i in self.train_set._raw2inner_id_items.keys():
