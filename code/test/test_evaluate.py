@@ -4,6 +4,7 @@ import math
 from collections import defaultdict
 import pandas as pd
 from surprise import SVD
+import matplotlib.pyplot as plt
 
 # setting path
 path.append('../src')
@@ -49,6 +50,7 @@ class TestEval(unittest.TestCase):
         self.assertLessEqual(0.0, ev.calculate_rmse(predictions))
 
     # cal_ndcg()
+    # len(gt) = k
     def test_cal_ndcg(self):
         gt = [1, 2, 3, 4, 5]
         res1 = [1, 2, 3, 4, 5]  # perfect result
@@ -57,46 +59,53 @@ class TestEval(unittest.TestCase):
         res4 = [6, 7, 3, 2, 1]
         res5 = [3, 2, 1, 6, 7]
 
-        self.assertEqual(1.0, ev.cal_ndcg(gt, res1))
-        self.assertEqual(1.0, ev.cal_ndcg(gt, res2))
-        self.assertEqual(0.0, ev.cal_ndcg(gt, res3))
-        self.assertEqual(ev.cal_ndcg(gt, res1), ev.cal_ndcg(gt, res2))
-        self.assertGreater(ev.cal_ndcg(gt, res2), ev.cal_ndcg(gt, res3))
+        self.assertAlmostEqual(1.0, ev.cal_ndcg(gt, res1))
+        self.assertAlmostEqual(1.0, ev.cal_ndcg(gt, res2))
+        # relevance of item in gt is all 1
+        self.assertAlmostEqual(ev.cal_ndcg(gt, res1), ev.cal_ndcg(gt, res2))
+
+        self.assertAlmostEqual(0.0, ev.cal_ndcg(gt, res3))
+
+        # res5 has item in gt at higher rank
         self.assertGreater(ev.cal_ndcg(gt, res5), ev.cal_ndcg(gt, res4))
 
-    # cal_ndcg() when len(gt) != len(prediction)
+    # cal_ndcg() when len(gt) != k
     def test_cal_ndcg2(self):
-        gt = [1, 2, 3]
+        gt = [1, 2, 3, 4, 5]
+
         res1 = [1, 2, 3, 4, 5]
-        res2 = [5, 4, 3, 2, 1]
-        res3 = [6, 7, 8, 9, 10]
+        res2 = [1, 2, 3]
+        res3 = [4, 5, 6]
+        res4 = [1, 2, 3, 4, 5, 6]
+        res5 = [6, 1, 2, 3, 4, 5]
+        res6 = [1, 2, 3, 4, 5, None]
 
-        self.assertEqual(1.0, ev.cal_ndcg(gt, res1))
-        self.assertGreater(1.0, ev.cal_ndcg(gt, res2))
-        self.assertEqual(0.0, ev.cal_ndcg(gt, res3))
-
-    # cal_ndcg() when result contains None
-    def test_cal_ndcg3(self):
-        gt = [1, 2, 3]
-        res = [1, 2, 3, None, None]
-
-        self.assertEqual(1.0, ev.cal_ndcg(gt, res))
+        # len(gt) = k
+        self.assertAlmostEqual(1.0, ev.cal_ndcg(gt, res1))
+        # len(gt) > k
+        self.assertAlmostEqual(1.0, ev.cal_ndcg(gt, res2))
+        self.assertGreater(1.0, ev.cal_ndcg(gt, res3))
+        # len(gt) < k
+        self.assertAlmostEqual(1.0, ev.cal_ndcg(gt, res4))
+        self.assertGreater(1.0, ev.cal_ndcg(gt, res5))
+        # contains None
+        self.assertAlmostEqual(1.0, ev.cal_ndcg(gt, res6))
 
     # calculate_ndcg()
     def test_calculate_ndcg(self):
         rel_dict = {0: ['A', 'B', 'C', 'D', 'E']}
         top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E']}).transpose()
 
-        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
-        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 3))
-        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 1))
+        self.assertAlmostEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertAlmostEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 3))
+        self.assertAlmostEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 1))
 
         rel_dict = {0: ['A', 'B', 'C', 'D', 'E']}
         top_n_df = pd.DataFrame({0: ['F', 'G', 'C', 'D', 'E']}).transpose()
 
         self.assertGreater(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
         self.assertLess(ev.calculate_ndcg(rel_dict, top_n_df, 3), ev.calculate_ndcg(rel_dict, top_n_df, 5))
-        self.assertEqual(0.0, ev.calculate_ndcg(rel_dict, top_n_df, 1))
+        self.assertAlmostEqual(0.0, ev.calculate_ndcg(rel_dict, top_n_df, 1))
 
     # calculate_ndcg() for multiple users
     def test_calculate_ndcg2(self):
@@ -104,19 +113,19 @@ class TestEval(unittest.TestCase):
         top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 3: ['F', 'G', 'C', 'D', 'E']}).transpose()
 
         self.assertGreater(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
-        self.assertEqual(0.5, ev.calculate_ndcg(rel_dict, top_n_df, 2))
+        self.assertAlmostEqual(0.5, ev.calculate_ndcg(rel_dict, top_n_df, 2))
 
     # skip either rel_dict[u] is empty or top_n_df.loc[u] is empty
     def test_calculate_ndcg3(self):
         rel_dict = {0: ['A', 'B', 'C', 'D', 'E']}
         top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 3: ['F', 'G', 'C', 'D', 'E']}).transpose()
 
-        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertAlmostEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
 
         rel_dict = {0: ['A', 'B', 'C', 'D', 'E'], 4: ['A', 'B', 'C', 'D', 'E']}
         top_n_df = pd.DataFrame({0: ['A', 'B', 'C', 'D', 'E'], 3: ['F', 'G', 'C', 'D', 'E']}).transpose()
 
-        self.assertEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
+        self.assertAlmostEqual(1.0, ev.calculate_ndcg(rel_dict, top_n_df, 5))
 
     # return nan for empty rel_dict
     def test_calculate_ndcg4(self):
@@ -124,4 +133,3 @@ class TestEval(unittest.TestCase):
         top_n_df = self.rec.get_top_n()
 
         self.assertTrue(math.isnan(ev.calculate_ndcg(rel_dict, top_n_df, 5)))
-
