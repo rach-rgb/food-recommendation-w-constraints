@@ -199,7 +199,9 @@ class CnstSVD_hard(CnstSVD):
     def exclude_train(self, u, i):
         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
             return False
-        return True
+        elif self.vio is not None:
+            return True
+        return False
 
 # exclude when constraint 1/2 violated and constraint 3 exists
 class CnstSVD_harder(CnstSVD):
