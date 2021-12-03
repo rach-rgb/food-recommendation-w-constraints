@@ -199,11 +199,10 @@ class TestCnstSVD(unittest.TestCase):
         self.algo.vio[1][1] = 6.0
 
         self.assertTrue(self.algo.exclude_train(0, 0))
-        # include train
         self.assertFalse(self.algo.exclude_train(0, 1))
-        self.assertTrue(self.algo.exclude_train(0, 2))
-        self.assertTrue(self.algo.exclude_train(1, 0))
-        self.assertTrue(self.algo.exclude_train(1, 1))
+        self.assertFalse(self.algo.exclude_train(0, 2))
+        self.assertFalse(self.algo.exclude_train(1, 0))
+        self.assertFalse(self.algo.exclude_train(1, 1))
 
 
 class TestCnstSVD_all(unittest.TestCase):
@@ -228,31 +227,9 @@ class TestCnstSVD_all(unittest.TestCase):
         self.assertFalse(self.algo.exclude_train(1, 1))
 
 
-class TestCnstSVD_weaker(unittest.TestCase):
+class TestCnstSVD_hard(unittest.TestCase):
     def setUp(self):
-        self.algo = svd_constraint.CnstSVD_weaker()
-        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
-        self.rec.get_data()
-        self.rec.train()
-
-    def test_exclude_train(self):
-        # change values for test
-        self.algo.vio[0][0] = -1.0
-        self.algo.vio[0][1] = 0.0
-        self.algo.vio[0][2] = 1.0
-        self.algo.vio[1][0] = 3.5
-        self.algo.vio[1][1] = 6.0
-
-        self.assertTrue(self.algo.exclude_train(0, 0))
-        self.assertFalse(self.algo.exclude_train(0, 1))
-        self.assertFalse(self.algo.exclude_train(0, 2))
-        self.assertFalse(self.algo.exclude_train(1, 0))
-        self.assertFalse(self.algo.exclude_train(1, 1))
-
-
-class TestCnstSVD_weak(unittest.TestCase):
-    def setUp(self):
-        self.algo = svd_constraint.CnstSVD_weak()
+        self.algo = svd_constraint.CnstSVD_hard()
         self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
         self.rec.get_data()
         self.rec.train()
@@ -270,6 +247,31 @@ class TestCnstSVD_weak(unittest.TestCase):
         self.assertTrue(self.algo.exclude_train(0, 2))
         self.assertFalse(self.algo.exclude_train(1, 0))
         self.assertFalse(self.algo.exclude_train(1, 1))
+
+
+class TestCnstSVD_harder(unittest.TestCase):
+    def setUp(self):
+        self.algo = svd_constraint.CnstSVD_harder()
+        self.rec = InterRec('./data/rate.csv', './data/attr.csv', './data/const.csv', self.algo)
+        self.rec.get_data()
+        self.rec.train()
+
+    def test_exclude_train(self):
+        self.rec.train()
+
+        # change values for test
+        self.algo.vio[0][0] = -1.0
+        self.algo.vio[0][1] = 0.0
+        self.algo.vio[0][2] = 1.0
+        self.algo.vio[1][0] = 3.5
+        self.algo.vio[1][1] = 6.0
+
+        self.assertTrue(self.algo.exclude_train(0, 0))
+        # include train
+        self.assertFalse(self.algo.exclude_train(0, 1))
+        self.assertTrue(self.algo.exclude_train(0, 2))
+        self.assertTrue(self.algo.exclude_train(1, 0))
+        self.assertTrue(self.algo.exclude_train(1, 1))
 
 
 if __name__ == '__main__':

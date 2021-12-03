@@ -1985,7 +1985,7 @@ static const char __pyx_k_CnstSVD_sgd[] = "CnstSVD.sgd";
 static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_all_ratings[] = "all_ratings";
 static const char __pyx_k_global_mean[] = "global_mean";
-static const char __pyx_k_CnstSVD_weak[] = "CnstSVD_weak";
+static const char __pyx_k_CnstSVD_hard[] = "CnstSVD_hard";
 static const char __pyx_k_exclude_ingr[] = "exclude_ingr";
 static const char __pyx_k_include_ingr[] = "include_ingr";
 static const char __pyx_k_init_std_dev[] = "init_std_dev";
@@ -1993,7 +1993,7 @@ static const char __pyx_k_random_state[] = "random_state";
 static const char __pyx_k_current_epoch[] = "current_epoch";
 static const char __pyx_k_exclude_train[] = "exclude_train";
 static const char __pyx_k_CnstSVD___init[] = "CnstSVD.__init__";
-static const char __pyx_k_CnstSVD_weaker[] = "CnstSVD_weaker";
+static const char __pyx_k_CnstSVD_harder[] = "CnstSVD_harder";
 static const char __pyx_k_ingredient_ids[] = "ingredient_ids";
 static const char __pyx_k_surprise_utils[] = "surprise.utils";
 static const char __pyx_k_CnstSVD_estimate[] = "CnstSVD.estimate";
@@ -2011,8 +2011,8 @@ static const char __pyx_k_CnstSVD_exclude_train[] = "CnstSVD.exclude_train";
 static const char __pyx_k_CnstSVD_check_constraint[] = "CnstSVD.check_constraint";
 static const char __pyx_k_CnstSVD_all_exclude_train[] = "CnstSVD_all.exclude_train";
 static const char __pyx_k_User_and_item_are_unknown[] = "User and item are unknown.";
-static const char __pyx_k_CnstSVD_weak_exclude_train[] = "CnstSVD_weak.exclude_train";
-static const char __pyx_k_CnstSVD_weaker_exclude_train[] = "CnstSVD_weaker.exclude_train";
+static const char __pyx_k_CnstSVD_hard_exclude_train[] = "CnstSVD_hard.exclude_train";
+static const char __pyx_k_CnstSVD_harder_exclude_train[] = "CnstSVD_harder.exclude_train";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static PyObject *__pyx_n_s_CnstSVD;
@@ -2025,13 +2025,13 @@ static PyObject *__pyx_n_s_CnstSVD_estimate;
 static PyObject *__pyx_n_s_CnstSVD_exclude_ingr;
 static PyObject *__pyx_n_s_CnstSVD_exclude_train;
 static PyObject *__pyx_n_s_CnstSVD_fit;
+static PyObject *__pyx_n_s_CnstSVD_hard;
+static PyObject *__pyx_n_s_CnstSVD_hard_exclude_train;
+static PyObject *__pyx_n_s_CnstSVD_harder;
+static PyObject *__pyx_n_s_CnstSVD_harder_exclude_train;
 static PyObject *__pyx_n_s_CnstSVD_include_ingr;
 static PyObject *__pyx_n_s_CnstSVD_set_data;
 static PyObject *__pyx_n_s_CnstSVD_sgd;
-static PyObject *__pyx_n_s_CnstSVD_weak;
-static PyObject *__pyx_n_s_CnstSVD_weak_exclude_train;
-static PyObject *__pyx_n_s_CnstSVD_weaker;
-static PyObject *__pyx_n_s_CnstSVD_weaker_exclude_train;
 static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_n_s_PredictionImpossible;
 static PyObject *__pyx_kp_s_Processing_epoch;
@@ -2160,8 +2160,8 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_14exclude_ingr(CYTHON_U
 static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_16apply_nutr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fid, PyObject *__pyx_v_target); /* proto */
 static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_18exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i); /* proto */
 static PyObject *__pyx_pf_3src_14svd_constraint_11CnstSVD_all_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_u, CYTHON_UNUSED PyObject *__pyx_v_i); /* proto */
-static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i); /* proto */
-static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i); /* proto */
+static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_hard_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i); /* proto */
+static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_harder_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i); /* proto */
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_0_5;
 static PyObject *__pyx_float_neg_1_0;
@@ -6361,7 +6361,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_16apply_nutr(CYTHON_UNU
  *         score = d / (np.linalg.norm(nutr) * np.linalg.norm(target)) * self.c_alp * 5
  *         return np.clip(score, 0, self.c_alp * 5)             # <<<<<<<<<<<<<<
  * 
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
@@ -6456,9 +6456,9 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_16apply_nutr(CYTHON_UNU
 
 /* "src/svd_constraint.pyx":187
  * 
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *         if self.vio is not None and self.vio[u][i] == -1.0:
  *             return True
  */
 
@@ -6552,9 +6552,9 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_18exclude_train(CYTHON_
   __Pyx_RefNannySetupContext("exclude_train", 0);
 
   /* "src/svd_constraint.pyx":188
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] != 0.0:             # <<<<<<<<<<<<<<
+ *         if self.vio is not None and self.vio[u][i] == -1.0:             # <<<<<<<<<<<<<<
  *             return True
  *         return False
  */
@@ -6576,7 +6576,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_18exclude_train(CYTHON_
   __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyFloat_NeObjC(__pyx_t_2, __pyx_float_0_0, 0.0, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_EqObjC(__pyx_t_2, __pyx_float_neg_1_0, -1.0, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 188, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 188, __pyx_L1_error)
@@ -6587,7 +6587,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_18exclude_train(CYTHON_
 
     /* "src/svd_constraint.pyx":189
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *         if self.vio is not None and self.vio[u][i] == -1.0:
  *             return True             # <<<<<<<<<<<<<<
  *         return False
  * 
@@ -6598,16 +6598,16 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_18exclude_train(CYTHON_
     goto __pyx_L0;
 
     /* "src/svd_constraint.pyx":188
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] != 0.0:             # <<<<<<<<<<<<<<
+ *         if self.vio is not None and self.vio[u][i] == -1.0:             # <<<<<<<<<<<<<<
  *             return True
  *         return False
  */
   }
 
   /* "src/svd_constraint.pyx":190
- *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *         if self.vio is not None and self.vio[u][i] == -1.0:
  *             return True
  *         return False             # <<<<<<<<<<<<<<
  * 
@@ -6620,9 +6620,9 @@ static PyObject *__pyx_pf_3src_14svd_constraint_7CnstSVD_18exclude_train(CYTHON_
 
   /* "src/svd_constraint.pyx":187
  * 
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *         if self.vio is not None and self.vio[u][i] == -1.0:
  *             return True
  */
 
@@ -6732,7 +6732,7 @@ static PyObject *__pyx_pf_3src_14svd_constraint_11CnstSVD_all_exclude_train(CYTH
  *     def exclude_train(self, u, i):
  *         return False;             # <<<<<<<<<<<<<<
  * 
- * # exclude only when constraint 1/2 is violated
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(Py_False);
@@ -6755,17 +6755,17 @@ static PyObject *__pyx_pf_3src_14svd_constraint_11CnstSVD_all_exclude_train(CYTH
 }
 
 /* "src/svd_constraint.pyx":199
- * # exclude only when constraint 1/2 is violated
- * class CnstSVD_weaker(CnstSVD):
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * class CnstSVD_hard(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] == -1.0:
- *             return True
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *             return False
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_14svd_constraint_14CnstSVD_weaker_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3src_14svd_constraint_14CnstSVD_weaker_1exclude_train = {"exclude_train", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3src_14svd_constraint_14CnstSVD_weaker_1exclude_train, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3src_14svd_constraint_14CnstSVD_weaker_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3src_14svd_constraint_12CnstSVD_hard_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_3src_14svd_constraint_12CnstSVD_hard_1exclude_train = {"exclude_train", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3src_14svd_constraint_12CnstSVD_hard_1exclude_train, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_3src_14svd_constraint_12CnstSVD_hard_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_u = 0;
   PyObject *__pyx_v_i = 0;
@@ -6827,18 +6827,18 @@ static PyObject *__pyx_pw_3src_14svd_constraint_14CnstSVD_weaker_1exclude_train(
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("exclude_train", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 199, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_weaker.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_hard.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(__pyx_self, __pyx_v_self, __pyx_v_u, __pyx_v_i);
+  __pyx_r = __pyx_pf_3src_14svd_constraint_12CnstSVD_hard_exclude_train(__pyx_self, __pyx_v_self, __pyx_v_u, __pyx_v_i);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i) {
+static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_hard_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -6846,17 +6846,18 @@ static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(C
   int __pyx_t_3;
   int __pyx_t_4;
   PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("exclude_train", 0);
 
   /* "src/svd_constraint.pyx":200
- * class CnstSVD_weaker(CnstSVD):
+ * class CnstSVD_hard(CnstSVD):
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] == -1.0:             # <<<<<<<<<<<<<<
- *             return True
- *         return False
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):             # <<<<<<<<<<<<<<
+ *             return False
+ *         return True
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -6876,61 +6877,91 @@ static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(C
   __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyFloat_EqObjC(__pyx_t_2, __pyx_float_neg_1_0, -1.0, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_EqObjC(__pyx_t_2, __pyx_float_0_0, 0.0, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (!__pyx_t_4) {
+  } else {
+    __pyx_t_1 = __pyx_t_4;
+    goto __pyx_L4_bool_binop_done;
+  }
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_v_u); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_c_alp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_6 = PyNumber_Multiply(__pyx_t_2, __pyx_int_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = PyNumber_Multiply(__pyx_t_6, __pyx_float_0_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyInt_AddObjC(__pyx_t_2, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_5, __pyx_t_6, Py_GE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_1 = __pyx_t_4;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
     /* "src/svd_constraint.pyx":201
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] == -1.0:
- *             return True             # <<<<<<<<<<<<<<
- *         return False
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *             return False             # <<<<<<<<<<<<<<
+ *         return True
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __Pyx_INCREF(Py_True);
-    __pyx_r = Py_True;
+    __Pyx_INCREF(Py_False);
+    __pyx_r = Py_False;
     goto __pyx_L0;
 
     /* "src/svd_constraint.pyx":200
- * class CnstSVD_weaker(CnstSVD):
+ * class CnstSVD_hard(CnstSVD):
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] == -1.0:             # <<<<<<<<<<<<<<
- *             return True
- *         return False
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):             # <<<<<<<<<<<<<<
+ *             return False
+ *         return True
  */
   }
 
   /* "src/svd_constraint.pyx":202
- *         if self.vio is not None and self.vio[u][i] == -1.0:
- *             return True
- *         return False             # <<<<<<<<<<<<<<
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *             return False
+ *         return True             # <<<<<<<<<<<<<<
  * 
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * # exclude when constraint 1/2 violated and constraint 3 exists
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(Py_False);
-  __pyx_r = Py_False;
+  __Pyx_INCREF(Py_True);
+  __pyx_r = Py_True;
   goto __pyx_L0;
 
   /* "src/svd_constraint.pyx":199
- * # exclude only when constraint 1/2 is violated
- * class CnstSVD_weaker(CnstSVD):
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * class CnstSVD_hard(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] == -1.0:
- *             return True
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *             return False
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_weaker.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_hard.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6939,17 +6970,17 @@ static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_weaker_exclude_train(C
 }
 
 /* "src/svd_constraint.pyx":206
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
- * class CnstSVD_weak(CnstSVD):
+ * # exclude when constraint 1/2 violated and constraint 3 exists
+ * class CnstSVD_harder(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return False
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *             return True
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_14svd_constraint_12CnstSVD_weak_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_3src_14svd_constraint_12CnstSVD_weak_1exclude_train = {"exclude_train", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3src_14svd_constraint_12CnstSVD_weak_1exclude_train, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3src_14svd_constraint_12CnstSVD_weak_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_3src_14svd_constraint_14CnstSVD_harder_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_3src_14svd_constraint_14CnstSVD_harder_1exclude_train = {"exclude_train", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3src_14svd_constraint_14CnstSVD_harder_1exclude_train, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_3src_14svd_constraint_14CnstSVD_harder_1exclude_train(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_u = 0;
   PyObject *__pyx_v_i = 0;
@@ -7011,18 +7042,18 @@ static PyObject *__pyx_pw_3src_14svd_constraint_12CnstSVD_weak_1exclude_train(Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("exclude_train", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 206, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_weak.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_harder.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(__pyx_self, __pyx_v_self, __pyx_v_u, __pyx_v_i);
+  __pyx_r = __pyx_pf_3src_14svd_constraint_14CnstSVD_harder_exclude_train(__pyx_self, __pyx_v_self, __pyx_v_u, __pyx_v_i);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i) {
+static PyObject *__pyx_pf_3src_14svd_constraint_14CnstSVD_harder_exclude_train(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_u, PyObject *__pyx_v_i) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -7030,18 +7061,17 @@ static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYT
   int __pyx_t_3;
   int __pyx_t_4;
   PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("exclude_train", 0);
 
   /* "src/svd_constraint.pyx":207
- * class CnstSVD_weak(CnstSVD):
+ * class CnstSVD_harder(CnstSVD):
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):             # <<<<<<<<<<<<<<
- *             return False
- *         return True
+ *         if self.vio is not None and self.vio[u][i] != 0.0:             # <<<<<<<<<<<<<<
+ *             return True
+ *         return False
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -7061,88 +7091,58 @@ static PyObject *__pyx_pf_3src_14svd_constraint_12CnstSVD_weak_exclude_train(CYT
   __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyFloat_EqObjC(__pyx_t_2, __pyx_float_0_0, 0.0, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyFloat_NeObjC(__pyx_t_2, __pyx_float_0_0, 0.0, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (!__pyx_t_4) {
-  } else {
-    __pyx_t_1 = __pyx_t_4;
-    goto __pyx_L4_bool_binop_done;
-  }
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vio); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_t_5, __pyx_v_u); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_v_i); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_c_alp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = PyNumber_Multiply(__pyx_t_2, __pyx_int_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Multiply(__pyx_t_6, __pyx_float_0_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyInt_AddObjC(__pyx_t_2, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_5, __pyx_t_6, Py_GE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 207, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_1 = __pyx_t_4;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
     /* "src/svd_constraint.pyx":208
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return False             # <<<<<<<<<<<<<<
- *         return True
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *             return True             # <<<<<<<<<<<<<<
+ *         return False
  */
     __Pyx_XDECREF(__pyx_r);
-    __Pyx_INCREF(Py_False);
-    __pyx_r = Py_False;
+    __Pyx_INCREF(Py_True);
+    __pyx_r = Py_True;
     goto __pyx_L0;
 
     /* "src/svd_constraint.pyx":207
- * class CnstSVD_weak(CnstSVD):
+ * class CnstSVD_harder(CnstSVD):
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):             # <<<<<<<<<<<<<<
- *             return False
- *         return True
+ *         if self.vio is not None and self.vio[u][i] != 0.0:             # <<<<<<<<<<<<<<
+ *             return True
+ *         return False
  */
   }
 
   /* "src/svd_constraint.pyx":209
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return False
- *         return True             # <<<<<<<<<<<<<<
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *             return True
+ *         return False             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_INCREF(Py_True);
-  __pyx_r = Py_True;
+  __Pyx_INCREF(Py_False);
+  __pyx_r = Py_False;
   goto __pyx_L0;
 
   /* "src/svd_constraint.pyx":206
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
- * class CnstSVD_weak(CnstSVD):
+ * # exclude when constraint 1/2 violated and constraint 3 exists
+ * class CnstSVD_harder(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return False
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *             return True
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_weak.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.svd_constraint.CnstSVD_harder.exclude_train", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8049,13 +8049,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_CnstSVD_exclude_ingr, __pyx_k_CnstSVD_exclude_ingr, sizeof(__pyx_k_CnstSVD_exclude_ingr), 0, 0, 1, 1},
   {&__pyx_n_s_CnstSVD_exclude_train, __pyx_k_CnstSVD_exclude_train, sizeof(__pyx_k_CnstSVD_exclude_train), 0, 0, 1, 1},
   {&__pyx_n_s_CnstSVD_fit, __pyx_k_CnstSVD_fit, sizeof(__pyx_k_CnstSVD_fit), 0, 0, 1, 1},
+  {&__pyx_n_s_CnstSVD_hard, __pyx_k_CnstSVD_hard, sizeof(__pyx_k_CnstSVD_hard), 0, 0, 1, 1},
+  {&__pyx_n_s_CnstSVD_hard_exclude_train, __pyx_k_CnstSVD_hard_exclude_train, sizeof(__pyx_k_CnstSVD_hard_exclude_train), 0, 0, 1, 1},
+  {&__pyx_n_s_CnstSVD_harder, __pyx_k_CnstSVD_harder, sizeof(__pyx_k_CnstSVD_harder), 0, 0, 1, 1},
+  {&__pyx_n_s_CnstSVD_harder_exclude_train, __pyx_k_CnstSVD_harder_exclude_train, sizeof(__pyx_k_CnstSVD_harder_exclude_train), 0, 0, 1, 1},
   {&__pyx_n_s_CnstSVD_include_ingr, __pyx_k_CnstSVD_include_ingr, sizeof(__pyx_k_CnstSVD_include_ingr), 0, 0, 1, 1},
   {&__pyx_n_s_CnstSVD_set_data, __pyx_k_CnstSVD_set_data, sizeof(__pyx_k_CnstSVD_set_data), 0, 0, 1, 1},
   {&__pyx_n_s_CnstSVD_sgd, __pyx_k_CnstSVD_sgd, sizeof(__pyx_k_CnstSVD_sgd), 0, 0, 1, 1},
-  {&__pyx_n_s_CnstSVD_weak, __pyx_k_CnstSVD_weak, sizeof(__pyx_k_CnstSVD_weak), 0, 0, 1, 1},
-  {&__pyx_n_s_CnstSVD_weak_exclude_train, __pyx_k_CnstSVD_weak_exclude_train, sizeof(__pyx_k_CnstSVD_weak_exclude_train), 0, 0, 1, 1},
-  {&__pyx_n_s_CnstSVD_weaker, __pyx_k_CnstSVD_weaker, sizeof(__pyx_k_CnstSVD_weaker), 0, 0, 1, 1},
-  {&__pyx_n_s_CnstSVD_weaker_exclude_train, __pyx_k_CnstSVD_weaker_exclude_train, sizeof(__pyx_k_CnstSVD_weaker_exclude_train), 0, 0, 1, 1},
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
   {&__pyx_n_s_PredictionImpossible, __pyx_k_PredictionImpossible, sizeof(__pyx_k_PredictionImpossible), 0, 0, 1, 1},
   {&__pyx_kp_s_Processing_epoch, __pyx_k_Processing_epoch, sizeof(__pyx_k_Processing_epoch), 0, 0, 1, 0},
@@ -8319,9 +8319,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "src/svd_constraint.pyx":187
  * 
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *         if self.vio is not None and self.vio[u][i] == -1.0:
  *             return True
  */
   __pyx_tuple__21 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_u, __pyx_n_s_i); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 187, __pyx_L1_error)
@@ -8342,11 +8342,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_exclude_train, 194, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 194, __pyx_L1_error)
 
   /* "src/svd_constraint.pyx":199
- * # exclude only when constraint 1/2 is violated
- * class CnstSVD_weaker(CnstSVD):
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * class CnstSVD_hard(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] == -1.0:
- *             return True
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *             return False
  */
   __pyx_tuple__25 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_u, __pyx_n_s_i); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
@@ -8354,11 +8354,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_svd_constraint_pyx, __pyx_n_s_exclude_train, 199, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 199, __pyx_L1_error)
 
   /* "src/svd_constraint.pyx":206
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
- * class CnstSVD_weak(CnstSVD):
+ * # exclude when constraint 1/2 violated and constraint 3 exists
+ * class CnstSVD_harder(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return False
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *             return True
  */
   __pyx_tuple__27 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_u, __pyx_n_s_i); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
@@ -8888,9 +8888,9 @@ if (!__Pyx_RefNanny) {
 
   /* "src/svd_constraint.pyx":187
  * 
- *     # exclude if constraint 1/2 is violated or constraint 3 exists
+ *     # exclude if constraint 1/2 is violated
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *         if self.vio is not None and self.vio[u][i] == -1.0:
  *             return True
  */
   __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_7CnstSVD_19exclude_train, 0, __pyx_n_s_CnstSVD_exclude_train, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 187, __pyx_L1_error)
@@ -8961,10 +8961,10 @@ if (!__Pyx_RefNanny) {
 
   /* "src/svd_constraint.pyx":198
  * 
- * # exclude only when constraint 1/2 is violated
- * class CnstSVD_weaker(CnstSVD):             # <<<<<<<<<<<<<<
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * class CnstSVD_hard(CnstSVD):             # <<<<<<<<<<<<<<
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] == -1.0:
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_CnstSVD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -8975,31 +8975,31 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = 0;
   __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_CnstSVD_weaker, __pyx_n_s_CnstSVD_weaker, (PyObject *) NULL, __pyx_n_s_src_svd_constraint, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_CnstSVD_hard, __pyx_n_s_CnstSVD_hard, (PyObject *) NULL, __pyx_n_s_src_svd_constraint, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "src/svd_constraint.pyx":199
- * # exclude only when constraint 1/2 is violated
- * class CnstSVD_weaker(CnstSVD):
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * class CnstSVD_hard(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and self.vio[u][i] == -1.0:
- *             return True
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *             return False
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_14CnstSVD_weaker_1exclude_train, 0, __pyx_n_s_CnstSVD_weaker_exclude_train, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_12CnstSVD_hard_1exclude_train, 0, __pyx_n_s_CnstSVD_hard_exclude_train, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_exclude_train, __pyx_t_4) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "src/svd_constraint.pyx":198
  * 
- * # exclude only when constraint 1/2 is violated
- * class CnstSVD_weaker(CnstSVD):             # <<<<<<<<<<<<<<
+ * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
+ * class CnstSVD_hard(CnstSVD):             # <<<<<<<<<<<<<<
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and self.vio[u][i] == -1.0:
+ *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_CnstSVD_weaker, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_CnstSVD_hard, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CnstSVD_weaker, __pyx_t_4) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CnstSVD_hard, __pyx_t_4) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -9007,10 +9007,10 @@ if (!__Pyx_RefNanny) {
 
   /* "src/svd_constraint.pyx":205
  * 
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
- * class CnstSVD_weak(CnstSVD):             # <<<<<<<<<<<<<<
+ * # exclude when constraint 1/2 violated and constraint 3 exists
+ * class CnstSVD_harder(CnstSVD):             # <<<<<<<<<<<<<<
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_CnstSVD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -9021,31 +9021,31 @@ if (!__Pyx_RefNanny) {
   __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_CalculateMetaclass(NULL, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_CnstSVD_weak, __pyx_n_s_CnstSVD_weak, (PyObject *) NULL, __pyx_n_s_src_svd_constraint, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_CnstSVD_harder, __pyx_n_s_CnstSVD_harder, (PyObject *) NULL, __pyx_n_s_src_svd_constraint, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
   /* "src/svd_constraint.pyx":206
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
- * class CnstSVD_weak(CnstSVD):
+ * # exclude when constraint 1/2 violated and constraint 3 exists
+ * class CnstSVD_harder(CnstSVD):
  *     def exclude_train(self, u, i):             # <<<<<<<<<<<<<<
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
- *             return False
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
+ *             return True
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_12CnstSVD_weak_1exclude_train, 0, __pyx_n_s_CnstSVD_weak_exclude_train, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_3src_14svd_constraint_14CnstSVD_harder_1exclude_train, 0, __pyx_n_s_CnstSVD_harder_exclude_train, NULL, __pyx_n_s_src_svd_constraint, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_exclude_train, __pyx_t_4) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
   /* "src/svd_constraint.pyx":205
  * 
- * # exclude when constraint 1/2 violated or score from constraint 3 is less than self.c_alp * 5 * 0.5
- * class CnstSVD_weak(CnstSVD):             # <<<<<<<<<<<<<<
+ * # exclude when constraint 1/2 violated and constraint 3 exists
+ * class CnstSVD_harder(CnstSVD):             # <<<<<<<<<<<<<<
  *     def exclude_train(self, u, i):
- *         if self.vio is not None and (self.vio[u][i] == 0.0 or self.vio[u][i] >= self.c_alp * 5 * 0.5 + 1):
+ *         if self.vio is not None and self.vio[u][i] != 0.0:
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_CnstSVD_weak, __pyx_t_2, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_1, __pyx_n_s_CnstSVD_harder, __pyx_t_2, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CnstSVD_weak, __pyx_t_4) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CnstSVD_harder, __pyx_t_4) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
