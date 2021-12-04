@@ -1,7 +1,6 @@
 import unittest
 from sys import path
-from surprise import SVD
-from surprise import accuracy
+from surprise import SVD, accuracy
 
 path.append('../src')
 from rec_base import FoodRecBase

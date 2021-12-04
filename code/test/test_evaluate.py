@@ -1,10 +1,8 @@
-import unittest
 from sys import path
-import math
+import unittest, math
 from collections import defaultdict
 import pandas as pd
 from surprise import SVD
-import matplotlib.pyplot as plt
 
 # setting path
 path.append('../src')

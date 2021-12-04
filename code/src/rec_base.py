@@ -1,5 +1,6 @@
 from abc import *
 from collections import defaultdict
+
 from numpy import dot
 from numpy.linalg import norm
 from surprise.model_selection import train_test_split

@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
-from surprise import Reader
-from surprise import Dataset
+from surprise import Reader, Dataset
 
 input_path = "../data/"
 

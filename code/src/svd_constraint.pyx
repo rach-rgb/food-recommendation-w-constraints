@@ -1,8 +1,7 @@
 cimport numpy as np
 import numpy as np
 from surprise.utils import get_rng
-from surprise import PredictionImpossible
-from surprise import SVD
+from surprise import SVD, PredictionImpossible
 
 
 # SVD algorithm w/ constraint

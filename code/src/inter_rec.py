@@ -1,5 +1,4 @@
 import pandas as pd
-from collections import defaultdict
 from rec_base import *
 
 

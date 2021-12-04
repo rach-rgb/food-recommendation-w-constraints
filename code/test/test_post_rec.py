@@ -1,4 +1,3 @@
-import copy
 import unittest
 from sys import path
 from collections import defaultdict
@@ -8,7 +7,6 @@ from surprise import accuracy
 path.append('../src')
 
 from post_rec import PostRec
-from evaluate import Evaluation as ev
 
 
 class TestPostRec(unittest.TestCase):
