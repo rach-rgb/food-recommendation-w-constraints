@@ -1,9 +1,11 @@
 import unittest
 from sys import path
 from surprise import SVD, accuracy
+from surprise.prediction_algorithms.predictions import Prediction
 
 path.append('../src')
 from rec_base import FoodRecBase
+from evaluate import Evaluation as ev
 
 
 class TestRecBase(unittest.TestCase):
@@ -80,6 +82,17 @@ class TestRecBase(unittest.TestCase):
 
         # return predictions
         accuracy.rmse(predictions, False)
+
+    # test filter_set
+    def test_filter_set(self):
+        self.rec2.get_data()
+
+        plist = [Prediction(3, 0, 5.0, 5.0, None), Prediction(3, 1, 5.0, 0.0, None)]
+        self.assertLess(0.0, ev.calculate_rmse(plist))
+        # (3, 1, 5.0, 0.0) is removed since relevance score of (3, 1) is 0
+        self.assertEqual(0.0, ev.calculate_rmse(self.rec2.filter_set(plist)))
+        # (3, 0, 5.0, 5.0) remains since relevance score of (3, 0) is 1
+        self.assertEqual(1, len(self.rec2.filter_set(plist)))
 
     # get_constraint()
     def test_get_constraint(self):

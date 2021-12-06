@@ -4,6 +4,7 @@ from collections import defaultdict
 from numpy import dot
 from numpy.linalg import norm
 from surprise.model_selection import train_test_split
+from surprise.prediction_algorithms.predictions import Prediction
 
 import load_data as ld
 
@@ -69,6 +70,16 @@ class FoodRecBase(metaclass=ABCMeta):
 
         return self.algo.test(self.test_set)
 
+    # return filtered test_set
+    def filter_set(self, prediction):
+        filtered = []
+
+        for uid, iid, true_r, est, _ in prediction:
+            if self.cal_rel(int(uid), int(iid)) >= 0.5:
+                filtered.append(Prediction(uid, iid, true_r, est, _))
+
+        return filtered
+
     # get constraint of user u, return None if there's no constraint
     def get_constraint(self, u):
         const = self.const.loc[self.const.u == u]
@@ -133,6 +144,7 @@ class FoodRecBase(metaclass=ABCMeta):
             return (i1 is None) and (i2 is None) and (nl is None)
 
         return (const[self.c_i1] == i1) and (const[self.c_i2] == i2) and (const[self.c_nl] == nl)
+
 
     # return list of top-N recommended food for uid s.t. includes iid
     @abstractmethod
