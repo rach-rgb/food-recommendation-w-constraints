@@ -2,6 +2,7 @@
 Postech CSED499I-01 source code and samples
 
 ## datasets
+source: [Food.com dataset](https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions)
 Rating data: project > data > reduced_rating_data.csv  
 Attribute data: project > data > recipe_data.csv  
 Constraint data:  
